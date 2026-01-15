@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MallMerge.unity
+    path: Assets/Scenes/MallMerge_Menus.unity
     guid: bfdb3a64954f6bd4e8ffe00516797693
   m_configObjects: {}
