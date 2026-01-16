@@ -10,6 +10,8 @@ public class BasketControllerScript : MonoBehaviour
     public float maxYSpeed = 15f;
     float basketHalfWidth;
     float moveInput;
+    float minX;
+    float maxX;
     bool isGrounded;
     Rigidbody2D rigBody;
 
@@ -36,6 +38,11 @@ public class BasketControllerScript : MonoBehaviour
         basketHalfWidth = GetComponent<Collider2D>().bounds.extents.x;
 
         //playerBounceSFX = GameObject.Find("PlayerBounceSFX").GetComponent<AudioSource>();
+        float screenLeft = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
+        float screenRight = cam.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+
+        minX = screenLeft + basketHalfWidth;
+        maxX = screenRight - basketHalfWidth;
     }
 
     void Update()
@@ -162,6 +169,7 @@ public class BasketControllerScript : MonoBehaviour
         }
         rigBody.velocity = new Vector2(Mathf.Clamp(rigBody.velocity.x, -maxXSpeed, maxXSpeed),
                                        Mathf.Clamp(rigBody.velocity.y, -maxYSpeed, maxYSpeed));
+
     }
 
 
