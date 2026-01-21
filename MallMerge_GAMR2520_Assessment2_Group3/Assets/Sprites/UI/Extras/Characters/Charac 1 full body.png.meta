@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:MallMerge_GAMR2520_Assessment2_Group3/Assets/Sprites/UI/Extras/Blue Banner.png.meta
+guid: 30c8ffc4b3725ef47bf84236abf2af89
+========
 guid: 90d0674a0ce52c44f887d34a84228076
+>>>>>>>> 33a0995f1406d53c93a00f527c89997f8e3dde02:MallMerge_GAMR2520_Assessment2_Group3/Assets/Sprites/UI/Extras/Characters/Charac 1 full body.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,6 +112,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
