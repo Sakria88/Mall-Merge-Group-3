@@ -1,0 +1,901 @@
+fileFormatVersion: 2
+guid: 349d0845993643044b88e57a153f2db6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_BackIcon
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 896
+        width: 109
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49754cb8641bbde4b96b2393a93ea5a3
+      internalID: -791632809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_BackPressedIcon
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 896
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977a50622f1bf004091973801cf2c7e0
+      internalID: 780255614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_HelpIcon
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 896
+        width: 117
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6159abf026f6324ba83635a54b5c69b
+      internalID: 431108600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_PlayIcon
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 899
+        width: 109
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dadf9a210341e47b69462df2137fe0
+      internalID: -1393483261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_X_Icon
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 893
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474cee10fffd4664a91803d6116c8f2b
+      internalID: 1197927696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_X_IconPressed
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 893
+        width: 112
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961c5aca411114940affcb512271f621
+      internalID: 880120491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_CHatbox
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 801
+        width: 238
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc600e7d88446942b4dcaa51e13c5d6
+      internalID: 636626771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_WhiteBackground
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 410
+        width: 486
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6675ffcddc694a4abbb6759747b346f
+      internalID: 689603122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_RecPopUpMenu
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 524
+        width: 338
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d233046264b4645b7e9e4a0ac105dc
+      internalID: -889508838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_LargeBeigheBackground
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 389
+        width: 403
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5582e6b485afea489632220e8932b7b
+      internalID: 317531456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_GreenBackgroundnoLining
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 402
+        width: 398
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c61d5fa5cb6144f917dbf207023da8
+      internalID: 814811141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_EmptyCircleIcon
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 772
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1400a55260101c143a28990d27781098
+      internalID: 426912526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_HomeIcon
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 769
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9670c7a57de98924d8ae649753a92e65
+      internalID: 2136985630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_MusicIcon
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 770
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8ed477828cb6f4fabc2e076efcbc1e
+      internalID: 1235052559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_PauseIcon
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 773
+        width: 109
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f2fe4fc1e34084594449aebcd2b1c0
+      internalID: -433584267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_PausePressedIcon
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 773
+        width: 109
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37e9523c5af24d499e933263bb24f69
+      internalID: -1082343435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_ExclaimationIcon
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 797
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5579c187d9c158a4b8d0cdb5ffeaeb9c
+      internalID: 40042004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_SettingsBanner
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 662
+        width: 210
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5418389747d3f43962b25c586f12d5
+      internalID: -395252196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_SFXBanner
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 682
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c75549237813fa419ea6becff0d541b
+      internalID: -535603462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_SettingsIcon
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 643
+        width: 110
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8f385a045cc2248952e66d4b0acb01
+      internalID: -2136836745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_SettingsPressedIcon
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 644
+        width: 111
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea25dd45c0e44a408838146956556df
+      internalID: -467959756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_GreenBackground_WithLining
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 141
+        width: 412
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbb5d3be37f9204482605b6e2996bfe
+      internalID: -2125462885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_BeigeBanner
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 524
+        width: 235
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b56b0d6b8485064db3d8d5765a67f37
+      internalID: -807004085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_ShopIcon
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 520
+        width: 106
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2f114df8bdd124e9ba9b427b0bcfc1
+      internalID: 286827033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_TickIcon
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 518
+        width: 107
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ebd3ee62e617548a7c3af16fd5e1c5
+      internalID: 1361103973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_PinkBanner
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 411
+        width: 247
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02432b3d61a3eb449bedc090dae6b76
+      internalID: -377561530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_Vibrate
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 391
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e02824132a3814980a5fe9ee27a10f
+      internalID: -1886576673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_HelpText
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 386
+        width: 201
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3575fff59c148b947bb566712a490a7e
+      internalID: -1340047681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_BlueBanner
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 275
+        width: 250
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5bb43781b0290408e8470c972ae5b6
+      internalID: -1414959113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_squareBG
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 18
+        width: 367
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60233b65832638445b1ebaaa7dafe856
+      internalID: 406463640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_PinkBackground
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 10
+        width: 511
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0558e3535306eb4296ec48bd3455954
+      internalID: -13733122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_ShopText
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 122
+        width: 250
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe0268f25e44084aa11e55569d0c53c
+      internalID: -964907631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_MergesText
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 13
+        width: 244
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81439ebb9981e6b4bb2750610c9045c9
+      internalID: -1213448226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_ResumeText
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 46
+        width: 234
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa104e2341af1a408bffba0d3c2d46e
+      internalID: -1665435384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI Sprite Sheet_PauseText
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 37
+        width: 205
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35aa0d6bd74691145abd38fd5cb930d0
+      internalID: 1616005630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5613a778146502d4fa15453d42194285
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GUI Sprite Sheet_28: -574814432
+      GUI Sprite Sheet_33: 2089108263
+      GUI Sprite Sheet_34: 1510341074
+      GUI Sprite Sheet_36: -1324462422
+      GUI Sprite Sheet_BackIcon: -791632809
+      GUI Sprite Sheet_BackPressedIcon: 780255614
+      GUI Sprite Sheet_BeigeBanner: -807004085
+      GUI Sprite Sheet_BlueBanner: -1414959113
+      GUI Sprite Sheet_CHatbox: 636626771
+      GUI Sprite Sheet_EmptyCircleIcon: 426912526
+      GUI Sprite Sheet_ExclaimationIcon: 40042004
+      GUI Sprite Sheet_GreenBackground_WithLining: -2125462885
+      GUI Sprite Sheet_GreenBackgroundnoLining: 814811141
+      GUI Sprite Sheet_HelpIcon: 431108600
+      GUI Sprite Sheet_HelpText: -1340047681
+      GUI Sprite Sheet_HomeIcon: 2136985630
+      GUI Sprite Sheet_LargeBeigheBackground: 317531456
+      GUI Sprite Sheet_MergesText: -1213448226
+      GUI Sprite Sheet_MusicIcon: 1235052559
+      GUI Sprite Sheet_PauseIcon: -433584267
+      GUI Sprite Sheet_PausePressedIcon: -1082343435
+      GUI Sprite Sheet_PauseText: 1616005630
+      GUI Sprite Sheet_PinkBackground: -13733122
+      GUI Sprite Sheet_PinkBanner: -377561530
+      GUI Sprite Sheet_PlayIcon: -1393483261
+      GUI Sprite Sheet_RecPopUpMenu: -889508838
+      GUI Sprite Sheet_ResumeText: -1665435384
+      GUI Sprite Sheet_SFXBanner: -535603462
+      GUI Sprite Sheet_SettingsBanner: -395252196
+      GUI Sprite Sheet_SettingsIcon: -2136836745
+      GUI Sprite Sheet_SettingsPressedIcon: -467959756
+      GUI Sprite Sheet_ShopIcon: 286827033
+      GUI Sprite Sheet_ShopText: -964907631
+      GUI Sprite Sheet_TickIcon: 1361103973
+      GUI Sprite Sheet_Vibrate: -1886576673
+      GUI Sprite Sheet_WhiteBackground: 689603122
+      GUI Sprite Sheet_X_Icon: 1197927696
+      GUI Sprite Sheet_X_IconPressed: 880120491
+      GUI Sprite Sheet_squareBG: 406463640
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
