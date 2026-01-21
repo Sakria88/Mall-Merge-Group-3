@@ -106,11 +106,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GUI Sprite Sheet_BackIcon
+      name: BackIcon
       rect:
         serializedVersion: 2
         x: 10
@@ -118,7 +131,7 @@ TextureImporter:
         width: 109
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_BackPressedIcon
+      name: BackPressedIcon
       rect:
         serializedVersion: 2
         x: 133
@@ -139,7 +152,7 @@ TextureImporter:
         width: 115
         height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_HelpIcon
+      name: HelpIcon
       rect:
         serializedVersion: 2
         x: 260
@@ -160,7 +173,7 @@ TextureImporter:
         width: 117
         height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_PlayIcon
+      name: PlayIcon
       rect:
         serializedVersion: 2
         x: 393
@@ -181,7 +194,7 @@ TextureImporter:
         width: 109
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_X_Icon
+      name: X_Icon
       rect:
         serializedVersion: 2
         x: 519
@@ -202,7 +215,7 @@ TextureImporter:
         width: 116
         height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_X_IconPressed
+      name: X_IconPressed
       rect:
         serializedVersion: 2
         x: 648
@@ -223,7 +236,7 @@ TextureImporter:
         width: 112
         height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_CHatbox
+      name: CHatbox
       rect:
         serializedVersion: 2
         x: 779
@@ -244,7 +257,7 @@ TextureImporter:
         width: 238
         height: 138
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,15 +270,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_WhiteBackground
+      name: ShopCatalogueBox
       rect:
         serializedVersion: 2
         x: 1167
-        y: 410
+        y: 412
         width: 486
         height: 587
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_RecPopUpMenu
+      name: PopUpMenuBox
       rect:
         serializedVersion: 2
         x: 1709
@@ -286,7 +299,7 @@ TextureImporter:
         width: 338
         height: 479
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +320,7 @@ TextureImporter:
         width: 403
         height: 611
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +341,7 @@ TextureImporter:
         width: 398
         height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_EmptyCircleIcon
+      name: EmptyCircle Banner
       rect:
         serializedVersion: 2
         x: 11
@@ -349,7 +362,7 @@ TextureImporter:
         width: 113
         height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_HomeIcon
+      name: GoHomeIcon
       rect:
         serializedVersion: 2
         x: 131
@@ -370,7 +383,7 @@ TextureImporter:
         width: 114
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_MusicIcon
+      name: MusicIcon
       rect:
         serializedVersion: 2
         x: 262
@@ -391,7 +404,7 @@ TextureImporter:
         width: 111
         height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_PauseIcon
+      name: PauseIcon
       rect:
         serializedVersion: 2
         x: 393
@@ -412,7 +425,7 @@ TextureImporter:
         width: 109
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_PausePressedIcon
+      name: PausePressedIcon
       rect:
         serializedVersion: 2
         x: 522
@@ -433,7 +446,7 @@ TextureImporter:
         width: 109
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,15 +459,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_ExclaimationIcon
+      name: ExclaimationIcon
       rect:
         serializedVersion: 2
-        x: 695
-        y: 797
+        x: 697
+        y: 795
         width: 15
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_SettingsBanner
+      name: SettingsBanner
       rect:
         serializedVersion: 2
         x: 15
@@ -475,7 +488,7 @@ TextureImporter:
         width: 210
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,7 +501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_SFXBanner
+      name: SFXBanner
       rect:
         serializedVersion: 2
         x: 260
@@ -496,7 +509,7 @@ TextureImporter:
         width: 120
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_SettingsIcon
+      name: SettingsIcon
       rect:
         serializedVersion: 2
         x: 393
@@ -517,7 +530,7 @@ TextureImporter:
         width: 110
         height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,7 +543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_SettingsPressedIcon
+      name: SettingsPressedIcon
       rect:
         serializedVersion: 2
         x: 521
@@ -538,7 +551,7 @@ TextureImporter:
         width: 111
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,7 +564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_GreenBackground_WithLining
+      name: Settings Menu BG
       rect:
         serializedVersion: 2
         x: 654
@@ -559,7 +572,7 @@ TextureImporter:
         width: 412
         height: 604
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,7 +585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_BeigeBanner
+      name: BeigeBanner
       rect:
         serializedVersion: 2
         x: 10
@@ -580,7 +593,7 @@ TextureImporter:
         width: 235
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,7 +606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_ShopIcon
+      name: ShopIcon
       rect:
         serializedVersion: 2
         x: 267
@@ -601,7 +614,7 @@ TextureImporter:
         width: 106
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_TickIcon
+      name: TickIcon
       rect:
         serializedVersion: 2
         x: 393
@@ -622,7 +635,7 @@ TextureImporter:
         width: 107
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,7 +648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_PinkBanner
+      name: PinkBanner
       rect:
         serializedVersion: 2
         x: 4
@@ -643,7 +656,7 @@ TextureImporter:
         width: 247
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -664,7 +677,7 @@ TextureImporter:
         width: 108
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -677,7 +690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_HelpText
+      name: HelpText
       rect:
         serializedVersion: 2
         x: 414
@@ -685,7 +698,7 @@ TextureImporter:
         width: 201
         height: 117
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,7 +711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_BlueBanner
+      name: BlueBanner
       rect:
         serializedVersion: 2
         x: 4
@@ -706,7 +719,7 @@ TextureImporter:
         width: 250
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,7 +732,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_squareBG
+      name: Pop Up Menu Mini Game
       rect:
         serializedVersion: 2
         x: 264
@@ -727,7 +740,7 @@ TextureImporter:
         width: 367
         height: 326
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -748,7 +761,7 @@ TextureImporter:
         width: 511
         height: 372
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -761,7 +774,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_ShopText
+      name: ShopText
       rect:
         serializedVersion: 2
         x: 4
@@ -769,7 +782,7 @@ TextureImporter:
         width: 250
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -782,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_MergesText
+      name: MergesText
       rect:
         serializedVersion: 2
         x: 10
@@ -790,7 +803,7 @@ TextureImporter:
         width: 244
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -803,7 +816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_ResumeText
+      name: ResumeText
       rect:
         serializedVersion: 2
         x: 650
@@ -811,7 +824,7 @@ TextureImporter:
         width: 234
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -824,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI Sprite Sheet_PauseText
+      name: PauseText
       rect:
         serializedVersion: 2
         x: 922
@@ -832,7 +845,7 @@ TextureImporter:
         width: 205
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -855,45 +868,45 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BackIcon: -791632809
+      BackPressedIcon: 780255614
+      BeigeBanner: -807004085
+      BlueBanner: -1414959113
+      CHatbox: 636626771
+      EmptyCircle Banner: 426912526
+      ExclaimationIcon: 40042004
       GUI Sprite Sheet_28: -574814432
       GUI Sprite Sheet_33: 2089108263
       GUI Sprite Sheet_34: 1510341074
       GUI Sprite Sheet_36: -1324462422
-      GUI Sprite Sheet_BackIcon: -791632809
-      GUI Sprite Sheet_BackPressedIcon: 780255614
-      GUI Sprite Sheet_BeigeBanner: -807004085
-      GUI Sprite Sheet_BlueBanner: -1414959113
-      GUI Sprite Sheet_CHatbox: 636626771
-      GUI Sprite Sheet_EmptyCircleIcon: 426912526
-      GUI Sprite Sheet_ExclaimationIcon: 40042004
-      GUI Sprite Sheet_GreenBackground_WithLining: -2125462885
       GUI Sprite Sheet_GreenBackgroundnoLining: 814811141
-      GUI Sprite Sheet_HelpIcon: 431108600
-      GUI Sprite Sheet_HelpText: -1340047681
-      GUI Sprite Sheet_HomeIcon: 2136985630
       GUI Sprite Sheet_LargeBeigheBackground: 317531456
-      GUI Sprite Sheet_MergesText: -1213448226
-      GUI Sprite Sheet_MusicIcon: 1235052559
-      GUI Sprite Sheet_PauseIcon: -433584267
-      GUI Sprite Sheet_PausePressedIcon: -1082343435
-      GUI Sprite Sheet_PauseText: 1616005630
       GUI Sprite Sheet_PinkBackground: -13733122
-      GUI Sprite Sheet_PinkBanner: -377561530
-      GUI Sprite Sheet_PlayIcon: -1393483261
-      GUI Sprite Sheet_RecPopUpMenu: -889508838
-      GUI Sprite Sheet_ResumeText: -1665435384
-      GUI Sprite Sheet_SFXBanner: -535603462
-      GUI Sprite Sheet_SettingsBanner: -395252196
-      GUI Sprite Sheet_SettingsIcon: -2136836745
-      GUI Sprite Sheet_SettingsPressedIcon: -467959756
-      GUI Sprite Sheet_ShopIcon: 286827033
-      GUI Sprite Sheet_ShopText: -964907631
-      GUI Sprite Sheet_TickIcon: 1361103973
       GUI Sprite Sheet_Vibrate: -1886576673
-      GUI Sprite Sheet_WhiteBackground: 689603122
-      GUI Sprite Sheet_X_Icon: 1197927696
-      GUI Sprite Sheet_X_IconPressed: 880120491
-      GUI Sprite Sheet_squareBG: 406463640
+      GoHomeIcon: 2136985630
+      HelpIcon: 431108600
+      HelpText: -1340047681
+      MergesText: -1213448226
+      MusicIcon: 1235052559
+      PauseIcon: -433584267
+      PausePressedIcon: -1082343435
+      PauseText: 1616005630
+      PinkBanner: -377561530
+      PlayIcon: -1393483261
+      Pop Up Menu Mini Game: 406463640
+      PopUpMenuBox: -889508838
+      ResumeText: -1665435384
+      SFXBanner: -535603462
+      Settings Menu BG: -2125462885
+      SettingsBanner: -395252196
+      SettingsIcon: -2136836745
+      SettingsPressedIcon: -467959756
+      ShopCatalogueBox: 689603122
+      ShopIcon: 286827033
+      ShopText: -964907631
+      TickIcon: 1361103973
+      X_Icon: 1197927696
+      X_IconPressed: 880120491
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
