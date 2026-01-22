@@ -648,69 +648,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Energy 0.5
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 898
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b4b790ffdcd96848b30f2737c9f3677
-      internalID: 99677789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: energy 0
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e7feb3af943ed84daf680da42be83ea
-      internalID: -229293538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: energy 1
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05dc1445bbee29049895aec86670fe94
-      internalID: 1708673288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Star coin
       rect:
         serializedVersion: 2
@@ -1046,6 +983,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: energy 0
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 909
+        width: 79
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0bf9c774ec044b95729500406219e
+      internalID: -229293538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy 0.5
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 919
+        width: 97
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fba6090a24a1c34fbfc2cf59da7d636
+      internalID: 99677789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy 1
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 914
+        width: 102
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 0, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6dbd3fd25a1b94495b03d0b6e83be5
+      internalID: 777733809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1100,7 +1100,7 @@ TextureImporter:
       Watch: -821427214
       Yellow Chest: -404262337
       energy 0: -229293538
-      energy 1: 1708673288
+      energy 1: 777733809
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
