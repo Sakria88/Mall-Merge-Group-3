@@ -106,11 +106,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ItemsSpriteSheet_0
+      name: Apple
       rect:
         serializedVersion: 2
         x: 0
@@ -118,7 +131,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_1
+      name: Berry
       rect:
         serializedVersion: 2
         x: 128
@@ -139,7 +152,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_2
+      name: Strawberry
       rect:
         serializedVersion: 2
         x: 256
@@ -160,7 +173,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_3
+      name: Peach
       rect:
         serializedVersion: 2
         x: 384
@@ -181,7 +194,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_4
+      name: Pineapple
       rect:
         serializedVersion: 2
         x: 512
@@ -202,7 +215,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_5
+      name: Donut
       rect:
         serializedVersion: 2
         x: 640
@@ -223,7 +236,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_6
+      name: Cinnamon Rolls
       rect:
         serializedVersion: 2
         x: 768
@@ -244,7 +257,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_7
+      name: Icrecream
       rect:
         serializedVersion: 2
         x: 896
@@ -265,7 +278,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_8
+      name: Pie
       rect:
         serializedVersion: 2
         x: 1024
@@ -286,7 +299,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_9
+      name: Cake
       rect:
         serializedVersion: 2
         x: 1152
@@ -307,7 +320,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_10
+      name: Brush
       rect:
         serializedVersion: 2
         x: 0
@@ -328,7 +341,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_11
+      name: Blush
       rect:
         serializedVersion: 2
         x: 128
@@ -349,7 +362,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_12
+      name: Lipstick
       rect:
         serializedVersion: 2
         x: 256
@@ -370,7 +383,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_13
+      name: Mascara
       rect:
         serializedVersion: 2
         x: 384
@@ -391,7 +404,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_14
+      name: Eyeshadow
       rect:
         serializedVersion: 2
         x: 512
@@ -412,7 +425,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_15
+      name: Socks
       rect:
         serializedVersion: 2
         x: 640
@@ -433,7 +446,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,7 +459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_16
+      name: Skirt
       rect:
         serializedVersion: 2
         x: 768
@@ -454,7 +467,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_17
+      name: Shirts
       rect:
         serializedVersion: 2
         x: 896
@@ -475,7 +488,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,7 +501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_18
+      name: Jacket
       rect:
         serializedVersion: 2
         x: 1024
@@ -496,7 +509,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_19
+      name: Dress
       rect:
         serializedVersion: 2
         x: 1152
@@ -517,7 +530,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,7 +543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_20
+      name: Watch
       rect:
         serializedVersion: 2
         x: 0
@@ -538,7 +551,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,7 +564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_21
+      name: Phone
       rect:
         serializedVersion: 2
         x: 128
@@ -559,7 +572,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,7 +585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_22
+      name: Tablet
       rect:
         serializedVersion: 2
         x: 256
@@ -580,7 +593,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,7 +606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_23
+      name: Nintendo
       rect:
         serializedVersion: 2
         x: 384
@@ -601,7 +614,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_24
+      name: Switch
       rect:
         serializedVersion: 2
         x: 512
@@ -622,7 +635,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,15 +648,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_25
+      name: Energy 0.5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 896
+        x: 636
+        y: 898
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,7 +669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_26
+      name: energy 0
       rect:
         serializedVersion: 2
         x: 768
@@ -664,7 +677,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -677,7 +690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_27
+      name: energy 1
       rect:
         serializedVersion: 2
         x: 896
@@ -685,7 +698,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,7 +711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_28
+      name: Star coin
       rect:
         serializedVersion: 2
         x: 1024
@@ -706,7 +719,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,7 +732,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_29
+      name: Yellow Chest
       rect:
         serializedVersion: 2
         x: 1152
@@ -727,7 +740,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -740,7 +753,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_30
+      name: Purple Chest
       rect:
         serializedVersion: 2
         x: 0
@@ -748,7 +761,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -761,7 +774,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_31
+      name: Blue Chest
       rect:
         serializedVersion: 2
         x: 128
@@ -769,7 +782,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -782,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_32
+      name: Coin
       rect:
         serializedVersion: 2
         x: 256
@@ -790,7 +803,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -803,7 +816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_33
+      name: Pink Chest
       rect:
         serializedVersion: 2
         x: 384
@@ -811,7 +824,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -824,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_34
+      name: Bomb
       rect:
         serializedVersion: 2
         x: 512
@@ -832,7 +845,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -845,7 +858,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_35
+      name: Bomb EXP1
       rect:
         serializedVersion: 2
         x: 640
@@ -853,7 +866,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -866,7 +879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_36
+      name: Bomb EXP2
       rect:
         serializedVersion: 2
         x: 768
@@ -874,7 +887,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -887,7 +900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_37
+      name: Bomb EXP3
       rect:
         serializedVersion: 2
         x: 896
@@ -895,7 +908,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -908,7 +921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_38
+      name: Bomb EXP4
       rect:
         serializedVersion: 2
         x: 1024
@@ -916,7 +929,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -929,7 +942,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_39
+      name: Bomb EXP5
       rect:
         serializedVersion: 2
         x: 1152
@@ -937,7 +950,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -950,7 +963,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_40
+      name: Lock 1
       rect:
         serializedVersion: 2
         x: 0
@@ -958,7 +971,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -971,7 +984,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_41
+      name: Lock 2
       rect:
         serializedVersion: 2
         x: 128
@@ -979,7 +992,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -992,7 +1005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_42
+      name: Green Chest
       rect:
         serializedVersion: 2
         x: 256
@@ -1000,7 +1013,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1013,7 +1026,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ItemsSpriteSheet_43
+      name: Arrow
       rect:
         serializedVersion: 2
         x: 384
@@ -1021,7 +1034,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1044,50 +1057,50 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ItemsSpriteSheet_0: 573273639
-      ItemsSpriteSheet_1: -843645656
-      ItemsSpriteSheet_10: 439426402
-      ItemsSpriteSheet_11: -1554632920
-      ItemsSpriteSheet_12: 1173056784
-      ItemsSpriteSheet_13: -256631058
-      ItemsSpriteSheet_14: 1197374873
-      ItemsSpriteSheet_15: -132362729
-      ItemsSpriteSheet_16: 771527804
-      ItemsSpriteSheet_17: 958043569
-      ItemsSpriteSheet_18: -1967556772
-      ItemsSpriteSheet_19: 1416874911
-      ItemsSpriteSheet_2: 1682494118
-      ItemsSpriteSheet_20: -821427214
-      ItemsSpriteSheet_21: -1978279809
-      ItemsSpriteSheet_22: 810417009
-      ItemsSpriteSheet_23: 1052929667
-      ItemsSpriteSheet_24: 693079728
-      ItemsSpriteSheet_25: 99677789
-      ItemsSpriteSheet_26: -229293538
-      ItemsSpriteSheet_27: 1708673288
-      ItemsSpriteSheet_28: 1366991039
-      ItemsSpriteSheet_29: -404262337
-      ItemsSpriteSheet_3: -86966239
-      ItemsSpriteSheet_30: 1687115470
-      ItemsSpriteSheet_31: -26610384
-      ItemsSpriteSheet_32: -771391692
-      ItemsSpriteSheet_33: -1963464169
-      ItemsSpriteSheet_34: 1708115937
-      ItemsSpriteSheet_35: 1592135387
-      ItemsSpriteSheet_36: 535071422
-      ItemsSpriteSheet_37: -275448573
-      ItemsSpriteSheet_38: -1693646632
-      ItemsSpriteSheet_39: -226113877
-      ItemsSpriteSheet_4: -458616239
-      ItemsSpriteSheet_40: -1007410830
-      ItemsSpriteSheet_41: -346823169
-      ItemsSpriteSheet_42: -1251918031
-      ItemsSpriteSheet_43: -1174217946
-      ItemsSpriteSheet_5: -857264483
-      ItemsSpriteSheet_6: 1716651758
-      ItemsSpriteSheet_7: 206000314
-      ItemsSpriteSheet_8: 1598239411
-      ItemsSpriteSheet_9: 378309285
+      Apple: 573273639
+      Arrow: -1174217946
+      Berry: -843645656
+      Blue Chest: -26610384
+      Blush: -1554632920
+      Bomb: 1708115937
+      Bomb EXP1: 1592135387
+      Bomb EXP2: 535071422
+      Bomb EXP3: -275448573
+      Bomb EXP4: -1693646632
+      Bomb EXP5: -226113877
+      Brush: 439426402
+      Cake: 378309285
+      Cinnamon Rolls: 1716651758
+      Coin: -771391692
+      Donut: -857264483
+      Dress: 1416874911
+      Energy 0.5: 99677789
+      Eyeshadow: 1197374873
+      Green Chest: -1251918031
+      Icrecream: 206000314
+      Jacket: -1967556772
+      Lipstick: 1173056784
+      Lock 1: -1007410830
+      Lock 2: -346823169
+      Mascara: -256631058
+      Nintendo: 1052929667
+      Peach: -86966239
+      Phone: -1978279809
+      Pie: 1598239411
+      Pineapple: -458616239
+      Pink Chest: -1963464169
+      Purple Chest: 1687115470
+      Shirts: 958043569
+      Skirt: 771527804
+      Socks: -132362729
+      Star coin: 1366991039
+      Strawberry: 1682494118
+      Switch: 693079728
+      Tablet: 810417009
+      Watch: -821427214
+      Yellow Chest: -404262337
+      energy 0: -229293538
+      energy 1: 1708673288
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
