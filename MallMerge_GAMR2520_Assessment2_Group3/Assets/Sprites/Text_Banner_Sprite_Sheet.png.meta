@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3d9d3a87d75dd244bb0a5f89be800f9c
+guid: c3b38060d4844614682ac3ef729f8ef2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Empty Banner
+      name: Beige Banner
       rect:
         serializedVersion: 2
-        x: 0
-        y: 774
-        width: 244
-        height: 244
+        x: 7
+        y: 1061
+        width: 486
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cf40988603fc5747b0f95efb2cf337e
-      internalID: 70796723
+      spriteID: 81826ad77c2a4d54bb374381c9f41c61
+      internalID: -385384268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Help
+      name: Blue Banner
       rect:
         serializedVersion: 2
-        x: 251
-        y: 773
-        width: 245
-        height: 245
+        x: 6
+        y: 834
+        width: 496
+        height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd75fc23ce632f240af5401ceefc3fe9
-      internalID: 1230589925
+      spriteID: be924fccfb262c747a1fac0c93792a72
+      internalID: 675854962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shop
+      name: Pink Banner
       rect:
         serializedVersion: 2
-        x: 506
-        y: 777
-        width: 237
-        height: 239
+        x: 3
+        y: 579
+        width: 492
+        height: 133
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f83ab6e516e35e4ba6894b6e5ce8ff1
-      internalID: -1041090774
+      spriteID: 15c19027a204c2a49af6ff9b7e661e7d
+      internalID: 1423871005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings Pressed
+      name: Pause
       rect:
         serializedVersion: 2
-        x: 762
-        y: 771
-        width: 239
-        height: 239
+        x: 47
+        y: 83
+        width: 425
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 067fa3154991ba44c9bf556755f5715e
-      internalID: 1100985165
+      spriteID: 1617bfcf549293444a6bb5ab365cc757
+      internalID: -815637025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resume
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 94
+        width: 542
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321848d92de519e4bbfa030df5745847
+      internalID: -540226051
       vertices: []
       indices: 
       edges: []
@@ -210,10 +231,10 @@ TextureImporter:
       name: Settings
       rect:
         serializedVersion: 2
-        x: 1005
-        y: 771
-        width: 243
-        height: 246
+        x: 66
+        y: 306
+        width: 602
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,61 +242,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bad7c8e0d0702b4a9a6ae736ef7a9d3
-      internalID: -1676974848
+      spriteID: 60e6bb80caf3e7d44996bdbf76248d68
+      internalID: -1803526543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volume
+      name: Merges
       rect:
         serializedVersion: 2
-        x: 2
-        y: 526
-        width: 244
-        height: 245
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4f39c6cc015cbf4eb7c013121563463
-      internalID: 847621946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 523
-        width: 240
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd3921441e84d904298a2b3e2eb5605c
-      internalID: 911192198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vibrate
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 526
-        width: 239
+        x: 537
+        y: 777
+        width: 696
         height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -284,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80190859e4628cf4e8dbd9154a8b4c23
-      internalID: -1026577340
+      spriteID: 26d2be3c1cadbae4a94cc919234fc8a6
+      internalID: -712135661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back To main Menu
+      name: SFX
       rect:
         serializedVersion: 2
-        x: 755
-        y: 527
-        width: 239
-        height: 239
+        x: 577
+        y: 559
+        width: 382
+        height: 177
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf137c13ed25bf4c92420bd981b18cf
-      internalID: 1796690189
+      spriteID: 46d8de8f0b896e944b37abb3bfceef19
+      internalID: -1095529317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Check
+      name: Help
       rect:
         serializedVersion: 2
-        x: 1010
-        y: 525
-        width: 234
-        height: 234
+        x: 548
+        y: 1022
+        width: 413
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,155 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01c3ba5427d02348921cf4318adc9c3
-      internalID: -73995062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: X out
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 275
-        width: 245
-        height: 245
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f128387f58a9c264e80426138524a07a
-      internalID: 425013896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: X out Pressed
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 270
-        width: 242
-        height: 243
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 643126b8d0179964da541002fdfd61a3
-      internalID: -1108321827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Left arrow
-      rect:
-        serializedVersion: 2
-        x: 506
-        y: 275
-        width: 240
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a3b1abd5c340ba449611239ccd383db
-      internalID: 58724477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Arrow
-      rect:
-        serializedVersion: 2
-        x: 749
-        y: 264
-        width: 251
-        height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b0276311a7d60a428459efa7daeddb2
-      internalID: -1983861503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Paused
-      rect:
-        serializedVersion: 2
-        x: 1001
-        y: 271
-        width: 248
-        height: 247
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 137e8a8da53a05f49946ba30db8d28ac
-      internalID: 1104718407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pause Pressed
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 26
-        width: 239
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e49f5f20f0abf54c93b487b242d48c1
-      internalID: 916519017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Music Icon
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 38
-        width: 225
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 688f34f124fcc18439bd37af45d6d0ff
-      internalID: -687988073
+      spriteID: c5367817a07d2f14c8445396b2032355
+      internalID: 1487061329
       vertices: []
       indices: 
       edges: []
@@ -482,7 +314,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a808fc5bba20dd74a8a5337cb8e649f3
+    spriteID: 449991cd145962840b29c917188dfa8c
     internalID: 0
     vertices: []
     indices: 
@@ -490,23 +322,40 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Arrow: -1983861503
-      Back To main Menu: 1796690189
-      Check: -73995062
-      Empty Banner: 70796723
-      Help: 1230589925
-      Icons Sprite Sheet_6: 911192198
-      Left arrow: 58724477
-      Music Icon: -687988073
-      Pause Pressed: 916519017
-      Paused: 1104718407
-      Settings: -1676974848
-      Settings Pressed: 1100985165
-      Shop: -1041090774
-      Vibrate: -1026577340
-      Volume: 847621946
-      X out: 425013896
-      X out Pressed: -1108321827
+      Beige Banner: -385384268
+      Blue Banner: 675854962
+      Help: 1487061329
+      Merges: -712135661
+      Pause: -815637025
+      Pink Banner: 1423871005
+      Resume: -540226051
+      SFX: -1095529317
+      Settings: -1803526543
+      Text_Banner_Sprite_Sheet_1: 116721302
+      Text_Banner_Sprite_Sheet_10: -326957408
+      Text_Banner_Sprite_Sheet_12: 1101753685
+      Text_Banner_Sprite_Sheet_13: 701392995
+      Text_Banner_Sprite_Sheet_14: -1347816921
+      Text_Banner_Sprite_Sheet_15: -1792597398
+      Text_Banner_Sprite_Sheet_16: 334408239
+      Text_Banner_Sprite_Sheet_17: -1963446344
+      Text_Banner_Sprite_Sheet_18: -2124449192
+      Text_Banner_Sprite_Sheet_19: 14767751
+      Text_Banner_Sprite_Sheet_2: 1968672749
+      Text_Banner_Sprite_Sheet_20: 1304215262
+      Text_Banner_Sprite_Sheet_21: -1409323609
+      Text_Banner_Sprite_Sheet_22: -226905009
+      Text_Banner_Sprite_Sheet_23: 1745492691
+      Text_Banner_Sprite_Sheet_24: -754648256
+      Text_Banner_Sprite_Sheet_25: 1889410241
+      Text_Banner_Sprite_Sheet_26: 1377559140
+      Text_Banner_Sprite_Sheet_27: 1933069781
+      Text_Banner_Sprite_Sheet_3: -1414947122
+      Text_Banner_Sprite_Sheet_4: -1932286106
+      Text_Banner_Sprite_Sheet_6: -184490250
+      Text_Banner_Sprite_Sheet_7: -1845053728
+      Text_Banner_Sprite_Sheet_8: -65395286
+      Text_Banner_Sprite_Sheet_9: -851054938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

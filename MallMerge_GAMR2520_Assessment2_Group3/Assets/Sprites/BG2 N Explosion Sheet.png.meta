@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -121,18 +121,656 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: explode 4
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1619
+        width: 430
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b57259cefc713941b708433661d94cd
+      internalID: -779282196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 1960
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7f9613f43f32043ac3a0aeb0d1f663
+      internalID: 1360120142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode 5
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 1619
+        width: 406
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5feac74ce258245b27f27ed85c0a10
+      internalID: -486144267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode 1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1766
+        width: 79
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54fe1e6246534d4d9ab86f0ae198a19
+      internalID: 700325059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode 2
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 1737
+        width: 137
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3b9576794f09e479cf84a5d48d538c
+      internalID: 1257670039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode 3
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 1709
+        width: 194
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbf7558459fb234fabcf7ddff8ba90f
+      internalID: -16464248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 1750
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b72650c89615344aa9733eda43e6d5
+      internalID: -2026219167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2516
+        y: 1690
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3a1c835ddcc7345a00d17ef7df7372
+      internalID: -774004083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 1608
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70dc1ba413fb2c4a972bf7d52ef8cf1
+      internalID: -727942776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 1608
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7fb149de68d61b4ebcc328b249ee177
+      internalID: 950486184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 1602
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3caf5e7cf14d614fa965447216c1819
+      internalID: -999165567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Home BG
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 97
+        width: 1005
+        height: 1390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08e7825cb1b608468e3eb5ae9184810
+      internalID: -365752465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1474
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ca04cc520a3094eb490facc61be467
+      internalID: -896287005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 1485
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc4077e18d4ac24bbf68571586cf6c8
+      internalID: -2043264766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1485
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd615d97c44fd745b24a1b26ab41469
+      internalID: -390647565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1485
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba13d84a01d2085478ef5beac2a01aa1
+      internalID: -109810552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 1450
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4bf54f49309144d89e03f488333583
+      internalID: 216562196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 1485
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a798eeea6e4cf49be06470019de569
+      internalID: -35784369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode 7
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 1157
+        width: 416
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7600f7e9ee9bf2a4691f063ddfa9f6a7
+      internalID: 600732902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 1485
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873e06c97c9c31d4b97dd7ffeb024c7b
+      internalID: -591155946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode 6
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1158
+        width: 415
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8385be020731446a9ec89e33447ef6
+      internalID: 1033235899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1403
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a1ff8e80befd1448ee94474a4a1ac7
+      internalID: -2094017231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode 8
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 1174
+        width: 418
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f673adc4ef4c4dd4ca0e60fa8e78d8ec
+      internalID: -1169535367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1286
+        width: 43
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7158005f83117f64c810974c03ad73c5
+      internalID: -1538697841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1262
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9990a2428ae7e41b0a22bbf5345259
+      internalID: -426509181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 1203
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746a65c6cfde4dd47ac0d289e71b1d75
+      internalID: 129738130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1150
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcee555e61a8a784d870ad7e90821a46
+      internalID: -466123423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG2 N Explosion Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 122
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4498f62b3a249a4449a4ff873b76a235
+      internalID: -1838447168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings Menu
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 49
+        width: 714
+        height: 1043
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2e676f7e6c68247b1ce9231e8cf88a
+      internalID: -574182994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 217b94faea628714885d81addc70ae9d
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BG2 N Explosion Sheet_1: 1360120142
+      BG2 N Explosion Sheet_10: -999165567
+      BG2 N Explosion Sheet_12: -896287005
+      BG2 N Explosion Sheet_13: -2043264766
+      BG2 N Explosion Sheet_14: -390647565
+      BG2 N Explosion Sheet_15: -109810552
+      BG2 N Explosion Sheet_16: 216562196
+      BG2 N Explosion Sheet_17: -35784369
+      BG2 N Explosion Sheet_19: -591155946
+      BG2 N Explosion Sheet_21: -2094017231
+      BG2 N Explosion Sheet_23: -1538697841
+      BG2 N Explosion Sheet_24: -426509181
+      BG2 N Explosion Sheet_25: 129738130
+      BG2 N Explosion Sheet_26: -466123423
+      BG2 N Explosion Sheet_27: -1838447168
+      BG2 N Explosion Sheet_6: -2026219167
+      BG2 N Explosion Sheet_7: -774004083
+      BG2 N Explosion Sheet_8: -727942776
+      BG2 N Explosion Sheet_9: 950486184
+      Main Home BG: -365752465
+      Settings Menu: -574182994
+      explode 1: 700325059
+      explode 2: 1257670039
+      explode 3: -16464248
+      explode 4: -779282196
+      explode 5: -486144267
+      explode 6: 1033235899
+      explode 7: 600732902
+      explode 8: -1169535367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
