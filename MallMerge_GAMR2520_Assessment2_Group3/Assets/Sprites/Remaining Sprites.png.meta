@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -121,18 +121,3815 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Grid 0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1231
+        width: 768
+        height: 743
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdf2ff9525bbe04dac0a99337a092d5
+      internalID: -1480112519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid 2
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1251
+        width: 771
+        height: 748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4127543f851f4e34694e99baf28c200b
+      internalID: 458939357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid 1
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1255
+        width: 758
+        height: 732
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b599aae71bffa049bb30134e754a706
+      internalID: 1369562430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mini Gmae Basket
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 824
+        width: 606
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ea57083b686b647800a729d467edf2
+      internalID: 1529608733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MG Basket Darkened
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 820
+        width: 608
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4699746de495549aab157d22230ee1
+      internalID: -501257643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpline text
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 730
+        width: 1058
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f94412b0abf2204e8fd79db77098510
+      internalID: 710411264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 1161
+        width: 76
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8e3420ff4b27747a926675e01b14b6
+      internalID: -1500950694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1161
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3b9271b85bd9444a2748ae092e83cf
+      internalID: 1442054300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1161
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1691fff4437f9d446bb33e0b9859e1d9
+      internalID: 1879145246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1161
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d3c5ebefb6f0f44954f4166c6d732d
+      internalID: 941850509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 1161
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253f4b0e459d02c48bfdd31931b4af6d
+      internalID: 1731663445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 1161
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8f070a7e0ee6f47b63f160141acb39
+      internalID: 1724157224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 1161
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b852399f3d909c0498bc0727f1852451
+      internalID: -1784340098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_17
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 1171
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298b42c5979e7eb47a94e5a94dc87a8b
+      internalID: -312756412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 1161
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040aa6570fa9a514dad496746d614819
+      internalID: -1536794897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_22
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 1076
+        width: 75
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7ae580de819f64caa66b7ccc8925b0
+      internalID: -2114173191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_23
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1072
+        width: 66
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0fee19ba05cf247a1348e7c10f922f
+      internalID: -559062226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_24
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1076
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd799a153612d24681f0a3161a3b3f5
+      internalID: -364849881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_25
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 1076
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c5713695a73bbf44887367c7ee69534
+      internalID: -1696627977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_26
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1076
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8a4fbd530158d42ab4baa2c4108d7a
+      internalID: -1760948462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_27
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1076
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73152b10facab0489aff6da71af4934
+      internalID: -1417948083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_28
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1076
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f39ccdad3f6af34b87f38fc5c0aabec
+      internalID: -2011911483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_29
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 1076
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c240fae77696c4098fac056ed451c4
+      internalID: -1165235422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_30
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1076
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1764b459a4ce8b47bdfe2fb26b255b6
+      internalID: -1047854183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_31
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 1076
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69479ec0afe50cd488b69d07ad46c923
+      internalID: 1122296630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_32
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 1072
+        width: 152
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08d0b934484f544593633a990e88f93
+      internalID: 1500237654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_33
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 1076
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbbc24c29e57ec458556a5d930a7bd4
+      internalID: -394640693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_34
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 1076
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f649fd8b8b65e4dbb68b7d3070baf6
+      internalID: -1213355995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_35
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1076
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40851bb40e9110f4ea2d46c52b783c53
+      internalID: 1057113808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_36
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 1076
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157f87e75d08f1e42a353322e72c1da4
+      internalID: -357170692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_37
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 1086
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f6129b8033b5c45aa59f3edbd871ba
+      internalID: -1547498390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_38
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 1076
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a453ec6965a154044ae264c85ef6a81c
+      internalID: 337488453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_42
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1000
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d44e053d289c9347927206c6961c9bc
+      internalID: -453173352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_46
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 990
+        width: 76
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d890d24a2b0d34aab9e4efd8c8ac38
+      internalID: 1386763619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_47
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 990
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348d6edad2c9d6747abea43f65d30cad
+      internalID: -1167683721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_51
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 905
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001d6ebd7cf08e645a41b0c12b4c038f
+      internalID: 1494427284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_52
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 900
+        width: 265
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f155a70f014b1040be5a18581e8791d
+      internalID: -1006651476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_53
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 905
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa07cb82fe32bd4999a0b8d63555b75
+      internalID: -1218632353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_54
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 905
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f78d34db5fb97f4bad4a1e253969bf6
+      internalID: 1286502263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_55
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 905
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff136032f19c4f449269b35a277dc1d
+      internalID: -1690143110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_56
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 905
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3710ad94cca5d6d498f786f9c07d2c31
+      internalID: -1135167790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_57
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 905
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c939e8638e587104eb0f521cfad51b21
+      internalID: 1478890669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_58
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 905
+        width: 75
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583636a4624eda344b13633ab97accbf
+      internalID: -423213096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_59
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 905
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb60c28f137b4044b291b1173823a01
+      internalID: 336383017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_60
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 905
+        width: 76
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1197d097a7fdd1147a86e0846d714987
+      internalID: 961359610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_61
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 905
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b218bdc58048242bedf0dd94399722
+      internalID: 2069498753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_62
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 905
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040a500029a30f84a8db1f48899b0282
+      internalID: -1793137352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_63
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 905
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cff3c7dc13d9dd479fe9645b25f748f
+      internalID: -352478764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_64
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 818
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe52bd820fd33544bc9d30bf554156e
+      internalID: -1710784810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_65
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 818
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51927b374a5028c4bbeeac0b58a4e6e0
+      internalID: 5036167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_66
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 818
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42910510710f1af4e977e26c4cb486db
+      internalID: 43962593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_67
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 818
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578ac1b8c1b43a245845bd978fc00f63
+      internalID: 1025228004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_68
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 818
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b38ab75bb366b342848dfe7a651bd52
+      internalID: 1141947678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_69
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 814
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fd7bab04a94654692190b012ece1fd
+      internalID: 428579374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_70
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 818
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c1250bfd94b624a838cae457d53a0c
+      internalID: 463110247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_71
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 814
+        width: 108
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084e29e76cf0bc04ab27accbf2453828
+      internalID: -251099253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_72
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 818
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd82357e0159bc743ae7fd10f41c0ea8
+      internalID: -1229549780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_73
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 818
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4943987c9fb884e8bf76bd484b9dc3
+      internalID: -1471331155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_74
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 828
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6b990b7a39d194f8705d4fc31b5050
+      internalID: -767386509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_75
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 828
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15634bb3b3106704391d31b7aa84ba46
+      internalID: -1552545037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_76
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 818
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ff194a0c71fe8478367abe03609d27
+      internalID: 39345948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_77
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 818
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae56e4c33dbb91b4794c882f4c74e462
+      internalID: 811094182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_78
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 818
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117098e4b06514341bd935caa0ea4339
+      internalID: 1942036905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_79
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 818
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877a8f47a67ec584eafd6fe45a5bd16c
+      internalID: -1743132239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_80
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 818
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d72c250fa047347873933492bb7031
+      internalID: 1697620418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_81
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 818
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a37c6bae95dfe947b83b7564d295d14
+      internalID: 2067357651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_82
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 828
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7963627738aabb7469ece5f89bcd86c8
+      internalID: 900031039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_83
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 818
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002bf88583772274284df37450b40bde
+      internalID: 219251095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_84
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 818
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3514c3fa17c9fc140b7c6521024a4fa3
+      internalID: 787543430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_85
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 818
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ba3221ba05fdb489ec0133e4c4b038
+      internalID: -365308672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid 3
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 43
+        width: 779
+        height: 744
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f01ebb8f49ed448a44d83c70a5920d
+      internalID: 1230933910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_87
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 733
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c7c7ea33715a24cb1c3fd51e5f7101
+      internalID: -1015403492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_88
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 733
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fd99bc7d3873c44a04873a0cd098b0
+      internalID: -1182922615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_89
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 733
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2160ff261e285074ca3a8449cd8b293b
+      internalID: -2102461669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_90
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 733
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee9371335cf59c4cb39935fc2c055df
+      internalID: 1606472752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_91
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 733
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5364a3ca751694ab8a2dbbc547c5c1
+      internalID: -2099947470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_92
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 733
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435845a2d5452c74fac53d9b61697568
+      internalID: -885801196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_93
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 733
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc68a071a103c343bc71bf979128f45
+      internalID: -1865971058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_94
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 733
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ca50e8b892ee24ebff0d097d663586
+      internalID: 1723422787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_95
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 733
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5969082cd2ebe4e9d1ce723ad28d32
+      internalID: 495251303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_96
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 733
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60e9ad87ba2fe8409bbadf854ddcc5a
+      internalID: 608955643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mute Icon
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 424
+        width: 271
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5528eaa95cd61634285bf2e1cfd93b83
+      internalID: 2143067186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Music Volume Icon
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 424
+        width: 278
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cae2b667be97504b8bed683cc4c0377
+      internalID: -544867238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_109
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 216
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba01e8071aac894faa9e86ac52bf47c
+      internalID: 1005303267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_110
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 216
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4436479c27be34384b90d746ec00ab
+      internalID: 377521826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_111
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 216
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aaabe4b2791a714fb5cedad92235d09
+      internalID: 901374850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_112
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 216
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952c811f233f35b48b060161e954deed
+      internalID: -1101423287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_113
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 216
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69c151f0d767024aa362e589d069a1c
+      internalID: 1047961081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_114
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 216
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe2cc0d97de83848b3a3c81767a192c
+      internalID: -359320737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_115
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 216
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b7bfe7b75c5b6478e701e8c893cffc
+      internalID: -1859922765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_116
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 216
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53dfcfb96263c341b8fed019510dcec
+      internalID: -444002519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_117
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 216
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c324af4f001bf24d9fabef15b20ba9b
+      internalID: 511502192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_118
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 216
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6607df0e6da5aed45b99854d1d4a3c8c
+      internalID: -399926760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_119
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 216
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d6d2f0afd59584490f37fd41c640d9
+      internalID: -405206366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_120
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 216
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d051c3f353a25458f6973e3e5335f1
+      internalID: -2054443256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_121
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 216
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6feb879746e0db844bc77368e0228cdc
+      internalID: -382128224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_122
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 216
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bde41bdf37d37d48b3df229520b46c0
+      internalID: -1874684793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_123
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 216
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e54436434dffcf4dac6ab074353592b
+      internalID: 2068322518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_124
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 216
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac529b6abac5fdc45abfdfa925885b1c
+      internalID: 1450842210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_125
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 216
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb538aaa755c934c9c9ee2d6b2c59f3
+      internalID: 1292410039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_126
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 216
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bae335441ae0cf489805e0dc5530f18
+      internalID: 1277278525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_137
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 121
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99385a6ea1514174398d222fd35d2483
+      internalID: 2017465597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_138
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 121
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa808999724b3b40b53e62a7dbcdf9f
+      internalID: 975932333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_139
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 121
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369100ac7234ef84d92af073b5a67e86
+      internalID: 779990594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_140
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 121
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592cbb82b9410984f94cd425a0fe9e74
+      internalID: 1390089587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_141
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 121
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2912f46586d27ac4980a87f424ca8da1
+      internalID: 1889628341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_142
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e661027689819488b14e2f847480f9
+      internalID: -762290087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_143
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 121
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772c86ae3df9ce74cb02324d1bd9dd29
+      internalID: -1396076219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_144
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 121
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4da48dd5430b704fa70fb221db6b398
+      internalID: -400411012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_145
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 121
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95429bffb0300745bfc188a9df4d020
+      internalID: -1420338237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_146
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 121
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fb2edab56aa9746808ae1fc008d834
+      internalID: 649523854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_147
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 121
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0859fca0e0a45e04cbf7885c4f31dc3f
+      internalID: 700050422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_148
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 118
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749854331fcef3041a25876c7457eb56
+      internalID: 10203040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_149
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 121
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2f9741f81135541b1c2015c47e54ab
+      internalID: -1590772407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_150
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 121
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8d306b54ccb8745905a429d736b890
+      internalID: 289138531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_151
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 121
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bc01e12001da14eb9d1bfcc18779b7
+      internalID: 20378623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_152
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 121
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c663c0aaa2f858b49b336d83a6605655
+      internalID: 945859665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_153
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 121
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708607eb795bfb848959b080d174ba08
+      internalID: 376409449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_154
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8123e345a8497c74da5474407b856dbb
+      internalID: 1009891404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_155
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc219cba04a4e9499b25b6fcd7e7141
+      internalID: 647142998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_156
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 121
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3be1ac5485abce4184811dae75b51c5
+      internalID: 2024011405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_157
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 121
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4bc42adebf3554baf970512cf33ed8
+      internalID: -315683202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_158
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 121
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3833f356c6b7b49b25c76915c74dfe
+      internalID: 2140900765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_159
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 121
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b122ec15b7e644fa5b81f25a896118
+      internalID: -459909648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_160
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 121
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7490e60e49e3842b49b7f312730da7
+      internalID: -683026316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_161
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 118
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c6f920d64a90b4bb5d35c45196b96e
+      internalID: -868033506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_162
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5dd0dc1608e504c87ba53e89fcffac
+      internalID: 1433371062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_163
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 121
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c711a786646e841bcf05bd4c436e33
+      internalID: -401974569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_164
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 121
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc0844846de5104ca87b50121fce8f7
+      internalID: 2146864876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_165
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 121
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cff6b8fc9ad7849ab468cab093ffcb
+      internalID: -1776989497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_166
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 121
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244f3b4611a8832478449dcc178224a3
+      internalID: 383798873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_167
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 121
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3dafecca19ccf419844583e7a0ccd6
+      internalID: 1104085033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_168
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 118
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec8ae398f71b4a49b26ae5a7ee4a80c
+      internalID: -200851890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_169
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 118
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db43ef6ee5ef93e42bc72ba65b7b0ad7
+      internalID: -71880544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_170
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 118
+        width: 58
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f75b774d65f9140b9fea8911727755
+      internalID: 704244168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_171
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 121
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403bb2ca695f2c84ab2d26bf5a8ebbd3
+      internalID: -68138203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_172
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 121
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62b9ee187b5b63488d7aa354d0d3a42
+      internalID: 2128939519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_173
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 121
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9def08d373ffad34da2b784d35fad01e
+      internalID: 342126248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_174
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 121
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30e15be552f5cc43a91bf55f5e9122a
+      internalID: 1084461174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_175
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979c86a4dff47d543ba46fbf98c0d2c2
+      internalID: -1987937466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_176
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 118
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b705f14cad79c694494e14e63f53e3f8
+      internalID: -1832556862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_177
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 118
+        width: 59
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a3d563695f6954d9a8d2cf5bdc0b4a
+      internalID: 1027198483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_178
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 121
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e175ba98d97a94742b5c021bca27e48d
+      internalID: -2034542171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_179
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 121
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d470ababacfff4f9019d175f8dc935
+      internalID: 433953466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_180
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 121
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e91cb2399c2f384884653e97f95627a
+      internalID: -1942214041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_181
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 121
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51438ade12370e43a7c547aaeeb0631
+      internalID: -339867403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_182
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 118
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b681eb9b3d8c5ce4cbbf73a9f67bc315
+      internalID: 674371231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_183
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888d1c5b4f3fbff4f8f99c5820fd3e9d
+      internalID: -859210747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_184
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 118
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97222517b37c95f4e8230cd591e61221
+      internalID: -1705388559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_185
+      rect:
+        serializedVersion: 2
+        x: 2339
+        y: 121
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72a586f626cc7341bf6e0259a140d99
+      internalID: -2137182696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_186
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 121
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f44a6716f74694ca4caeb96bea6324
+      internalID: 688260114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_187
+      rect:
+        serializedVersion: 2
+        x: 2402
+        y: 121
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c231afc18b51da141a0195abe5b2d3e2
+      internalID: -510918193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_188
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 121
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a612539818cec449a7dfd18702f962
+      internalID: -906011611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_189
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e2e5d4650401b44ae5745d50929f1b
+      internalID: -1708981299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_190
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 118
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b876287f576b24ba912702ea633ebe
+      internalID: 361751837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_191
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0ab043ebe26cb4c86c9997c66a6261
+      internalID: 707118707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_192
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 24
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce95e760ecf61624281bcd8b2bca925c
+      internalID: -1811563558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_193
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 24
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf030cf842b2f64b8ccaf0d26b9d2c6
+      internalID: -1029550524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_194
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 24
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4103b7008481ceb4e82eb2b59651ce31
+      internalID: 988466243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_195
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 24
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261fc4deb3af41e4dbbc441cbb6b22cb
+      internalID: 933036171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_196
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 24
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f675d0e1208318742bd0fd872ce939f0
+      internalID: -1581528239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_197
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 23
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82fe0316f5cbd9949a7bf991660c2551
+      internalID: -1624633796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_198
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 23
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fed0a98fb36c40468f3880f89fe1e8f
+      internalID: -254449571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_199
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 23
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe91968fcc8634e45977ba4749cd4e12
+      internalID: -136651094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mall Merge Letters
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 377
+        width: 867
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f0677116229f14885021426f3d3932
+      internalID: -463446053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 311
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849e330cd0a7da24fb39e40da945b8c5
+      internalID: 443620188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 311
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c057a2108c3554b984656b29be3bd7
+      internalID: -1590379253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 308
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233a40589f506fb4188b5296cfa1d72b
+      internalID: 1567165474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 308
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bc2385963f3aa44abc4a98efbf3aa2
+      internalID: -1179247389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 303
+        width: 74
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5033145d3876df8448b7b2b4d9cb065b
+      internalID: -2027309861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remaining Sprites_86
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 305
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5368fbd69c45fe6439e2f2e945617127
+      internalID: 594527579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 206e8075572a3214cb14462bc8ce0d1a
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Grid 0: -1480112519
+      Grid 1: 1369562430
+      Grid 2: 458939357
+      Grid 3: 1230933910
+      Helpline text: 710411264
+      MG Basket Darkened: -501257643
+      Mall Merge Letters: -463446053
+      Mini Gmae Basket: 1529608733
+      Music Volume Icon: -544867238
+      Mute Icon: 2143067186
+      Remaining Sprites_0: 443620188
+      Remaining Sprites_1: -1590379253
+      Remaining Sprites_10: -1500950694
+      Remaining Sprites_101: 1923316678
+      Remaining Sprites_102: -1192274230
+      Remaining Sprites_103: -1574055169
+      Remaining Sprites_104: -272837799
+      Remaining Sprites_105: 1397312341
+      Remaining Sprites_106: -694778028
+      Remaining Sprites_107: 1186242053
+      Remaining Sprites_108: 1520598319
+      Remaining Sprites_109: 1005303267
+      Remaining Sprites_11: 1442054300
+      Remaining Sprites_110: 377521826
+      Remaining Sprites_111: 901374850
+      Remaining Sprites_112: -1101423287
+      Remaining Sprites_113: 1047961081
+      Remaining Sprites_114: -359320737
+      Remaining Sprites_115: -1859922765
+      Remaining Sprites_116: -444002519
+      Remaining Sprites_117: 511502192
+      Remaining Sprites_118: -399926760
+      Remaining Sprites_119: -405206366
+      Remaining Sprites_12: 1879145246
+      Remaining Sprites_120: -2054443256
+      Remaining Sprites_121: -382128224
+      Remaining Sprites_122: -1874684793
+      Remaining Sprites_123: 2068322518
+      Remaining Sprites_124: 1450842210
+      Remaining Sprites_125: 1292410039
+      Remaining Sprites_126: 1277278525
+      Remaining Sprites_127: 1102592253
+      Remaining Sprites_128: -1824843132
+      Remaining Sprites_129: 219613585
+      Remaining Sprites_13: 941850509
+      Remaining Sprites_130: -1598450200
+      Remaining Sprites_131: -1529842623
+      Remaining Sprites_132: -1258253390
+      Remaining Sprites_133: 968968235
+      Remaining Sprites_134: 205861410
+      Remaining Sprites_135: 1867961142
+      Remaining Sprites_136: 314040980
+      Remaining Sprites_137: 2017465597
+      Remaining Sprites_138: 975932333
+      Remaining Sprites_139: 779990594
+      Remaining Sprites_14: 1731663445
+      Remaining Sprites_140: 1390089587
+      Remaining Sprites_141: 1889628341
+      Remaining Sprites_142: -762290087
+      Remaining Sprites_143: -1396076219
+      Remaining Sprites_144: -400411012
+      Remaining Sprites_145: -1420338237
+      Remaining Sprites_146: 649523854
+      Remaining Sprites_147: 700050422
+      Remaining Sprites_148: 10203040
+      Remaining Sprites_149: -1590772407
+      Remaining Sprites_15: 1724157224
+      Remaining Sprites_150: 289138531
+      Remaining Sprites_151: 20378623
+      Remaining Sprites_152: 945859665
+      Remaining Sprites_153: 376409449
+      Remaining Sprites_154: 1009891404
+      Remaining Sprites_155: 647142998
+      Remaining Sprites_156: 2024011405
+      Remaining Sprites_157: -315683202
+      Remaining Sprites_158: 2140900765
+      Remaining Sprites_159: -459909648
+      Remaining Sprites_16: -1784340098
+      Remaining Sprites_160: -683026316
+      Remaining Sprites_161: -868033506
+      Remaining Sprites_162: 1433371062
+      Remaining Sprites_163: -401974569
+      Remaining Sprites_164: 2146864876
+      Remaining Sprites_165: -1776989497
+      Remaining Sprites_166: 383798873
+      Remaining Sprites_167: 1104085033
+      Remaining Sprites_168: -200851890
+      Remaining Sprites_169: -71880544
+      Remaining Sprites_17: -312756412
+      Remaining Sprites_170: 704244168
+      Remaining Sprites_171: -68138203
+      Remaining Sprites_172: 2128939519
+      Remaining Sprites_173: 342126248
+      Remaining Sprites_174: 1084461174
+      Remaining Sprites_175: -1987937466
+      Remaining Sprites_176: -1832556862
+      Remaining Sprites_177: 1027198483
+      Remaining Sprites_178: -2034542171
+      Remaining Sprites_179: 433953466
+      Remaining Sprites_18: -1536794897
+      Remaining Sprites_180: -1942214041
+      Remaining Sprites_181: -339867403
+      Remaining Sprites_182: 674371231
+      Remaining Sprites_183: -859210747
+      Remaining Sprites_184: -1705388559
+      Remaining Sprites_185: -2137182696
+      Remaining Sprites_186: 688260114
+      Remaining Sprites_187: -510918193
+      Remaining Sprites_188: -906011611
+      Remaining Sprites_189: -1708981299
+      Remaining Sprites_19: 446593603
+      Remaining Sprites_190: 361751837
+      Remaining Sprites_191: 707118707
+      Remaining Sprites_192: -1811563558
+      Remaining Sprites_193: -1029550524
+      Remaining Sprites_194: 988466243
+      Remaining Sprites_195: 933036171
+      Remaining Sprites_196: -1581528239
+      Remaining Sprites_197: -1624633796
+      Remaining Sprites_198: -254449571
+      Remaining Sprites_199: -136651094
+      Remaining Sprites_2: 1567165474
+      Remaining Sprites_20: 1763479670
+      Remaining Sprites_21: 659638451
+      Remaining Sprites_22: -2114173191
+      Remaining Sprites_23: -559062226
+      Remaining Sprites_24: -364849881
+      Remaining Sprites_25: -1696627977
+      Remaining Sprites_26: -1760948462
+      Remaining Sprites_27: -1417948083
+      Remaining Sprites_28: -2011911483
+      Remaining Sprites_29: -1165235422
+      Remaining Sprites_3: -1179247389
+      Remaining Sprites_30: -1047854183
+      Remaining Sprites_31: 1122296630
+      Remaining Sprites_32: 1500237654
+      Remaining Sprites_33: -394640693
+      Remaining Sprites_34: -1213355995
+      Remaining Sprites_35: 1057113808
+      Remaining Sprites_36: -357170692
+      Remaining Sprites_37: -1547498390
+      Remaining Sprites_38: 337488453
+      Remaining Sprites_39: 423577694
+      Remaining Sprites_4: -2027309861
+      Remaining Sprites_40: -1149274086
+      Remaining Sprites_41: 102453803
+      Remaining Sprites_42: -453173352
+      Remaining Sprites_43: -1737703552
+      Remaining Sprites_44: -56359396
+      Remaining Sprites_45: 1666888965
+      Remaining Sprites_46: 1386763619
+      Remaining Sprites_47: -1167683721
+      Remaining Sprites_48: -208653878
+      Remaining Sprites_49: 1017329331
+      Remaining Sprites_50: 965049650
+      Remaining Sprites_51: 1494427284
+      Remaining Sprites_52: -1006651476
+      Remaining Sprites_53: -1218632353
+      Remaining Sprites_54: 1286502263
+      Remaining Sprites_55: -1690143110
+      Remaining Sprites_56: -1135167790
+      Remaining Sprites_57: 1478890669
+      Remaining Sprites_58: -423213096
+      Remaining Sprites_59: 336383017
+      Remaining Sprites_6: -880581394
+      Remaining Sprites_60: 961359610
+      Remaining Sprites_61: 2069498753
+      Remaining Sprites_62: -1793137352
+      Remaining Sprites_63: -352478764
+      Remaining Sprites_64: -1710784810
+      Remaining Sprites_65: 5036167
+      Remaining Sprites_66: 43962593
+      Remaining Sprites_67: 1025228004
+      Remaining Sprites_68: 1141947678
+      Remaining Sprites_69: 428579374
+      Remaining Sprites_7: 2005206992
+      Remaining Sprites_70: 463110247
+      Remaining Sprites_71: -251099253
+      Remaining Sprites_72: -1229549780
+      Remaining Sprites_73: -1471331155
+      Remaining Sprites_74: -767386509
+      Remaining Sprites_75: -1552545037
+      Remaining Sprites_76: 39345948
+      Remaining Sprites_77: 811094182
+      Remaining Sprites_78: 1942036905
+      Remaining Sprites_79: -1743132239
+      Remaining Sprites_8: 499787611
+      Remaining Sprites_80: 1697620418
+      Remaining Sprites_81: 2067357651
+      Remaining Sprites_82: 900031039
+      Remaining Sprites_83: 219251095
+      Remaining Sprites_84: 787543430
+      Remaining Sprites_85: -365308672
+      Remaining Sprites_86: 594527579
+      Remaining Sprites_87: -1015403492
+      Remaining Sprites_88: -1182922615
+      Remaining Sprites_89: -2102461669
+      Remaining Sprites_9: -344722843
+      Remaining Sprites_90: 1606472752
+      Remaining Sprites_91: -2099947470
+      Remaining Sprites_92: -885801196
+      Remaining Sprites_93: -1865971058
+      Remaining Sprites_94: 1723422787
+      Remaining Sprites_95: 495251303
+      Remaining Sprites_96: 608955643
+      Remaining Sprites_98: 586325002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
