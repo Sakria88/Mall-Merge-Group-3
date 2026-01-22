@@ -207,27 +207,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shop Catalogue BG
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 491
-        width: 567
-        height: 847
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35414476590930046bb378debb21f723
-      internalID: -541873369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Backgrounds1 Sheet_5
       rect:
         serializedVersion: 2
@@ -307,6 +286,27 @@ TextureImporter:
       bones: []
       spriteID: 4f521b2e3ae555042bf63dd523c2469d
       internalID: 1168031143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop Catalogue BG
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 566
+        width: 565
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07663eb73f0d8245827b628af43c5e9
+      internalID: -541873369
       vertices: []
       indices: 
       edges: []
