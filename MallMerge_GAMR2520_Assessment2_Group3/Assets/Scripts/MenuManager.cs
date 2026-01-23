@@ -80,6 +80,8 @@ public class MenuManager : MonoBehaviour
     public void OnPlayButtonClicked()
     {
         PlayClickSound();
+        
+        // Ensure "Main Game Play Area" matches your Scene name in Build Settings exactly
         SceneManager.LoadScene("Main Game Play Area");
     }
 
