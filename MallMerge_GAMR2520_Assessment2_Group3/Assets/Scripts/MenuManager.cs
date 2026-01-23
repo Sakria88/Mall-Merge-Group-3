@@ -8,49 +8,52 @@ public partial class MenuManager : MonoBehaviour
     public GameObject settingsMenuPanel;
     public GameObject shopCataloguePanel;
     public GameObject helpMenuPanel;
+    public GameObject musicMenuPanel; // New Panel
 
-    // --- BUTTON FUNCTIONS ---
+    private GameObject previousPanel; // Tracks the last active panel
 
-    // 1. Play Button: Go to last saved area in "Main Game Play Area"
-    public void OnPlayButtonClicked()
+    // --- SETTINGS NAV FUNCTIONS ---
+
+    // 1. Exit Button: Go back to whatever page it was on before Settings
+    public void OnSettingsExitButtonClicked()
     {
-        // SceneManager.LoadScene will load the specified scene. 
-        // Logic for "last saved area" would typically be handled 
-        // within that scene's initialization.
-        SceneManager.LoadScene("Main Game Play Area");
+        if (previousPanel != null)
+        {
+            SwitchPanel(previousPanel);
+        }
+        else
+        {
+            // Default to Main Menu if no history exists
+            SwitchPanel(mainMenuPanel);
+        }
     }
 
-    // 2. Settings Button: Open Settings Menu Panel
-    public void OnSettingsButtonClicked()
+    // 2. Back Button: Always go to Main Menu
+    public void OnSettingsBackToMainClicked()
     {
-        SwitchPanel(settingsMenuPanel);
+        SwitchPanel(mainMenuPanel);
     }
 
-    // 3. Shop Button: Open Shop Catalogue Panel
-    public void OnShopButtonClicked()
+    // 3. Music Button: Go to Music Menu Panel
+    public void OnMusicButtonClicked()
     {
-        SwitchPanel(shopCataloguePanel);
+        SwitchPanel(musicMenuPanel);
     }
 
-    // 4. Help Button: Open Help Menu Panel
-    public void OnHelpButtonClicked()
-    {
-        SwitchPanel(helpMenuPanel);
-    }
-
-    // 5. Mini Game Button (Inside Shop/Mini Game Panel)
-    public void OnMiniGameButtonClicked()
-    {
-        SceneManager.LoadScene("mini game scene");
-    }
-
-    // Helper method to toggle visibility
+    // Updated SwitchPanel to track history
     private void SwitchPanel(GameObject targetPanel)
     {
+        // Record the current panel as 'previous' before switching, 
+        // unless we are already in settings/music to avoid loops.
+        if (mainMenuPanel.activeSelf) previousPanel = mainMenuPanel;
+        else if (shopCataloguePanel.activeSelf) previousPanel = shopCataloguePanel;
+        else if (helpMenuPanel.activeSelf) previousPanel = helpMenuPanel;
+
         mainMenuPanel.SetActive(false);
         settingsMenuPanel.SetActive(false);
         shopCataloguePanel.SetActive(false);
         helpMenuPanel.SetActive(false);
+        musicMenuPanel.SetActive(false);
 
         targetPanel.SetActive(true);
     }
