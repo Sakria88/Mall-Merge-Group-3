@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI; // Needed for Slider and Image
+using UnityEngine.UI; 
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -13,8 +13,8 @@ public class MenuManager : MonoBehaviour
 
     [Header("Audio Settings")]
     public AudioSource musicSource;
-    public AudioClip chillyMusic; // Option 1
-    public AudioClip dreamMusic;  // Option 2
+    public AudioClip chillyMusic; 
+    public AudioClip dreamMusic;  
 
     [Header("Sound Effects")]
     public AudioClip buttonClickSFX;
@@ -25,13 +25,12 @@ public class MenuManager : MonoBehaviour
     public Sprite volumeSprite;
     public Sprite muteSprite;
 
-    private GameObject previousPanel; // Tracks where we came from for the 'Exit' button
+    private GameObject previousPanel; 
     private bool isMuted = false;
     private float preMuteVolume = 1f;
 
     void Start()
     {
-        // 1. Initialize Music (Start with Chilly.wav)
         if (musicSource != null && chillyMusic != null)
         {
             musicSource.clip = chillyMusic;
@@ -39,13 +38,11 @@ public class MenuManager : MonoBehaviour
             musicSource.loop = true;
         }
 
-        // 2. Initialize slider position to current volume
         if (volumeSlider != null && musicSource != null)
         {
             volumeSlider.value = musicSource.volume;
         }
 
-        // 3. Initialize UI (Start on Main Menu)
         SwitchPanel(mainMenuPanel);
     }
 
@@ -85,17 +82,11 @@ public class MenuManager : MonoBehaviour
         SwitchPanel(helpMenuPanel);
     }
 
-    // --- SETTINGS FUNCTIONS ---
+    // --- SETTINGS & NAVIGATION FUNCTIONS ---
 
     public void OnSettingsExitButtonClicked()
     {
         UniversalExit();
-    }
-
-    public void OnSettingsBackToMainClicked()
-    {
-        PlayClickSound();
-        SwitchPanel(mainMenuPanel);
     }
 
     public void OnMusicButtonClicked()
@@ -104,21 +95,45 @@ public class MenuManager : MonoBehaviour
         SwitchPanel(musicMenuPanel);
     }
 
-    // --- HELP MENU FUNCTIONS ---
+    public void OnMusicExitButtonClicked()
+    {
+        PlayClickSound();
+        SwitchPanel(settingsMenuPanel);
+    }
 
     public void OnHelpExitButtonClicked()
     {
         PlayClickSound();
-
-        // 1. If we have a record of a panel in THIS scene, go back to it
         if (previousPanel != null)
         {
             SwitchPanel(previousPanel);
         }
-        // 2. If no previous panel is recorded, it means we likely came from a different scene
         else
         {
             SceneManager.LoadScene("Main Game Play Area");
+        }
+    }
+
+    // --- SPECIFIC EXIT LOGIC ---
+
+    // Assign this to your "Exit" button in Settings to force return to Main Menu
+    public void BackToMainMenu()
+    {
+        PlayClickSound();
+        SwitchPanel(mainMenuPanel);
+        previousPanel = mainMenuPanel;
+    }
+
+    public void UniversalExit()
+    {
+        PlayClickSound();
+        if (previousPanel != null && previousPanel != musicMenuPanel)
+        {
+            SwitchPanel(previousPanel);
+        }
+        else
+        {
+            SwitchPanel(mainMenuPanel);
         }
     }
 
@@ -164,7 +179,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    // --- MUSIC MENU FUNCTIONS ---
+    // --- MUSIC SELECTION ---
 
     public void OnOption1Clicked()
     {
@@ -185,26 +200,7 @@ public class MenuManager : MonoBehaviour
         musicSource.Play();
     }
 
-    public void OnMusicExitButtonClicked()
-    {
-        UniversalExit();
-    }
-
-    // --- SHARED NAVIGATION LOGIC ---
-
-    public void UniversalExit()
-    {
-        PlayClickSound();
-
-        if (previousPanel != null)
-        {
-            SwitchPanel(previousPanel);
-        }
-        else
-        {
-            SwitchPanel(mainMenuPanel);
-        }
-    }
+    // --- CORE LOGIC ---
 
     public void OnMiniGameButtonClicked()
     {
@@ -214,7 +210,7 @@ public class MenuManager : MonoBehaviour
 
     private void SwitchPanel(GameObject targetPanel)
     {
-        // Record history only if we are currently on a major panel
+        // Record history ONLY if we are moving away from a 'root' panel
         if (mainMenuPanel.activeSelf) previousPanel = mainMenuPanel;
         else if (shopCataloguePanel.activeSelf) previousPanel = shopCataloguePanel;
         else if (helpMenuPanel.activeSelf) previousPanel = helpMenuPanel;
