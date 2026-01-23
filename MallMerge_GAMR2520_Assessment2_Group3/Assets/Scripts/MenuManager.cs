@@ -8,13 +8,41 @@ public partial class MenuManager : MonoBehaviour
     public GameObject settingsMenuPanel;
     public GameObject shopCataloguePanel;
     public GameObject helpMenuPanel;
-    public GameObject musicMenuPanel; // New Panel
+    public GameObject musicMenuPanel;
 
-    private GameObject previousPanel; // Tracks the last active panel
+    private GameObject previousPanel; // Tracks where we came from for the 'Exit' button
 
-    // --- SETTINGS NAV FUNCTIONS ---
+    void Start()
+    {
+        // This ensures that even if you left the Settings panel open in the editor,
+        // the game starts fresh on the Main Menu.
+        SwitchPanel(mainMenuPanel);
+    }
 
-    // 1. Exit Button: Go back to whatever page it was on before Settings
+    // --- MAIN MENU FUNCTIONS ---
+
+    public void OnPlayButtonClicked()
+    {
+        SceneManager.LoadScene("Main Game Play Area");
+    }
+
+    public void OnSettingsButtonClicked()
+    {
+        SwitchPanel(settingsMenuPanel);
+    }
+
+    public void OnShopButtonClicked()
+    {
+        SwitchPanel(shopCataloguePanel);
+    }
+
+    public void OnHelpButtonClicked()
+    {
+        SwitchPanel(helpMenuPanel);
+    }
+
+    // --- SETTINGS FUNCTIONS ---
+
     public void OnSettingsExitButtonClicked()
     {
         if (previousPanel != null)
@@ -23,38 +51,48 @@ public partial class MenuManager : MonoBehaviour
         }
         else
         {
-            // Default to Main Menu if no history exists
             SwitchPanel(mainMenuPanel);
         }
     }
 
-    // 2. Back Button: Always go to Main Menu
     public void OnSettingsBackToMainClicked()
     {
         SwitchPanel(mainMenuPanel);
     }
 
-    // 3. Music Button: Go to Music Menu Panel
     public void OnMusicButtonClicked()
     {
         SwitchPanel(musicMenuPanel);
     }
 
-    // Updated SwitchPanel to track history
+    // --- OTHER FUNCTIONS ---
+
+    public void OnMiniGameButtonClicked()
+    {
+        SceneManager.LoadScene("mini game scene");
+    }
+
+    // --- CORE LOGIC ---
+
     private void SwitchPanel(GameObject targetPanel)
     {
-        // Record the current panel as 'previous' before switching, 
-        // unless we are already in settings/music to avoid loops.
+        // 1. Record the current active panel as 'previous' before we hide it
+        // We only track history if we aren't already in a sub-menu to avoid loops
         if (mainMenuPanel.activeSelf) previousPanel = mainMenuPanel;
         else if (shopCataloguePanel.activeSelf) previousPanel = shopCataloguePanel;
         else if (helpMenuPanel.activeSelf) previousPanel = helpMenuPanel;
 
+        // 2. Turn everything off
         mainMenuPanel.SetActive(false);
         settingsMenuPanel.SetActive(false);
         shopCataloguePanel.SetActive(false);
         helpMenuPanel.SetActive(false);
         musicMenuPanel.SetActive(false);
 
-        targetPanel.SetActive(true);
+        // 3. Turn the requested panel on
+        if (targetPanel != null)
+        {
+            targetPanel.SetActive(true);
+        }
     }
 }
