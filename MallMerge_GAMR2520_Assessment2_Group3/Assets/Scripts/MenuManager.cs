@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI; // Needed for Slider and Image
 using UnityEngine.SceneManagement;
 
-public partial class MenuManager : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     [Header("Menu Panels")]
     public GameObject mainMenuPanel;
@@ -10,12 +11,38 @@ public partial class MenuManager : MonoBehaviour
     public GameObject helpMenuPanel;
     public GameObject musicMenuPanel;
 
+    [Header("Audio Settings")]
+    public AudioSource musicSource;
+    public AudioClip chillyMusic; // Option 1
+    public AudioClip dreamMusic;  // Option 2
+
+    [Header("Volume UI")]
+    public Slider volumeSlider;
+    public Image muteButtonImage;
+    public Sprite volumeSprite;
+    public Sprite muteSprite;
+
     private GameObject previousPanel; // Tracks where we came from for the 'Exit' button
+    private bool isMuted = false;
+    private float preMuteVolume = 1f;
 
     void Start()
     {
-        // This ensures that even if you left the Settings panel open in the editor,
-        // the game starts fresh on the Main Menu.
+        // 1. Initialize Music (Start with Chilly.wav)
+        if (musicSource != null && chillyMusic != null)
+        {
+            musicSource.clip = chillyMusic;
+            musicSource.Play();
+            musicSource.loop = true;
+        }
+
+        // 2. Initialize slider position to current volume
+        if (volumeSlider != null && musicSource != null)
+        {
+            volumeSlider.value = musicSource.volume;
+        }
+
+        // 3. Initialize UI (Start on Main Menu)
         SwitchPanel(mainMenuPanel);
     }
 
@@ -65,6 +92,72 @@ public partial class MenuManager : MonoBehaviour
         SwitchPanel(musicMenuPanel);
     }
 
+    // --- AUDIO CONTROLS ---
+
+    // For the Slider: Link to "On Value Changed" (Dynamic float)
+    public void SetVolume(float volume)
+    {
+        if (musicSource == null) return;
+
+        musicSource.volume = volume;
+
+        // If player moves slider up while muted, unmute them visually
+        if (volume > 0 && isMuted)
+        {
+            isMuted = false;
+            if (muteButtonImage != null) muteButtonImage.sprite = volumeSprite;
+        }
+    }
+
+    // For the Mute Button: Link to "On Click"
+    public void ToggleMute()
+    {
+        if (musicSource == null) return;
+
+        isMuted = !isMuted;
+
+        if (isMuted)
+        {
+            preMuteVolume = musicSource.volume; // Save current level
+            musicSource.volume = 0;
+            if (volumeSlider != null) volumeSlider.value = 0;
+            if (muteButtonImage != null) muteButtonImage.sprite = muteSprite;
+        }
+        else
+        {
+            // Restore volume or default to 50%
+            musicSource.volume = preMuteVolume > 0 ? preMuteVolume : 0.5f;
+            if (volumeSlider != null) volumeSlider.value = musicSource.volume;
+            if (muteButtonImage != null) muteButtonImage.sprite = volumeSprite;
+        }
+    }
+
+    // --- MUSIC MENU FUNCTIONS ---
+
+    public void OnOption1Clicked()
+    {
+        PlaySong(chillyMusic);
+    }
+
+    public void OnOption2Clicked()
+    {
+        PlaySong(dreamMusic);
+    }
+
+    private void PlaySong(AudioClip clip)
+    {
+        if (musicSource == null || clip == null) return;
+        if (musicSource.clip == clip) return; 
+
+        musicSource.clip = clip;
+        musicSource.Play();
+    }
+
+    public void OnMusicExitButtonClicked()
+    {
+        SwitchPanel(settingsMenuPanel);
+    }
+
     // --- OTHER FUNCTIONS ---
 
     public void OnMiniGameButtonClicked()
@@ -76,20 +169,19 @@ public partial class MenuManager : MonoBehaviour
 
     private void SwitchPanel(GameObject targetPanel)
     {
-        // 1. Record the current active panel as 'previous' before we hide it
-        // We only track history if we aren't already in a sub-menu to avoid loops
+        // 1. Record history before hiding
         if (mainMenuPanel.activeSelf) previousPanel = mainMenuPanel;
         else if (shopCataloguePanel.activeSelf) previousPanel = shopCataloguePanel;
         else if (helpMenuPanel.activeSelf) previousPanel = helpMenuPanel;
 
-        // 2. Turn everything off
+        // 2. Turn all panels off
         mainMenuPanel.SetActive(false);
         settingsMenuPanel.SetActive(false);
         shopCataloguePanel.SetActive(false);
         helpMenuPanel.SetActive(false);
         musicMenuPanel.SetActive(false);
 
-        // 3. Turn the requested panel on
+        // 3. Turn requested panel on
         if (targetPanel != null)
         {
             targetPanel.SetActive(true);
