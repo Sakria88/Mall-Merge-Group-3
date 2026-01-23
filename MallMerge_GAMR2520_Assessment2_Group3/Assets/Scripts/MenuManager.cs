@@ -82,7 +82,7 @@ public class MenuManager : MonoBehaviour
         PlayClickSound();
         
         // Ensure "Main Game Play Area" matches your Scene name in Build Settings exactly
-        SceneManager.LoadScene("Main Game Play Area");
+        SceneManager.LoadScene("MainGamePlayArea");
     }
 
     public void OnSettingsButtonClicked()
@@ -131,7 +131,7 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Main Game Play Area");
+            SceneManager.LoadScene("MainGamePlayArea");
         }
     }
 
@@ -225,7 +225,7 @@ public class MenuManager : MonoBehaviour
     public void OnMiniGameButtonClicked()
     {
         PlayClickSound();
-        SceneManager.LoadScene("mini game scene");
+        SceneManager.LoadScene("MiniGameScene");
     }
 
     private void SwitchPanel(GameObject targetPanel)
