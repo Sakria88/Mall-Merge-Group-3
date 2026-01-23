@@ -95,43 +95,54 @@ public class MenuManager : MonoBehaviour
     // --- AUDIO CONTROLS ---
 
     // For the Slider: Link to "On Value Changed" (Dynamic float)
-    public void SetVolume(float volume)
+    // 1. Instant Volume Update
+public void SetVolume(float volume)
+{
+    if (musicSource == null) return;
+
+    // Directly set the volume. 0.0 is silent, 1.0 is max.
+    musicSource.volume = volume;
+
+    // Update the UI Icon based on the slider position
+    if (volume > 0 && isMuted)
     {
-        if (musicSource == null) return;
+        isMuted = false;
+        if (muteButtonImage != null) muteButtonImage.sprite = volumeSprite;
+    }
+    else if (volume <= 0 && !isMuted)
+    {
+        isMuted = true;
+        if (muteButtonImage != null) muteButtonImage.sprite = muteSprite;
+    }
+}
 
-        musicSource.volume = volume;
+// 2. Instant Mute (No delay)
+public void ToggleMute()
+{
+    if (musicSource == null) return;
 
-        // If player moves slider up while muted, unmute them visually
-        if (volume > 0 && isMuted)
-        {
-            isMuted = false;
-            if (muteButtonImage != null) muteButtonImage.sprite = volumeSprite;
-        }
+    isMuted = !isMuted;
+
+    // 1. Swap the sprite INSTANTLY
+    if (muteButtonImage != null) 
+    {
+        muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
     }
 
-    // For the Mute Button: Link to "On Click"
-    public void ToggleMute()
+    // 2. Adjust the audio and slider
+    if (isMuted)
     {
-        if (musicSource == null) return;
-
-        isMuted = !isMuted;
-
-        if (isMuted)
-        {
-            preMuteVolume = musicSource.volume; // Save current level
-            musicSource.volume = 0;
-            if (volumeSlider != null) volumeSlider.value = 0;
-            if (muteButtonImage != null) muteButtonImage.sprite = muteSprite;
-        }
-        else
-        {
-            // Restore volume or default to 50%
-            musicSource.volume = preMuteVolume > 0 ? preMuteVolume : 0.5f;
-            if (volumeSlider != null) volumeSlider.value = musicSource.volume;
-            if (muteButtonImage != null) muteButtonImage.sprite = volumeSprite;
-        }
+        preMuteVolume = musicSource.volume;
+        musicSource.volume = 0f;
+        if (volumeSlider != null) volumeSlider.value = 0f;
     }
-
+    else
+    {
+        float restoreVol = preMuteVolume > 0.1f ? preMuteVolume : 0.5f;
+        musicSource.volume = restoreVol;
+        if (volumeSlider != null) volumeSlider.value = restoreVol;
+    }
+}
     // --- MUSIC MENU FUNCTIONS ---
 
     public void OnOption1Clicked()
