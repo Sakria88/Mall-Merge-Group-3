@@ -1874,7 +1874,7 @@ GameObject:
   - component: {fileID: 391272763}
   - component: {fileID: 391272762}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1942,7 +1942,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 391272763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2124864923}
+        m_TargetAssemblyTypeName: PlayAreaNavigation, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &391272763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3509,7 +3521,7 @@ GameObject:
   - component: {fileID: 709869734}
   - component: {fileID: 709869733}
   m_Layer: 5
-  m_Name: Button
+  m_Name: 'Shop Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3577,7 +3589,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 709869734}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2124864923}
+        m_TargetAssemblyTypeName: PlayAreaNavigation, Assembly-CSharp
+        m_MethodName: GoToMenuShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &709869734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7509,7 +7533,7 @@ GameObject:
   - component: {fileID: 1690344518}
   - component: {fileID: 1690344517}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Help Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7577,7 +7601,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1690344518}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2124864923}
+        m_TargetAssemblyTypeName: PlayAreaNavigation, Assembly-CSharp
+        m_MethodName: GoToMenuHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1690344518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7820,13 +7856,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2124864923}
+        m_TargetAssemblyTypeName: PlayAreaNavigation, Assembly-CSharp
+        m_MethodName: GoToMenuSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9660,7 +9696,7 @@ GameObject:
   - component: {fileID: 2124864922}
   - component: {fileID: 2124864923}
   m_Layer: 0
-  m_Name: Play Area Navigation
+  m_Name: NavigationManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9693,7 +9729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06793b103d515f4dbb59267d6f23019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaOne: {fileID: 0}
+  areaOne: {fileID: 166249327}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
