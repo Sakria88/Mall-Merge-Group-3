@@ -51,12 +51,10 @@ public class MenuManager : MonoBehaviour
 
     // --- SOUND EFFECTS ---
 
-    // This function will play the click sound once
     public void PlayClickSound()
     {
         if (musicSource != null && buttonClickSFX != null)
         {
-            // PlayOneShot is best here because it won't stop the background music
             musicSource.PlayOneShot(buttonClickSFX);
         }
     }
@@ -65,21 +63,25 @@ public class MenuManager : MonoBehaviour
 
     public void OnPlayButtonClicked()
     {
+        PlayClickSound();
         SceneManager.LoadScene("Main Game Play Area");
     }
 
     public void OnSettingsButtonClicked()
     {
+        PlayClickSound();
         SwitchPanel(settingsMenuPanel);
     }
 
     public void OnShopButtonClicked()
     {
+        PlayClickSound();
         SwitchPanel(shopCataloguePanel);
     }
 
     public void OnHelpButtonClicked()
     {
+        PlayClickSound();
         SwitchPanel(helpMenuPanel);
     }
 
@@ -87,37 +89,46 @@ public class MenuManager : MonoBehaviour
 
     public void OnSettingsExitButtonClicked()
     {
-        if (previousPanel != null)
-        {
-            SwitchPanel(previousPanel);
-        }
-        else
-        {
-            SwitchPanel(mainMenuPanel);
-        }
+        UniversalExit();
     }
 
     public void OnSettingsBackToMainClicked()
     {
+        PlayClickSound();
         SwitchPanel(mainMenuPanel);
     }
 
     public void OnMusicButtonClicked()
     {
+        PlayClickSound();
         SwitchPanel(musicMenuPanel);
+    }
+
+    // --- HELP MENU FUNCTIONS ---
+
+    public void OnHelpExitButtonClicked()
+    {
+        PlayClickSound();
+
+        // 1. If we have a record of a panel in THIS scene, go back to it
+        if (previousPanel != null)
+        {
+            SwitchPanel(previousPanel);
+        }
+        // 2. If no previous panel is recorded, it means we likely came from a different scene
+        else
+        {
+            SceneManager.LoadScene("Main Game Play Area");
+        }
     }
 
     // --- AUDIO CONTROLS ---
 
-    // For the Slider: Link to "On Value Changed" (Dynamic float)
     public void SetVolume(float volume)
     {
         if (musicSource == null) return;
-
-        // Directly set the volume. 0.0 is silent, 1.0 is max.
         musicSource.volume = volume;
 
-        // Update the UI Icon based on the slider position
         if (volume > 0 && isMuted)
         {
             isMuted = false;
@@ -130,20 +141,15 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    // For the Mute Button: Link to "On Click"
     public void ToggleMute()
     {
         if (musicSource == null) return;
-
+        PlayClickSound();
         isMuted = !isMuted;
 
-        // 1. Swap the sprite INSTANTLY
         if (muteButtonImage != null)
-        {
             muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
-        }
 
-        // 2. Adjust the audio and slider
         if (isMuted)
         {
             preMuteVolume = musicSource.volume;
@@ -162,52 +168,63 @@ public class MenuManager : MonoBehaviour
 
     public void OnOption1Clicked()
     {
+        PlayClickSound();
         PlaySong(chillyMusic);
     }
 
     public void OnOption2Clicked()
     {
+        PlayClickSound();
         PlaySong(dreamMusic);
     }
 
     private void PlaySong(AudioClip clip)
     {
-        if (musicSource == null || clip == null) return;
-        if (musicSource.clip == clip) return;
-
+        if (musicSource == null || clip == null || musicSource.clip == clip) return;
         musicSource.clip = clip;
         musicSource.Play();
     }
 
     public void OnMusicExitButtonClicked()
     {
-        SwitchPanel(settingsMenuPanel);
+        UniversalExit();
     }
 
-    // --- OTHER FUNCTIONS ---
+    // --- SHARED NAVIGATION LOGIC ---
+
+    public void UniversalExit()
+    {
+        PlayClickSound();
+
+        if (previousPanel != null)
+        {
+            SwitchPanel(previousPanel);
+        }
+        else
+        {
+            SwitchPanel(mainMenuPanel);
+        }
+    }
 
     public void OnMiniGameButtonClicked()
     {
+        PlayClickSound();
         SceneManager.LoadScene("mini game scene");
     }
 
-    // --- CORE LOGIC ---
-
     private void SwitchPanel(GameObject targetPanel)
     {
-        // 1. Record history before hiding
+        // Record history only if we are currently on a major panel
         if (mainMenuPanel.activeSelf) previousPanel = mainMenuPanel;
         else if (shopCataloguePanel.activeSelf) previousPanel = shopCataloguePanel;
         else if (helpMenuPanel.activeSelf) previousPanel = helpMenuPanel;
 
-        // 2. Turn all panels off
         mainMenuPanel.SetActive(false);
         settingsMenuPanel.SetActive(false);
         shopCataloguePanel.SetActive(false);
         helpMenuPanel.SetActive(false);
         musicMenuPanel.SetActive(false);
 
-        // 3. Turn requested panel on
         if (targetPanel != null)
         {
             targetPanel.SetActive(true);
