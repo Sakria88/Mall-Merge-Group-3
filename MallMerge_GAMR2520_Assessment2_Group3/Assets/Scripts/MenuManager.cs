@@ -54,7 +54,7 @@ public class MenuManager : MonoBehaviour
             if (targetPanelName == "Settings") SwitchPanel(settingsMenuPanel);
             else if (targetPanelName == "Help") SwitchPanel(helpMenuPanel);
             else if (targetPanelName == "Shop") SwitchPanel(shopCataloguePanel);
-            
+
             // Reset it so the menu behaves normally next time
             targetPanelName = ""; 
         }
@@ -80,8 +80,9 @@ public class MenuManager : MonoBehaviour
     public void OnPlayButtonClicked()
     {
         PlayClickSound();
-        
+
         // Ensure "Main Game Play Area" matches your Scene name in Build Settings exactly
+        SceneManager.LoadScene("Main Game Play Area");
         SceneManager.LoadScene("MainGamePlayArea");
     }
 
@@ -131,6 +132,7 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
+            SceneManager.LoadScene("Main Game Play Area");
             SceneManager.LoadScene("MainGamePlayArea");
         }
     }
@@ -225,6 +227,7 @@ public class MenuManager : MonoBehaviour
     public void OnMiniGameButtonClicked()
     {
         PlayClickSound();
+        SceneManager.LoadScene("mini game scene");
         SceneManager.LoadScene("MiniGameScene");
     }
 
