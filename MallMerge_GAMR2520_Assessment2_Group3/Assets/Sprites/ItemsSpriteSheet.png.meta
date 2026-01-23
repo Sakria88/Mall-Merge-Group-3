@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cinnamon Rolls
+      name: Jalebi
       rect:
         serializedVersion: 2
         x: 768
@@ -1070,7 +1070,6 @@ TextureImporter:
       Bomb EXP5: -226113877
       Brush: 439426402
       Cake: 378309285
-      Cinnamon Rolls: 1716651758
       Coin: -771391692
       Donut: -857264483
       Dress: 1416874911
@@ -1079,6 +1078,7 @@ TextureImporter:
       Green Chest: -1251918031
       Icrecream: 206000314
       Jacket: -1967556772
+      Jalebi: 1716651758
       Lipstick: 1173056784
       Lock 1: -1007410830
       Lock 2: -346823169
