@@ -16,6 +16,9 @@ public class MenuManager : MonoBehaviour
     public AudioClip chillyMusic; // Option 1
     public AudioClip dreamMusic;  // Option 2
 
+    [Header("Sound Effects")]
+    public AudioClip buttonClickSFX;
+
     [Header("Volume UI")]
     public Slider volumeSlider;
     public Image muteButtonImage;
@@ -44,6 +47,18 @@ public class MenuManager : MonoBehaviour
 
         // 3. Initialize UI (Start on Main Menu)
         SwitchPanel(mainMenuPanel);
+    }
+
+    // --- SOUND EFFECTS ---
+
+    // This function will play the click sound once
+    public void PlayClickSound()
+    {
+        if (musicSource != null && buttonClickSFX != null)
+        {
+            // PlayOneShot is best here because it won't stop the background music
+            musicSource.PlayOneShot(buttonClickSFX);
+        }
     }
 
     // --- MAIN MENU FUNCTIONS ---
@@ -95,54 +110,54 @@ public class MenuManager : MonoBehaviour
     // --- AUDIO CONTROLS ---
 
     // For the Slider: Link to "On Value Changed" (Dynamic float)
-    // 1. Instant Volume Update
-public void SetVolume(float volume)
-{
-    if (musicSource == null) return;
-
-    // Directly set the volume. 0.0 is silent, 1.0 is max.
-    musicSource.volume = volume;
-
-    // Update the UI Icon based on the slider position
-    if (volume > 0 && isMuted)
+    public void SetVolume(float volume)
     {
-        isMuted = false;
-        if (muteButtonImage != null) muteButtonImage.sprite = volumeSprite;
-    }
-    else if (volume <= 0 && !isMuted)
-    {
-        isMuted = true;
-        if (muteButtonImage != null) muteButtonImage.sprite = muteSprite;
-    }
-}
+        if (musicSource == null) return;
 
-// 2. Instant Mute (No delay)
-public void ToggleMute()
-{
-    if (musicSource == null) return;
+        // Directly set the volume. 0.0 is silent, 1.0 is max.
+        musicSource.volume = volume;
 
-    isMuted = !isMuted;
-
-    // 1. Swap the sprite INSTANTLY
-    if (muteButtonImage != null) 
-    {
-        muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
+        // Update the UI Icon based on the slider position
+        if (volume > 0 && isMuted)
+        {
+            isMuted = false;
+            if (muteButtonImage != null) muteButtonImage.sprite = volumeSprite;
+        }
+        else if (volume <= 0 && !isMuted)
+        {
+            isMuted = true;
+            if (muteButtonImage != null) muteButtonImage.sprite = muteSprite;
+        }
     }
 
-    // 2. Adjust the audio and slider
-    if (isMuted)
+    // For the Mute Button: Link to "On Click"
+    public void ToggleMute()
     {
-        preMuteVolume = musicSource.volume;
-        musicSource.volume = 0f;
-        if (volumeSlider != null) volumeSlider.value = 0f;
+        if (musicSource == null) return;
+
+        isMuted = !isMuted;
+
+        // 1. Swap the sprite INSTANTLY
+        if (muteButtonImage != null)
+        {
+            muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
+        }
+
+        // 2. Adjust the audio and slider
+        if (isMuted)
+        {
+            preMuteVolume = musicSource.volume;
+            musicSource.volume = 0f;
+            if (volumeSlider != null) volumeSlider.value = 0f;
+        }
+        else
+        {
+            float restoreVol = preMuteVolume > 0.1f ? preMuteVolume : 0.5f;
+            musicSource.volume = restoreVol;
+            if (volumeSlider != null) volumeSlider.value = restoreVol;
+        }
     }
-    else
-    {
-        float restoreVol = preMuteVolume > 0.1f ? preMuteVolume : 0.5f;
-        musicSource.volume = restoreVol;
-        if (volumeSlider != null) volumeSlider.value = restoreVol;
-    }
-}
+
     // --- MUSIC MENU FUNCTIONS ---
 
     public void OnOption1Clicked()
@@ -158,7 +173,7 @@ public void ToggleMute()
     private void PlaySong(AudioClip clip)
     {
         if (musicSource == null || clip == null) return;
-        if (musicSource.clip == clip) return; 
+        if (musicSource.clip == clip) return;
 
         musicSource.clip = clip;
         musicSource.Play();
