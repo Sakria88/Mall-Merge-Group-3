@@ -25,48 +25,79 @@ public class MenuManager : MonoBehaviour
     public Sprite volumeSprite;
     public Sprite muteSprite;
 
-    // --- NEW STATIC VARIABLE FOR CROSS-SCENE NAVIGATION ---
+    // --- STATIC VARIABLES FOR PERSISTENCE & NAVIGATION ---
     public static string targetPanelName = ""; 
+    private static MenuManager instance;
 
     private GameObject previousPanel; 
     private bool isMuted = false;
     private float preMuteVolume = 1f;
 
+    // --- PERSISTENCE LOGIC (The "Secret Sauce") ---
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            // Keeps this object and its music playing across all scenes
+            DontDestroyOnLoad(gameObject); 
+        }
+        else
+        {
+            // If a second MenuManager spawns (when returning to menu), kill it immediately
+            Destroy(gameObject); 
+            return;
+        }
+    }
+
     void Start()
     {
-        // 1. Initialize Music
-        if (musicSource != null && chillyMusic != null)
+        // 1. Force the instance to check for music immediately
+        if (musicSource != null)
         {
-            musicSource.clip = chillyMusic;
-            musicSource.Play();
-            musicSource.loop = true;
+            // Safety: If the volume is 0, set it to a default so we can hear it
+            if (musicSource.volume <= 0) musicSource.volume = 0.5f;
+
+            // Check if we already have a clip playing (from a previous scene)
+            if (musicSource.clip == null || !musicSource.isPlaying)
+            {
+                // Load the last saved choice (Default to 0/Chilly if none exists)
+                int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0); 
+                
+                // Explicitly play the correct clip
+                AudioClip clipToPlay = (savedMusic == 0) ? chillyMusic : dreamMusic;
+                PlaySong(clipToPlay);
+            }
         }
 
+        SetupUI(); 
+    }
+
+    // --- HELPER FOR UI INITIALIZATION ---
+    private void SetupUI()
+    {
         // 2. Initialize slider position
         if (volumeSlider != null && musicSource != null)
         {
             volumeSlider.value = musicSource.volume;
         }
 
-        // 3. NEW: Check if we redirected here from the Play Area
+        // 3. Check if we redirected here from the Play Area
         if (!string.IsNullOrEmpty(targetPanelName))
         {
             if (targetPanelName == "Settings") SwitchPanel(settingsMenuPanel);
             else if (targetPanelName == "Help") SwitchPanel(helpMenuPanel);
             else if (targetPanelName == "Shop") SwitchPanel(shopCataloguePanel);
 
-            // Reset it so the menu behaves normally next time
             targetPanelName = ""; 
         }
-        else
+        else if (mainMenuPanel != null)
         {
-            // Default start
             SwitchPanel(mainMenuPanel);
         }
     }
 
     // --- SOUND EFFECTS ---
-
     public void PlayClickSound()
     {
         if (musicSource != null && buttonClickSFX != null)
@@ -76,68 +107,27 @@ public class MenuManager : MonoBehaviour
     }
 
     // --- MAIN MENU FUNCTIONS ---
-
     public void OnPlayButtonClicked()
     {
         PlayClickSound();
-
-        // Ensure "Main Game Play Area" matches your Scene name in Build Settings exactly
-        SceneManager.LoadScene("Main Game Play Area");
         SceneManager.LoadScene("MainGamePlayArea");
     }
 
-    public void OnSettingsButtonClicked()
-    {
-        PlayClickSound();
-        SwitchPanel(settingsMenuPanel);
-    }
-
-    public void OnShopButtonClicked()
-    {
-        PlayClickSound();
-        SwitchPanel(shopCataloguePanel);
-    }
-
-    public void OnHelpButtonClicked()
-    {
-        PlayClickSound();
-        SwitchPanel(helpMenuPanel);
-    }
+    public void OnSettingsButtonClicked() { PlayClickSound(); SwitchPanel(settingsMenuPanel); }
+    public void OnShopButtonClicked() { PlayClickSound(); SwitchPanel(shopCataloguePanel); }
+    public void OnHelpButtonClicked() { PlayClickSound(); SwitchPanel(helpMenuPanel); }
 
     // --- SETTINGS & NAVIGATION FUNCTIONS ---
-
-    public void OnSettingsExitButtonClicked()
-    {
-        UniversalExit();
-    }
-
-    public void OnMusicButtonClicked()
-    {
-        PlayClickSound();
-        SwitchPanel(musicMenuPanel);
-    }
-
-    public void OnMusicExitButtonClicked()
-    {
-        PlayClickSound();
-        SwitchPanel(settingsMenuPanel);
-    }
+    public void OnSettingsExitButtonClicked() { UniversalExit(); }
+    public void OnMusicButtonClicked() { PlayClickSound(); SwitchPanel(musicMenuPanel); }
+    public void OnMusicExitButtonClicked() { PlayClickSound(); SwitchPanel(settingsMenuPanel); }
 
     public void OnHelpExitButtonClicked()
     {
         PlayClickSound();
-        if (previousPanel != null)
-        {
-            SwitchPanel(previousPanel);
-        }
-        else
-        {
-            SceneManager.LoadScene("Main Game Play Area");
-            SceneManager.LoadScene("MainGamePlayArea");
-        }
+        if (previousPanel != null) SwitchPanel(previousPanel);
+        else SceneManager.LoadScene("MainGamePlayArea");
     }
-
-    // --- SPECIFIC EXIT LOGIC ---
 
     public void BackToMainMenu()
     {
@@ -149,18 +139,11 @@ public class MenuManager : MonoBehaviour
     public void UniversalExit()
     {
         PlayClickSound();
-        if (previousPanel != null && previousPanel != musicMenuPanel)
-        {
-            SwitchPanel(previousPanel);
-        }
-        else
-        {
-            SwitchPanel(mainMenuPanel);
-        }
+        if (previousPanel != null && previousPanel != musicMenuPanel) SwitchPanel(previousPanel);
+        else SwitchPanel(mainMenuPanel);
     }
 
     // --- AUDIO CONTROLS ---
-
     public void SetVolume(float volume)
     {
         if (musicSource == null) return;
@@ -201,51 +184,55 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    // --- MUSIC SELECTION ---
-
+    // --- MUSIC SELECTION WITH SAVING ---
     public void OnOption1Clicked()
     {
         PlayClickSound();
+        PlayerPrefs.SetInt("SelectedMusic", 0);
         PlaySong(chillyMusic);
     }
 
     public void OnOption2Clicked()
     {
         PlayClickSound();
+        PlayerPrefs.SetInt("SelectedMusic", 1);
         PlaySong(dreamMusic);
     }
 
     private void PlaySong(AudioClip clip)
     {
-        if (musicSource == null || clip == null || musicSource.clip == clip) return;
-        musicSource.clip = clip;
-        musicSource.Play();
+        if (musicSource == null || clip == null) return;
+        
+        // Change the clip if it's different OR if the source is currently stopped
+        if (musicSource.clip != clip || !musicSource.isPlaying)
+        {
+            musicSource.clip = clip;
+            musicSource.Play();
+            musicSource.loop = true;
+        }
     }
 
     // --- CORE LOGIC ---
-
     public void OnMiniGameButtonClicked()
     {
         PlayClickSound();
-        SceneManager.LoadScene("mini game scene");
         SceneManager.LoadScene("MiniGameScene");
     }
 
     private void SwitchPanel(GameObject targetPanel)
     {
-        if (mainMenuPanel.activeSelf) previousPanel = mainMenuPanel;
-        else if (shopCataloguePanel.activeSelf) previousPanel = shopCataloguePanel;
-        else if (helpMenuPanel.activeSelf) previousPanel = helpMenuPanel;
+        if (targetPanel == null) return;
 
-        mainMenuPanel.SetActive(false);
-        settingsMenuPanel.SetActive(false);
-        shopCataloguePanel.SetActive(false);
-        helpMenuPanel.SetActive(false);
-        musicMenuPanel.SetActive(false);
+        if (mainMenuPanel != null && mainMenuPanel.activeSelf) previousPanel = mainMenuPanel;
+        else if (shopCataloguePanel != null && shopCataloguePanel.activeSelf) previousPanel = shopCataloguePanel;
+        else if (helpMenuPanel != null && helpMenuPanel.activeSelf) previousPanel = helpMenuPanel;
 
-        if (targetPanel != null)
-        {
-            targetPanel.SetActive(true);
-        }
+        if (mainMenuPanel != null) mainMenuPanel.SetActive(false);
+        if (settingsMenuPanel != null) settingsMenuPanel.SetActive(false);
+        if (shopCataloguePanel != null) shopCataloguePanel.SetActive(false);
+        if (helpMenuPanel != null) helpMenuPanel.SetActive(false);
+        if (musicMenuPanel != null) musicMenuPanel.SetActive(false);
+
+        targetPanel.SetActive(true);
     }
 }
