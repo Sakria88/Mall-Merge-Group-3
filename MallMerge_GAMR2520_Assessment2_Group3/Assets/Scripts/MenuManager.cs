@@ -25,12 +25,16 @@ public class MenuManager : MonoBehaviour
     public Sprite volumeSprite;
     public Sprite muteSprite;
 
+    // --- NEW STATIC VARIABLE FOR CROSS-SCENE NAVIGATION ---
+    public static string targetPanelName = ""; 
+
     private GameObject previousPanel; 
     private bool isMuted = false;
     private float preMuteVolume = 1f;
 
     void Start()
     {
+        // 1. Initialize Music
         if (musicSource != null && chillyMusic != null)
         {
             musicSource.clip = chillyMusic;
@@ -38,12 +42,27 @@ public class MenuManager : MonoBehaviour
             musicSource.loop = true;
         }
 
+        // 2. Initialize slider position
         if (volumeSlider != null && musicSource != null)
         {
             volumeSlider.value = musicSource.volume;
         }
 
-        SwitchPanel(mainMenuPanel);
+        // 3. NEW: Check if we redirected here from the Play Area
+        if (!string.IsNullOrEmpty(targetPanelName))
+        {
+            if (targetPanelName == "Settings") SwitchPanel(settingsMenuPanel);
+            else if (targetPanelName == "Help") SwitchPanel(helpMenuPanel);
+            else if (targetPanelName == "Shop") SwitchPanel(shopCataloguePanel);
+            
+            // Reset it so the menu behaves normally next time
+            targetPanelName = ""; 
+        }
+        else
+        {
+            // Default start
+            SwitchPanel(mainMenuPanel);
+        }
     }
 
     // --- SOUND EFFECTS ---
@@ -116,7 +135,6 @@ public class MenuManager : MonoBehaviour
 
     // --- SPECIFIC EXIT LOGIC ---
 
-    // Assign this to your "Exit" button in Settings to force return to Main Menu
     public void BackToMainMenu()
     {
         PlayClickSound();
@@ -210,7 +228,6 @@ public class MenuManager : MonoBehaviour
 
     private void SwitchPanel(GameObject targetPanel)
     {
-        // Record history ONLY if we are moving away from a 'root' panel
         if (mainMenuPanel.activeSelf) previousPanel = mainMenuPanel;
         else if (shopCataloguePanel.activeSelf) previousPanel = shopCataloguePanel;
         else if (helpMenuPanel.activeSelf) previousPanel = helpMenuPanel;
