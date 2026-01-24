@@ -231,10 +231,10 @@ TextureImporter:
       name: Merges
       rect:
         serializedVersion: 2
-        x: 537
-        y: 777
-        width: 696
-        height: 239
+        x: 551
+        y: 782
+        width: 655
+        height: 231
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: SFX
       rect:
         serializedVersion: 2
-        x: 577
-        y: 559
-        width: 382
-        height: 177
+        x: 604
+        y: 571
+        width: 320
+        height: 141
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: Help
       rect:
         serializedVersion: 2
-        x: 548
+        x: 560
         y: 1022
-        width: 413
-        height: 258
+        width: 389
+        height: 245
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,9 +295,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 782
-        y: 300
-        width: 444
-        height: 203
+        y: 293
+        width: 430
+        height: 198
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
