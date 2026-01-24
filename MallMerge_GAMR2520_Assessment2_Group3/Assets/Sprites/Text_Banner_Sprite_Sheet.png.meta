@@ -144,27 +144,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Banner
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 834
-        width: 496
-        height: 155
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be924fccfb262c747a1fac0c93792a72
-      internalID: 675854962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Pink Banner
       rect:
         serializedVersion: 2
@@ -231,10 +210,10 @@ TextureImporter:
       name: Settings
       rect:
         serializedVersion: 2
-        x: 66
-        y: 306
-        width: 602
-        height: 226
+        x: 67
+        y: 285
+        width: 605
+        height: 234
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,7 +299,7 @@ TextureImporter:
         width: 444
         height: 203
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,6 +307,27 @@ TextureImporter:
       bones: []
       spriteID: b5939d1aaee27a040a2df3d6dea46f22
       internalID: -1401510800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Banner_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 827
+        width: 493
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c79df0df594bc741a1f4b25274c0f8c
+      internalID: -494929902
       vertices: []
       indices: 
       edges: []
@@ -352,6 +352,7 @@ TextureImporter:
       Resume: -540226051
       SFX: -1095529317
       Settings: -1803526543
+      Text_Banner_Sprite_Sheet_0: -494929902
       Text_Banner_Sprite_Sheet_1: 116721302
       Text_Banner_Sprite_Sheet_10: -326957408
       Text_Banner_Sprite_Sheet_12: 1101753685
