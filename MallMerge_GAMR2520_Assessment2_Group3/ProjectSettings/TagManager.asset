@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Basket
+  - Energy
+  - Bomb
+  - Energy_15
+  - Energy_5
   layers:
   - Default
   - TransparentFX

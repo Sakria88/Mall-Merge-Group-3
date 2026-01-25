@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.UI;
 
 public class BasketControllerScript : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class BasketControllerScript : MonoBehaviour
     public float jumpForce = 10f;
     public float maxXSpeed = 5f;
     public float maxYSpeed = 15f;
+    private int energyCounter = 0;
+
     float basketHalfWidth;
     float moveInput;
     float minX;
@@ -35,7 +39,7 @@ public class BasketControllerScript : MonoBehaviour
         rigBody = GetComponent<Rigidbody2D>();
         cam = FindObjectOfType<Camera>();
 
-        basketHalfWidth = GetComponent<Collider2D>().bounds.extents.x;
+        basketHalfWidth = GetComponent<Collider2D>().bounds.extents.x * 2;
 
         //playerBounceSFX = GameObject.Find("PlayerBounceSFX").GetComponent<AudioSource>();
         float screenLeft = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
@@ -89,11 +93,11 @@ public class BasketControllerScript : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            if (Input.mousePosition.x > (Screen.width * 0.75f))
+            if ((Input.mousePosition.x > (Screen.width * 0.75f)) && rigBody.position.x < maxX)
             {
                 moveInput = 1f;
             }
-            else if (Input.mousePosition.x <= (Screen.width * 0.25f))
+            else if (Input.mousePosition.x <= (Screen.width * 0.25f) && rigBody.position.x > minX)
             {
                 moveInput = -1;
             }
@@ -110,7 +114,19 @@ public class BasketControllerScript : MonoBehaviour
 
     void AccelMove()
     {
-        moveInput = Input.acceleration.x;
+        if (Input.acceleration.x > 0.1f && rigBody.position.x < maxX)
+        {
+            facingRight = true;
+        }
+        else if (Input.acceleration.x < -0.1f && rigBody.position.x > minX)
+        {
+            facingRight = false;
+        }
+        else
+        {
+            moveInput = 0;
+            return;
+        }
     }
 
     void SwipeMove()
@@ -175,13 +191,46 @@ public class BasketControllerScript : MonoBehaviour
 
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    { 
         if (collision.gameObject.tag == "Ground" && !isGrounded)
         {
             isGrounded = true;
         }
     }
 
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Energy, Energy_5, Energy_15, Bomb
+        if (collision.CompareTag("Energy"))
+        {
+            energyCounter++;
+            Debug.Log("Energy Collected! Total Energy: " + energyCounter);
+            Text text = GameObject.Find("EnergyButton_Text").GetComponent<Text>();
+            text.text = "" + energyCounter;
+        }
+        else if (collision.CompareTag("Energy_5"))
+        {
+            energyCounter += 5;
+            Debug.Log("Energy Collected! Total Energy: " + energyCounter);
+            Text text = GameObject.Find("EnergyButton_Text").GetComponent<Text>();
+            text.text = "" + energyCounter;
+        }
+        else if (collision.CompareTag("Energy_15"))
+        {
+            energyCounter += 15;
+            Debug.Log("Energy Collected! Total Energy: " + energyCounter);
+            Text text = GameObject.Find("EnergyButton_Text").GetComponent<Text>();
+            text.text = "" + energyCounter;
+        }
+        else if (collision.CompareTag("Bomb"))
+        {
+            energyCounter -= 5;
+            if (energyCounter < 0) energyCounter = 0;
+            Debug.Log("Bomb Hit! Total Energy: " + energyCounter);
+            Text text = GameObject.Find("EnergyButton_Text").GetComponent<Text>();
+            text.text = "" + energyCounter;
+        }
+    }
 
     void OnGUI()
     {
