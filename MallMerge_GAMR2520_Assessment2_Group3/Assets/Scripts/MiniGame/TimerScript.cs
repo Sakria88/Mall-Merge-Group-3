@@ -1,46 +1,80 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
+    public float targetTime = 60f;
 
-    public float targetTime = 60.0f;
+    public GameObject gameOverPanel;
+    public Text titleText;
+    public Text scoreText;
+
+    private bool gameEnded = false;
 
     void Start()
     {
-
-        Debug.Log("Time left: " + (int)(targetTime));
-        Text text = GameObject.Find("Timer_Text").GetComponent<Text>();
-        text.text = "" + targetTime;
+        gameOverPanel.SetActive(false);
     }
 
     void Update()
     {
+        if (gameEnded) return;
+
         targetTime -= Time.deltaTime;
 
-        Debug.Log("Time left: " + (int)targetTime);
-        Text text = GameObject.Find("Timer_Text").GetComponent<Text>();
-        text.text = "" + targetTime;
+        Text timerText = GameObject.Find("Timer_Text").GetComponent<Text>();
+        timerText.text = Mathf.Ceil(targetTime).ToString();
 
-        if (targetTime < 10.0f)
+        if (targetTime < 10f)
+            timerText.color = Color.red;
+
+        if (targetTime <= 0f)
         {
-            text.color = Color.red;
+            EndGame(GameEndType.Win);
         }
-
-        if (targetTime <= 0.0f)
-        {
-            timerEnded();
-        }
-
     }
 
-    void timerEnded()
+    public void EndGame(GameEndType endType)
     {
-        Text text = GameObject.Find("Timer_Text").GetComponent<Text>();
-        text.text = "Time's Up!";
-        text.color = Color.black;
+        if (gameEnded) return;
+        gameEnded = true;
 
-        //end BasketControllerScript
+        // UI
+        gameOverPanel.SetActive(true);
+
+        if (endType == GameEndType.Win)
+        {
+            titleText.text = "CONGRATULATIONS";
+            titleText.color = Color.green;
+        }
+        else
+        {
+            titleText.text = "GAME OVER";
+            titleText.color = Color.red;
+        }
+
+        BasketControllerScript basket = FindObjectOfType<BasketControllerScript>();
+        if (basket != null)
+        {
+            scoreText.text = basket.energyCounter + "Energy!!";
+        }
+
+        // Pausar TODO
+        Time.timeScale = 0f;
     }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
+        );
+    }
+
+    public enum GameEndType
+    {
+        Win,
+        GameOver
+    }
+
 }

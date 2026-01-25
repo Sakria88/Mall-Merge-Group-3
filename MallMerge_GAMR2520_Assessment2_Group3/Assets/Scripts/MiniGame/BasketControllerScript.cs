@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.UI;
+using static TimerScript;
 
 public class BasketControllerScript : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class BasketControllerScript : MonoBehaviour
     public float jumpForce = 10f;
     public float maxXSpeed = 5f;
     public float maxYSpeed = 15f;
-    private int energyCounter = 0;
+    public int energyCounter = 0;
 
     float basketHalfWidth;
     float moveInput;
@@ -224,11 +225,11 @@ public class BasketControllerScript : MonoBehaviour
         }
         else if (collision.CompareTag("Bomb"))
         {
-            energyCounter -= 5;
-            if (energyCounter < 0) energyCounter = 0;
-            Debug.Log("Bomb Hit! Total Energy: " + energyCounter);
-            Text text = GameObject.Find("EnergyButton_Text").GetComponent<Text>();
-            text.text = "" + energyCounter;
+            TimerScript timer = FindObjectOfType<TimerScript>();
+            if (timer != null)
+            {
+                timer.EndGame(GameEndType.GameOver);
+            }
         }
     }
 
