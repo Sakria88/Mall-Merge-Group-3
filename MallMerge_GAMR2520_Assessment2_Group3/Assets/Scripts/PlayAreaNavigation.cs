@@ -11,30 +11,42 @@ public class PlayAreaNavigation : MonoBehaviour
         StartInAreaOne();
     }
 
+    // --- UNIVERSITY ASSIGNMENT METHOD ---
+    // This allows you to load any scene by typing its name in the Inspector
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    // --- EXISTING NAVIGATION METHODS ---
     public void GoToMenuSettings()
     {
-        MenuManager.targetPanelName = "Settings";
+        Debug.Log("Navigation: Setting target to Settings");
+        MenuManager.targetPanelName = "Settings_Panel"; 
         SceneManager.LoadScene("MallMergeMenus");
     }
 
     public void GoToMenuHelp()
     {
-        MenuManager.targetPanelName = "Help";
+        Debug.Log("Navigation: Setting target to Help");
+        MenuManager.targetPanelName = "Help_Panel";
         SceneManager.LoadScene("MallMergeMenus");
     }
 
     public void GoToMenuShop()
     {
+        Debug.Log("Navigation: Setting target to Shop");
         // tells MenuManager to open the Shop Catalogue panel
-        MenuManager.targetPanelName = "Shop";
-        SceneManager.LoadScene("MallMergeMenus");
+        MenuManager.targetPanelName = "ShopCatalogue_Panel";
+       SceneManager.LoadScene("MallMergeMenus");
     }
 
     public void GoToMainMenu()
     {
+        Debug.Log("Navigation: Setting target to MainMenu (Empty)");
         // Leaving targetPanelName empty will make MenuManager default to the Main Menu
         MenuManager.targetPanelName = "";
-        SceneManager.LoadScene("MallMergeMenus");
+       SceneManager.LoadScene("MallMergeMenus");
     }
 
     public void StartInAreaOne()
