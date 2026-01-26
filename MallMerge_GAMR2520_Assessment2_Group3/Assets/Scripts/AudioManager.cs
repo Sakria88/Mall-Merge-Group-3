@@ -4,106 +4,171 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    [Header("Audio Settings")]
+    [Header("Audio Sources")]
     public AudioSource musicSource;
+    public AudioSource sfxSource; 
+
+    [Header("Audio Clips")]
+    public AudioClip energyCollectedSFX;
+    public AudioClip successSFX;
+    public AudioClip itemChestSFX;
+    public AudioClip explosionSFX;
+    public AudioClip moneySFX;
+    public AudioClip swipeSFX;
+    public AudioClip winnerSFX;
+    public AudioClip resultsPopupSFX;
     public AudioClip chillyMusic; 
     public AudioClip dreamMusic;  
-
-    [Header("Sound Effects")]
     public AudioClip buttonClickSFX;
 
     [Header("Volume UI")]
-    public Slider volumeSlider;
+    public Slider musicSlider;    
+    public Slider sfxSlider;      
     public Image muteButtonImage;
     public Sprite volumeSprite;
     public Sprite muteSprite;
 
-    // --- STATIC VARIABLES FOR PERSISTENCE & NAVIGATION ---
-    public static string targetPanelName = ""; 
     private static AudioManager instance;
+    public static AudioManager Instance => instance;
 
-    private GameObject previousPanel; 
     private bool isMuted = false;
-    private float preMuteVolume = 1f;
 
-    // --- PERSISTENCE LOGIC ---
-
-
-
-    void Start()
+    void Awake()
     {
-        if (musicSource != null)
+        if (instance == null)
         {
-            if (musicSource.volume <= 0) musicSource.volume = 0.5f;
-
-            if (musicSource.clip == null || !musicSource.isPlaying)
-            {
-                int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0); 
-                AudioClip clipToPlay = (savedMusic == 0) ? chillyMusic : dreamMusic;
-                PlaySong(clipToPlay);
-            }
-        }
-
-        SetupUI(); 
-    }
-
-    // --- BULLETPROOF SETUP UI (Including Pause Menu Fix) ---
-    private void SetupUI()
-    {
-    
-        // Volume Slider check
-        if (volumeSlider == null) volumeSlider = GameObject.Find("Volume_Slider")?.GetComponent<Slider>();
-        if (volumeSlider != null && musicSource != null)
-        {
-            volumeSlider.value = musicSource.volume;
-        }
-    }
-
-    // --- BUTTON AND NAVIGATION METHODS ---
-    public void PlayClickSound()
-    {
-        if (musicSource != null && buttonClickSFX != null)
-        {
-            musicSource.PlayOneShot(buttonClickSFX);
-        }
-    }
-
- 
-    // --- AUDIO CONTROLS ---
-    public void SetVolume(float volume)
-    {
-        if (musicSource == null) return;
-        musicSource.volume = volume;
-    }
-
-    public void ToggleMute()
-    {
-        if (musicSource == null) return;
-        instance.PlayClickSound();
-        isMuted = !isMuted;
-
-        if (isMuted)
-        {
-            preMuteVolume = musicSource.volume;
-            musicSource.volume = 0f;
+            instance = this;
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            musicSource.volume = preMuteVolume;
+            Destroy(gameObject);
+            return;
         }
     }
 
-    public void OnOption1Clicked()
+    void Start()
     {
-        PlayerPrefs.SetInt("SelectedMusic", 0);
-        PlaySong(chillyMusic);
+        // 1. Load saved volumes
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", 0.7f);
+
+        // 2. Load and Apply Mute State
+        isMuted = PlayerPrefs.GetInt("IsMuted", 0) == 1;
+        musicSource.mute = isMuted;
+        sfxSource.mute = isMuted;
+        if (muteButtonImage != null) muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
+
+        // 3. Initial Music setup
+        if (musicSource != null && !musicSource.isPlaying)
+        {
+            int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0); 
+            PlaySong(savedMusic == 0 ? chillyMusic : dreamMusic);
+        }
+
+        SetupUI(); 
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public void OnOption2Clicked()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        PlayerPrefs.SetInt("SelectedMusic", 1);
-        PlaySong(dreamMusic);
+        SetupUI();
     }
+
+    public void SetupUI()
+    {
+        if (musicSlider == null) 
+            musicSlider = GameObject.Find("Volume_Slider")?.GetComponent<Slider>();
+        
+        if (musicSlider != null && musicSource != null)
+        {
+            musicSlider.onValueChanged.RemoveAllListeners();
+            musicSlider.value = musicSource.volume;
+            musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        }
+
+        if (sfxSlider == null) 
+            sfxSlider = GameObject.Find("SFX_Slider")?.GetComponent<Slider>();
+
+        if (sfxSlider != null && sfxSource != null)
+        {
+            sfxSlider.onValueChanged.RemoveAllListeners();
+            sfxSlider.value = sfxSource.volume;
+            sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+        }
+    }
+
+    // --- IMPROVED VOLUME CONTROLS ---
+
+    public void SetMusicVolume(float volume)
+    {
+        if (musicSource == null) return;
+        musicSource.volume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
+        
+        // If moving slider while muted, unmute automatically
+        if (volume > 0 && isMuted) ToggleMute(); 
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        if (sfxSource == null) return;
+        sfxSource.volume = volume;
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+        PlayerPrefs.Save();
+
+        if (volume > 0 && isMuted) ToggleMute();
+    }
+
+    // --- IMPROVED MUTE TOGGLE ---
+
+    public void ToggleMute()
+    {
+        isMuted = !isMuted;
+        
+        // Save the mute state
+        PlayerPrefs.SetInt("IsMuted", isMuted ? 1 : 0);
+        PlayerPrefs.Save();
+
+        // Direct mute property doesn't destroy volume settings
+        if (musicSource != null) musicSource.mute = isMuted;
+        if (sfxSource != null) sfxSource.mute = isMuted;
+
+        if (muteButtonImage != null)
+        {
+            muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
+        }
+
+        if (!isMuted) PlayClick();
+    }
+
+    // --- SFX PLAYBACK METHODS ---
+
+    public void PlaySFX(AudioClip clip)
+    {
+        if (sfxSource != null && clip != null)
+        {
+            sfxSource.PlayOneShot(clip);
+        }
+    }
+
+    public void PlayClick() => PlaySFX(buttonClickSFX);
+    public void PlayEnergy() => PlaySFX(energyCollectedSFX);
+    public void PlaySuccess() => PlaySFX(successSFX);
+    public void PlayItemChest() => PlaySFX(itemChestSFX);
+    public void PlayExplosion() => PlaySFX(explosionSFX);
+    public void PlayMoney() => PlaySFX(moneySFX);
+    public void PlaySwipe() => PlaySFX(swipeSFX);
+    public void PlayWinner() => PlaySFX(winnerSFX);
+    public void PlayResultsPopup() => PlaySFX(resultsPopupSFX);
+
+    public void PlayClickSound() => PlayClick();
+
+    // --- MUSIC SELECTION ---
+
+    public void OnOption1Clicked() { PlayerPrefs.SetInt("SelectedMusic", 0); PlaySong(chillyMusic); }
+    public void OnOption2Clicked() { PlayerPrefs.SetInt("SelectedMusic", 1); PlaySong(dreamMusic); }
 
     private void PlaySong(AudioClip clip)
     {
@@ -116,4 +181,8 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }
