@@ -1748,8 +1748,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 1801824646}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlayClickSound
         m_Mode: 1
         m_Arguments:
@@ -2105,14 +2105,22 @@ PrefabInstance:
     - target: {fileID: 2266032324104391322, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1801824646}
     - target: {fileID: 2266032324104391322, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisableMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2266032324104391322, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayClickSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2266032324104391322, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MenuButtonScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2266032324104391322, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2699613493358207825, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3500,7 +3508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550819433467083995, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0001473566
+      value: -0.000002865264
       objectReference: {fileID: 0}
     - target: {fileID: 5206040833208493295, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchorMax.x
