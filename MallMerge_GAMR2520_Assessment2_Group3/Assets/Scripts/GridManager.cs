@@ -110,31 +110,7 @@ public class GridManager : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Finds a random empty tile on the grid
-    /// </summary>
-    public bool TryGetRandomEmptyTile(out Vector2Int position)
-    {
-        List<Vector2Int> emptyTiles = new List<Vector2Int>();
-
-        for (int y = 0; y < rows; y++)
-        {
-            for (int x = 0; x < columns; x++)
-            {
-                if (!occupied[x, y])
-                    emptyTiles.Add(new Vector2Int(x, y));
-            }
-        }
-
-        if (emptyTiles.Count == 0)
-        {
-            position = Vector2Int.zero;
-            return false;
-        }
-
-        position = emptyTiles[Random.Range(0, emptyTiles.Count)];
-        return true;
-    }
+  
 
     /// <summary>
     /// Marks a tile as occupied after an item is placed
@@ -175,5 +151,35 @@ public class GridManager : MonoBehaviour
 
         return tileObj.GetComponent<TileUI>();
     }
+    /// <summary>
+    /// Returns a random empty tile position (where TileUI.currentItem == null).
+    /// </summary>
+    public bool TryGetRandomEmptyTile(out Vector2Int pos)
+    {
+        List<Vector2Int> empties = new List<Vector2Int>();
+
+        for (int y = 0; y < rows; y++)
+        {
+            for (int x = 0; x < columns; x++)
+            {
+                TileUI t = GetTileUI(x, y);
+
+                // Only count tiles that exist AND have no current item
+                if (t != null && t.currentItem == null)
+                    empties.Add(new Vector2Int(x, y));
+            }
+        }
+
+        if (empties.Count == 0)
+        {
+            pos = default;
+            return false;
+        }
+
+        pos = empties[Random.Range(0, empties.Count)];
+        return true;
+    }
+
+
 
 }
