@@ -1647,6 +1647,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1801824645}
   sfxSource: {fileID: 1801824645}
+  energyCollectedSFX: {fileID: 8300000, guid: a17501f14e1b2d4448989a4e4b6aff4a, type: 3}
+  successSFX: {fileID: 8300000, guid: e343a6dace8c3b449b0481b36e20c0be, type: 3}
+  itemChestSFX: {fileID: 8300000, guid: 02797d9063c536e48880e8822cdcfb1a, type: 3}
+  explosionSFX: {fileID: 8300000, guid: 7d25001e54f096840819ea317e05a009, type: 3}
+  moneySFX: {fileID: 8300000, guid: 9965a39b166e7ba4fa8b9f2534f2f7fe, type: 3}
+  swipeSFX: {fileID: 8300000, guid: d2b4798e779bc4c419bc1aae661b9acf, type: 3}
+  winnerSFX: {fileID: 8300000, guid: 8a3ed2ed7ce39974db09ed52d8430edf, type: 3}
+  resultsPopupSFX: {fileID: 8300000, guid: 8bc7176d5c26af4478d9ded61d0ac302, type: 3}
   chillyMusic: {fileID: 8300000, guid: 85b27b6d3ebe69e43b57bc381331ebbe, type: 3}
   dreamMusic: {fileID: 8300000, guid: 4462fb4a0adb73f4aa1a185883b5d3fd, type: 3}
   buttonClickSFX: {fileID: 8300000, guid: f0566a8060bd3474399daceaf3f26765, type: 3}
@@ -3816,7 +3824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550819433467083995, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000034333407
+      value: 0.00006548012
       objectReference: {fileID: 0}
     - target: {fileID: 5206040833208493295, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchorMax.x

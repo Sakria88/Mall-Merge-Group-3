@@ -9,6 +9,14 @@ public class AudioManager : MonoBehaviour
     public AudioSource sfxSource; 
 
     [Header("Audio Clips")]
+    public AudioClip energyCollectedSFX;
+    public AudioClip successSFX;
+    public AudioClip itemChestSFX;
+    public AudioClip explosionSFX;
+    public AudioClip moneySFX;
+    public AudioClip swipeSFX;
+    public AudioClip winnerSFX;
+    public AudioClip resultsPopupSFX;
     public AudioClip chillyMusic; 
     public AudioClip dreamMusic;  
     public AudioClip buttonClickSFX;
@@ -110,13 +118,30 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void PlayClickSound()
+    // --- SFX PLAYBACK METHODS ---
+
+    // Generic Playback
+    public void PlaySFX(AudioClip clip)
     {
-        if (sfxSource != null && buttonClickSFX != null)
+        if (sfxSource != null && clip != null)
         {
-            sfxSource.PlayOneShot(buttonClickSFX);
+            sfxSource.PlayOneShot(clip);
         }
     }
+
+    // Specific convenience methods
+    public void PlayClick() => PlaySFX(buttonClickSFX);
+    public void PlayEnergy() => PlaySFX(energyCollectedSFX);
+    public void PlaySuccess() => PlaySFX(successSFX);
+    public void PlayItemChest() => PlaySFX(itemChestSFX);
+    public void PlayExplosion() => PlaySFX(explosionSFX);
+    public void PlayMoney() => PlaySFX(moneySFX);
+    public void PlaySwipe() => PlaySFX(swipeSFX);
+    public void PlayWinner() => PlaySFX(winnerSFX);
+    public void PlayResultsPopup() => PlaySFX(resultsPopupSFX);
+
+    // Legacy method name kept for internal ToggleMute use
+    public void PlayClickSound() => PlayClick();
 
     public void ToggleMute()
     {
