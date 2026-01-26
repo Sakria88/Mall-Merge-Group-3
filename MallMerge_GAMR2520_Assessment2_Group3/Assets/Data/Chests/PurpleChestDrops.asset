@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6a0cc16abdb434f823f890766cf1f1, type: 3}
+  m_Name: PurpleChestDrops
+  m_EditorClassIdentifier: 
+  items:
+  - prefab: {fileID: 7364074087915012491, guid: a2ed48fab825f7a4eb2271a0a2662531, type: 3}
+    dropChance: 40
+  - prefab: {fileID: 7364074087915012491, guid: 1b3882846694a96418e474b84ce0a354, type: 3}
+    dropChance: 30
+  - prefab: {fileID: 7364074087915012491, guid: f0937746cd3b1a5498e8d3907521b537, type: 3}
+    dropChance: 20
+  - prefab: {fileID: 7364074087915012491, guid: f01541219a3fc2745bcc5a52e83d7a2e, type: 3}
+    dropChance: 10
+  - prefab: {fileID: 7364074087915012491, guid: cf2a6454a5449a240bcd10e7e71d0742, type: 3}
+    dropChance: 0

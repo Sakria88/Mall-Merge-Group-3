@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6a0cc16abdb434f823f890766cf1f1, type: 3}
+  m_Name: PinkChestDrops
+  m_EditorClassIdentifier: 
+  items:
+  - prefab: {fileID: 7364074087915012491, guid: 84fc2da5f75373c4ba1f84b143db79ec, type: 3}
+    dropChance: 40
+  - prefab: {fileID: 7364074087915012491, guid: 667202b29436869479c7846ca7f62fc4, type: 3}
+    dropChance: 30
+  - prefab: {fileID: 7364074087915012491, guid: 46b377fe15ff2cb46ab8138a76fc6f91, type: 3}
+    dropChance: 20
+  - prefab: {fileID: 7364074087915012491, guid: e87fdb76b0874164e82bce7112fedb9f, type: 3}
+    dropChance: 10
+  - prefab: {fileID: 7364074087915012491, guid: 4a9133dddf1823d4fb16f994c89506ee, type: 3}
+    dropChance: 0
