@@ -27,19 +27,7 @@ public class AudioManager : MonoBehaviour
     private float preMuteVolume = 1f;
 
     // --- PERSISTENCE LOGIC ---
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); 
-        }
-        else
-        {
-            Destroy(gameObject); 
-            return;
-        }
-    }
+
 
 
     void Start()
