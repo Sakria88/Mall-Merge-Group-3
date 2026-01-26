@@ -29,13 +29,9 @@ public class AudioManager : MonoBehaviour
     public Sprite muteSprite;
 
     private static AudioManager instance;
-    
-    // This allows buttons to find the manager easily
     public static AudioManager Instance => instance;
 
     private bool isMuted = false;
-    private float preMuteMusicVol = 1f;
-    private float preMuteSFXVol = 1f;
 
     void Awake()
     {
@@ -53,14 +49,17 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        // Load saved volumes
-        float savedMusicVol = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
-        float savedSFXVol = PlayerPrefs.GetFloat("SFXVolume", 0.7f);
+        // 1. Load saved volumes
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", 0.7f);
 
-        if (musicSource != null) musicSource.volume = savedMusicVol;
-        if (sfxSource != null) sfxSource.volume = savedSFXVol;
+        // 2. Load and Apply Mute State
+        isMuted = PlayerPrefs.GetInt("IsMuted", 0) == 1;
+        musicSource.mute = isMuted;
+        sfxSource.mute = isMuted;
+        if (muteButtonImage != null) muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
 
-        // Initial Music setup
+        // 3. Initial Music setup
         if (musicSource != null && !musicSource.isPlaying)
         {
             int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0); 
@@ -76,10 +75,8 @@ public class AudioManager : MonoBehaviour
         SetupUI();
     }
 
-    // Call this via your Menu Script whenever the Settings Panel is opened!
     public void SetupUI()
     {
-        // Find Music Slider
         if (musicSlider == null) 
             musicSlider = GameObject.Find("Volume_Slider")?.GetComponent<Slider>();
         
@@ -90,7 +87,6 @@ public class AudioManager : MonoBehaviour
             musicSlider.onValueChanged.AddListener(SetMusicVolume);
         }
 
-        // Find SFX Slider
         if (sfxSlider == null) 
             sfxSlider = GameObject.Find("SFX_Slider")?.GetComponent<Slider>();
 
@@ -102,12 +98,17 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    // --- IMPROVED VOLUME CONTROLS ---
+
     public void SetMusicVolume(float volume)
     {
         if (musicSource == null) return;
         musicSource.volume = volume;
         PlayerPrefs.SetFloat("MusicVolume", volume);
         PlayerPrefs.Save();
+        
+        // If moving slider while muted, unmute automatically
+        if (volume > 0 && isMuted) ToggleMute(); 
     }
 
     public void SetSFXVolume(float volume)
@@ -116,11 +117,34 @@ public class AudioManager : MonoBehaviour
         sfxSource.volume = volume;
         PlayerPrefs.SetFloat("SFXVolume", volume);
         PlayerPrefs.Save();
+
+        if (volume > 0 && isMuted) ToggleMute();
+    }
+
+    // --- IMPROVED MUTE TOGGLE ---
+
+    public void ToggleMute()
+    {
+        isMuted = !isMuted;
+        
+        // Save the mute state
+        PlayerPrefs.SetInt("IsMuted", isMuted ? 1 : 0);
+        PlayerPrefs.Save();
+
+        // Direct mute property doesn't destroy volume settings
+        if (musicSource != null) musicSource.mute = isMuted;
+        if (sfxSource != null) sfxSource.mute = isMuted;
+
+        if (muteButtonImage != null)
+        {
+            muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
+        }
+
+        if (!isMuted) PlayClick();
     }
 
     // --- SFX PLAYBACK METHODS ---
 
-    // Generic Playback
     public void PlaySFX(AudioClip clip)
     {
         if (sfxSource != null && clip != null)
@@ -129,7 +153,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Specific convenience methods
     public void PlayClick() => PlaySFX(buttonClickSFX);
     public void PlayEnergy() => PlaySFX(energyCollectedSFX);
     public void PlaySuccess() => PlaySFX(successSFX);
@@ -140,30 +163,9 @@ public class AudioManager : MonoBehaviour
     public void PlayWinner() => PlaySFX(winnerSFX);
     public void PlayResultsPopup() => PlaySFX(resultsPopupSFX);
 
-    // Legacy method name kept for internal ToggleMute use
     public void PlayClickSound() => PlayClick();
 
-    public void ToggleMute()
-    {
-        isMuted = !isMuted;
-        PlayClickSound();
-
-        if (isMuted)
-        {
-            preMuteMusicVol = musicSource.volume;
-            preMuteSFXVol = sfxSource.volume;
-            SetMusicVolume(0f);
-            SetSFXVolume(0f);
-        }
-        else
-        {
-            SetMusicVolume(preMuteMusicVol > 0 ? preMuteMusicVol : 0.5f);
-            SetSFXVolume(preMuteSFXVol > 0 ? preMuteSFXVol : 0.7f);
-        }
-
-        if (musicSlider != null) musicSlider.value = musicSource.volume;
-        if (sfxSlider != null) sfxSlider.value = sfxSource.volume;
-    }
+    // --- MUSIC SELECTION ---
 
     public void OnOption1Clicked() { PlayerPrefs.SetInt("SelectedMusic", 0); PlaySong(chillyMusic); }
     public void OnOption2Clicked() { PlayerPrefs.SetInt("SelectedMusic", 1); PlaySong(dreamMusic); }
