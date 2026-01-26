@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df451392709d6a46ac6cf3a3deb493e, type: 3}
+  m_Name: WardrobeChain
+  m_EditorClassIdentifier: 
+  family: 2
+  levelSprites:
+  - {fileID: -132362729, guid: 2baa2b0b1625bfb4389ae57f70c9bdf4, type: 3}
+  - {fileID: 771527804, guid: 2baa2b0b1625bfb4389ae57f70c9bdf4, type: 3}
+  - {fileID: 958043569, guid: 2baa2b0b1625bfb4389ae57f70c9bdf4, type: 3}
+  - {fileID: -1967556772, guid: 2baa2b0b1625bfb4389ae57f70c9bdf4, type: 3}
+  - {fileID: 1416874911, guid: 2baa2b0b1625bfb4389ae57f70c9bdf4, type: 3}

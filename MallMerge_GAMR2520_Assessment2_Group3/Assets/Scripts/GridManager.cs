@@ -152,5 +152,28 @@ public class GridManager : MonoBehaviour
         return grid[x, y].transform;
     }
 
+    // ------------------------------------------------------------
+    // Helper methods used by MergeBoardController
+    // ------------------------------------------------------------
+
+    /// <summary>
+    /// Returns true if (x,y) is inside the grid
+    /// </summary>
+
+
+    public bool InBounds(int x, int y)
+    {
+        return x >= 0 && x < columns && y >= 0 && y < rows;
+    }
+
+    public TileUI GetTileUI(int x, int y)
+    {
+        if (!InBounds(x, y)) return null;
+
+        GameObject tileObj = grid[x, y];
+        if (tileObj == null) return null;
+
+        return tileObj.GetComponent<TileUI>();
+    }
 
 }
