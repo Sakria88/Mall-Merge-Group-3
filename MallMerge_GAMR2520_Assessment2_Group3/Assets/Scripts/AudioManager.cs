@@ -4,110 +4,144 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    [Header("Audio Settings")]
+    [Header("Audio Sources")]
     public AudioSource musicSource;
+    public AudioSource sfxSource; 
+
+    [Header("Audio Clips")]
     public AudioClip chillyMusic; 
     public AudioClip dreamMusic;  
-
-    [Header("Sound Effects")]
     public AudioClip buttonClickSFX;
 
     [Header("Volume UI")]
-    public Slider volumeSlider;
+    public Slider musicSlider;    
+    public Slider sfxSlider;      
     public Image muteButtonImage;
     public Sprite volumeSprite;
     public Sprite muteSprite;
 
-    // --- STATIC VARIABLES FOR PERSISTENCE & NAVIGATION ---
-    public static string targetPanelName = ""; 
     private static AudioManager instance;
+    
+    // This allows buttons to find the manager easily
+    public static AudioManager Instance => instance;
 
-    private GameObject previousPanel; 
     private bool isMuted = false;
-    private float preMuteVolume = 1f;
+    private float preMuteMusicVol = 1f;
+    private float preMuteSFXVol = 1f;
 
-    // --- PERSISTENCE LOGIC ---
-
-
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); 
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     void Start()
     {
-        if (musicSource != null)
-        {
-            if (musicSource.volume <= 0) musicSource.volume = 0.5f;
+        // Load saved volumes
+        float savedMusicVol = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        float savedSFXVol = PlayerPrefs.GetFloat("SFXVolume", 0.7f);
 
-            if (musicSource.clip == null || !musicSource.isPlaying)
-            {
-                int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0); 
-                AudioClip clipToPlay = (savedMusic == 0) ? chillyMusic : dreamMusic;
-                PlaySong(clipToPlay);
-            }
-        }
-        {
-            Debug.Log("Volume: " + musicSource.volume);
-            Debug.Log("Is Playing: " + musicSource.isPlaying);
+        if (musicSource != null) musicSource.volume = savedMusicVol;
+        if (sfxSource != null) sfxSource.volume = savedSFXVol;
 
+        // Initial Music setup
+        if (musicSource != null && !musicSource.isPlaying)
+        {
+            int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0); 
+            PlaySong(savedMusic == 0 ? chillyMusic : dreamMusic);
         }
+
         SetupUI(); 
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // --- BULLETPROOF SETUP UI (Including Pause Menu Fix) ---
-    private void SetupUI()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-    
-        // Volume Slider check
-        if (volumeSlider == null) volumeSlider = GameObject.Find("Volume_Slider")?.GetComponent<Slider>();
-        if (volumeSlider != null && musicSource != null)
+        SetupUI();
+    }
+
+    // Call this via your Menu Script whenever the Settings Panel is opened!
+    public void SetupUI()
+    {
+        // Find Music Slider
+        if (musicSlider == null) 
+            musicSlider = GameObject.Find("Volume_Slider")?.GetComponent<Slider>();
+        
+        if (musicSlider != null && musicSource != null)
         {
-            volumeSlider.value = musicSource.volume;
+            musicSlider.onValueChanged.RemoveAllListeners();
+            musicSlider.value = musicSource.volume;
+            musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        }
+
+        // Find SFX Slider
+        if (sfxSlider == null) 
+            sfxSlider = GameObject.Find("SFX_Slider")?.GetComponent<Slider>();
+
+        if (sfxSlider != null && sfxSource != null)
+        {
+            sfxSlider.onValueChanged.RemoveAllListeners();
+            sfxSlider.value = sfxSource.volume;
+            sfxSlider.onValueChanged.AddListener(SetSFXVolume);
         }
     }
 
-    // --- BUTTON AND NAVIGATION METHODS ---
-    public void PlayClickSound()
-    {
-        if (musicSource != null && buttonClickSFX != null)
-        {
-            musicSource.PlayOneShot(buttonClickSFX);
-        }
-    }
-
- 
-    // --- AUDIO CONTROLS ---
-    public void SetVolume(float volume)
+    public void SetMusicVolume(float volume)
     {
         if (musicSource == null) return;
         musicSource.volume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        if (sfxSource == null) return;
+        sfxSource.volume = volume;
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+        PlayerPrefs.Save();
+    }
+
+    public void PlayClickSound()
+    {
+        if (sfxSource != null && buttonClickSFX != null)
+        {
+            sfxSource.PlayOneShot(buttonClickSFX);
+        }
     }
 
     public void ToggleMute()
     {
-        if (musicSource == null) return;
-        instance.PlayClickSound();
         isMuted = !isMuted;
+        PlayClickSound();
 
         if (isMuted)
         {
-            preMuteVolume = musicSource.volume;
-            musicSource.volume = 0f;
+            preMuteMusicVol = musicSource.volume;
+            preMuteSFXVol = sfxSource.volume;
+            SetMusicVolume(0f);
+            SetSFXVolume(0f);
         }
         else
         {
-            musicSource.volume = preMuteVolume;
+            SetMusicVolume(preMuteMusicVol > 0 ? preMuteMusicVol : 0.5f);
+            SetSFXVolume(preMuteSFXVol > 0 ? preMuteSFXVol : 0.7f);
         }
+
+        if (musicSlider != null) musicSlider.value = musicSource.volume;
+        if (sfxSlider != null) sfxSlider.value = sfxSource.volume;
     }
 
-    public void OnOption1Clicked()
-    {
-        PlayerPrefs.SetInt("SelectedMusic", 0);
-        PlaySong(chillyMusic);
-    }
-
-    public void OnOption2Clicked()
-    {
-        PlayerPrefs.SetInt("SelectedMusic", 1);
-        PlaySong(dreamMusic);
-    }
+    public void OnOption1Clicked() { PlayerPrefs.SetInt("SelectedMusic", 0); PlaySong(chillyMusic); }
+    public void OnOption2Clicked() { PlayerPrefs.SetInt("SelectedMusic", 1); PlaySong(dreamMusic); }
 
     private void PlaySong(AudioClip clip)
     {
@@ -120,4 +154,8 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }
