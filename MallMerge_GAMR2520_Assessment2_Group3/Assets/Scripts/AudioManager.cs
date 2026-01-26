@@ -43,11 +43,7 @@ public class AudioManager : MonoBehaviour
                 PlaySong(clipToPlay);
             }
         }
-        {
-            Debug.Log("Volume: " + musicSource.volume);
-            Debug.Log("Is Playing: " + musicSource.isPlaying);
 
-        }
         SetupUI(); 
     }
 
