@@ -26,7 +26,8 @@ public class TileUI : MonoBehaviour
         gridj = j;
 
        currentItem = null;
-       //RefreshUI();
+        //RefreshUI();
+        Debug.Log($"Tile initialized at ({gridi}, {gridj})");
     }
 
     /// <summary>

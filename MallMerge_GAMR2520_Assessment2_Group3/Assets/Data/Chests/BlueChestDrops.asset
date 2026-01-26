@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6a0cc16abdb434f823f890766cf1f1, type: 3}
+  m_Name: BlueChestDrops
+  m_EditorClassIdentifier: 
+  items:
+  - prefab: {fileID: 7364074087915012491, guid: 08c4fa043b259444baf81885f41c418e, type: 3}
+    dropChance: 40
+  - prefab: {fileID: 7364074087915012491, guid: 67115fd67afd39b47982108c5fce4cd0, type: 3}
+    dropChance: 30
+  - prefab: {fileID: 7364074087915012491, guid: 66ff90357532b104e825a89afea618b1, type: 3}
+    dropChance: 20
+  - prefab: {fileID: 7364074087915012491, guid: 3042539410db6d549bb7caec44ef7860, type: 3}
+    dropChance: 10
+  - prefab: {fileID: 7364074087915012491, guid: ad66fc2d4daafb940ab4027d14e34d87, type: 3}
+    dropChance: 0

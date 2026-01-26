@@ -27,7 +27,18 @@ public class GridManager : MonoBehaviour
 
     private GameObject[,] grid; //the grid that will store the tiles
     private GridLayoutGroup gridLayout; //Refrencing the Unity Grid layout group componet that is on the board as a varible called gridLayout
-    
+
+    // Allows other scripts (like chests) to access the grid manager easily
+    public static GridManager Instance;
+
+    // Tracks whether each tile in the grid is occupied
+    private bool[,] occupied;
+    private void Awake()
+    {
+        // Set up singleton reference
+        Instance = this;
+    }
+
     private void Start()
     {
         gridLayout = gridParent.GetComponent<GridLayoutGroup>();
@@ -67,6 +78,9 @@ public class GridManager : MonoBehaviour
     /// </summary>
     private void GenerateGrid()
     {
+        // Initialize occupancy tracking
+        occupied = new bool[columns, rows];
+        
         grid = new GameObject[columns, rows];
 
 
@@ -88,11 +102,55 @@ public class GridManager : MonoBehaviour
 
                 //Storing the tile
                 grid[i, j] = tile;
+
+                // Mark tile as empty at the start
+                occupied[i, j] = false;
             }
         }
 
     }
 
+    /// <summary>
+    /// Finds a random empty tile on the grid
+    /// </summary>
+    public bool TryGetRandomEmptyTile(out Vector2Int position)
+    {
+        List<Vector2Int> emptyTiles = new List<Vector2Int>();
 
-    
+        for (int y = 0; y < rows; y++)
+        {
+            for (int x = 0; x < columns; x++)
+            {
+                if (!occupied[x, y])
+                    emptyTiles.Add(new Vector2Int(x, y));
+            }
+        }
+
+        if (emptyTiles.Count == 0)
+        {
+            position = Vector2Int.zero;
+            return false;
+        }
+
+        position = emptyTiles[Random.Range(0, emptyTiles.Count)];
+        return true;
+    }
+
+    /// <summary>
+    /// Marks a tile as occupied after an item is placed
+    /// </summary>
+    public void OccupyTile(int x, int y)
+    {
+        occupied[x, y] = true;
+    }
+
+    /// <summary>
+    /// Returns the transform of a tile at a given grid position
+    /// </summary>
+    public Transform GetTileTransform(int x, int y)
+    {
+        return grid[x, y].transform;
+    }
+
+
 }

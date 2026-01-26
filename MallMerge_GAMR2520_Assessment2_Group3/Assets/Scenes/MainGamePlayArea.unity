@@ -3031,6 +3031,7 @@ GameObject:
   - component: {fileID: 541826880}
   - component: {fileID: 541826882}
   - component: {fileID: 541826881}
+  - component: {fileID: 541826883}
   m_Layer: 5
   m_Name: Grid
   m_TagString: Untagged
@@ -3076,7 +3077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3100,6 +3101,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541826879}
   m_CullTransparentMesh: 1
+--- !u!114 &541826883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541826879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 1
 --- !u!1 &567173777
 GameObject:
   m_ObjectHideFlags: 0
@@ -3610,6 +3635,7 @@ GameObject:
   - component: {fileID: 642340907}
   - component: {fileID: 642340906}
   - component: {fileID: 642340905}
+  - component: {fileID: 642340908}
   m_Layer: 5
   m_Name: MakeupChestPink
   m_TagString: Untagged
@@ -3631,10 +3657,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 541826880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 170, y: 335}
-  m_SizeDelta: {x: 140, y: 140}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642340905
 MonoBehaviour:
@@ -3679,7 +3705,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 642340906}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642340908}
+        m_TargetAssemblyTypeName: ChestButton, Assembly-CSharp
+        m_MethodName: OnChestClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &642340906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3718,6 +3756,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642340903}
   m_CullTransparentMesh: 1
+--- !u!114 &642340908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642340903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cc9fda22de76b48aecf3c68b3e6d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 1503765629}
+  dropData: {fileID: 11400000, guid: 717b9f79946f9ca428e5ca1f5fa4dfcf, type: 2}
 --- !u!1 &648294191
 GameObject:
   m_ObjectHideFlags: 0
@@ -5535,6 +5587,7 @@ GameObject:
   - component: {fileID: 1065224809}
   - component: {fileID: 1065224808}
   - component: {fileID: 1065224807}
+  - component: {fileID: 1065224810}
   m_Layer: 5
   m_Name: DessertsChestYellow
   m_TagString: Untagged
@@ -5556,10 +5609,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 541826880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141, y: 335}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065224807
 MonoBehaviour:
@@ -5604,7 +5657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1065224808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1065224810}
+        m_TargetAssemblyTypeName: ChestButton, Assembly-CSharp
+        m_MethodName: OnChestClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1065224808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5643,6 +5708,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065224805}
   m_CullTransparentMesh: 1
+--- !u!114 &1065224810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065224805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cc9fda22de76b48aecf3c68b3e6d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 1503765629}
+  dropData: {fileID: 11400000, guid: 52f7465ef4804f34ea64659b0de67238, type: 2}
 --- !u!1 &1074325694
 GameObject:
   m_ObjectHideFlags: 0
@@ -7062,6 +7141,7 @@ GameObject:
   - component: {fileID: 1266307550}
   - component: {fileID: 1266307549}
   - component: {fileID: 1266307548}
+  - component: {fileID: 1266307551}
   m_Layer: 5
   m_Name: FruitChestGreen
   m_TagString: Untagged
@@ -7083,10 +7163,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 541826880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: 335}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1266307548
 MonoBehaviour:
@@ -7131,7 +7211,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1266307549}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1266307551}
+        m_TargetAssemblyTypeName: ChestButton, Assembly-CSharp
+        m_MethodName: OnChestClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1266307549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7170,6 +7262,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266307546}
   m_CullTransparentMesh: 1
+--- !u!114 &1266307551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266307546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cc9fda22de76b48aecf3c68b3e6d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 1503765629}
+  dropData: {fileID: 11400000, guid: 8252c65fa1c643c408e456f547f4144d, type: 2}
 --- !u!1 &1288935285
 GameObject:
   m_ObjectHideFlags: 0
@@ -7345,7 +7451,6 @@ RectTransform:
   - {fileID: 470685594}
   - {fileID: 128750990}
   - {fileID: 1955457807}
-  - {fileID: 1756080008}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7365,6 +7470,7 @@ GameObject:
   - component: {fileID: 1298604774}
   - component: {fileID: 1298604773}
   - component: {fileID: 1298604772}
+  - component: {fileID: 1298604775}
   m_Layer: 5
   m_Name: TechChestBlue
   m_TagString: Untagged
@@ -7386,10 +7492,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 541826880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 317, y: 335}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298604772
 MonoBehaviour:
@@ -7434,7 +7540,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1298604773}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1298604775}
+        m_TargetAssemblyTypeName: ChestButton, Assembly-CSharp
+        m_MethodName: OnChestClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1298604773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7473,6 +7591,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298604770}
   m_CullTransparentMesh: 1
+--- !u!114 &1298604775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298604770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cc9fda22de76b48aecf3c68b3e6d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 1503765629}
+  dropData: {fileID: 11400000, guid: f7546943783f0a64883ddad564fb4aef, type: 2}
 --- !u!1 &1306831254
 GameObject:
   m_ObjectHideFlags: 0
@@ -8377,6 +8509,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495145973}
   m_CullTransparentMesh: 1
+--- !u!1 &1503765628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503765630}
+  - component: {fileID: 1503765629}
+  m_Layer: 0
+  m_Name: GridManager Area 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1503765629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503765628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa3f20219ea5e745823dc7e43d22d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columns: 5
+  rows: 5
+  gridParent: {fileID: 541826880}
+  tilePrefab: {fileID: 7948981279175537498, guid: c8f28010f44443c4aa24a03b0db2a653, type: 3}
+  spacing: {x: 20, y: 20}
+  tileMultiplier: 1
+--- !u!224 &1503765630
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503765628}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -7.972981}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1955457807}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 162.98062, y: -14.110596}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1519615469
 GameObject:
   m_ObjectHideFlags: 0
@@ -8464,6 +8650,7 @@ GameObject:
   - component: {fileID: 1593530884}
   - component: {fileID: 1593530883}
   - component: {fileID: 1593530882}
+  - component: {fileID: 1593530885}
   m_Layer: 5
   m_Name: WardrobeChestPurple
   m_TagString: Untagged
@@ -8485,10 +8672,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 541826880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 335}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1593530882
 MonoBehaviour:
@@ -8533,7 +8720,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1593530883}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1593530885}
+        m_TargetAssemblyTypeName: ChestButton, Assembly-CSharp
+        m_MethodName: OnChestClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1593530883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8572,6 +8771,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593530880}
   m_CullTransparentMesh: 1
+--- !u!114 &1593530885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593530880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cc9fda22de76b48aecf3c68b3e6d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 1503765629}
+  dropData: {fileID: 11400000, guid: 3344b4e1dc05fd3419977485536d495b, type: 2}
 --- !u!1 &1617555855
 GameObject:
   m_ObjectHideFlags: 0
@@ -9689,7 +9902,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756080007}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9706,7 +9919,7 @@ RectTransform:
   - {fileID: 1116808295}
   - {fileID: 1645879103}
   - {fileID: 735646473}
-  m_Father: {fileID: 1298241133}
+  m_Father: {fileID: 1955457807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10569,6 +10782,8 @@ RectTransform:
   - {fileID: 1254487419}
   - {fileID: 1988444860}
   - {fileID: 1444365139}
+  - {fileID: 1503765630}
+  - {fileID: 1756080008}
   m_Father: {fileID: 1298241133}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
