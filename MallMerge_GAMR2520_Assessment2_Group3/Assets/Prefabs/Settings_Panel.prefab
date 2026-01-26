@@ -1882,6 +1882,7 @@ GameObject:
   - component: {fileID: 5335276090790995129}
   - component: {fileID: 3969620215498049866}
   - component: {fileID: 5388335569443524075}
+  - component: {fileID: 5461246853523924511}
   m_Layer: 5
   m_Name: Settings_Panel
   m_TagString: Untagged
@@ -1971,6 +1972,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5461246853523924511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6786077703087833559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2243176ce666f44cb11a24ce6dfebcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7001499162639112567
 GameObject:
   m_ObjectHideFlags: 0
