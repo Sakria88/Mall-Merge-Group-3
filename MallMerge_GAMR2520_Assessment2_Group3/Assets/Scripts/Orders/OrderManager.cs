@@ -92,15 +92,23 @@ public bool GameEnded { get; private set; }
         HideAllSlots();
 
         // Initialize star counter display.
-        RefreshStartUI();
+        RefreshStarUI();
     }
 
     private void Start()
     {
+        // 1. Sync local star count with the Global Manager right at the start
+        // This ensures the UI displays the stars earned in previous scenes or minigames
+        if (GameManagerScript.Instance != null)
+        {
+            stars = GameManagerScript.Instance.stars;
+        }
 
-        // Make the first order as soon as game starts.
+        // 2. Update the Text on screen to show the synced star count
+        RefreshStarUI();
+
+        // 3. Make the first order as soon as game starts
         GenerateNewOrder();
-
     }
 
     /// <summary>
@@ -278,29 +286,45 @@ public bool GameEnded { get; private set; }
 
     private void PayoutAndNextCustomer()
     {
+        // 1. Calculate how many stars to reward based on complexity
         int completedCount = activeRequests.Count;
-        
         int reward = 0;
         if (completedCount == 1) reward = 3;
         else if (completedCount == 2) reward = 6;
         else if (completedCount >= 3) reward = 10;
 
-        stars += reward;
-        RefreshStartUI();
+        // 2. Report the payout to the persistent GameManager
+        if (GameManagerScript.Instance != null)
+        {
+            GameManagerScript.Instance.AddStars(reward);
 
+            // Sync local stars with global stars 
+            stars = GameManagerScript.Instance.stars;
+        }
+        else
+        {
+            // Fallback for testing if you haven't placed a GameManager in the scene
+            stars += reward;
+        }
+
+        // 3. Update the local UI Text
+        RefreshStarUI();
+
+        // 4. Progress win condition
         customersServed++;
-
         if (customersServed >= customersToWin)
         {
             WinGame();
             return;
         }
-        GenerateNewOrder(); 
 
-        
-    } 
-            
-    private void RefreshStartUI()
+        // 5. Spawn the next customer
+        GenerateNewOrder();
+    }
+
+
+
+    private void RefreshStarUI()
     {
         if (starCounterText != null)
         {

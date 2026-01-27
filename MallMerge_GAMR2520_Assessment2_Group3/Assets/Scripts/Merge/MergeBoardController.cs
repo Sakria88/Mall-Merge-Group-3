@@ -20,7 +20,7 @@ public class MergeBoardController : MonoBehaviour
 
     public GridManager gridManager; // your existing grid
     public ItemPool itemPool;       // object pool
-    public EnergyManager energyManager;
+    public GameManagerScript gameManager;
     public GameObject losePanel;
 
     // Assign 5 chain assets (FruitChain, DessertChain, etc.)
@@ -139,7 +139,7 @@ public class MergeBoardController : MonoBehaviour
     /// </summary>
     private void DoMerge(TileUI fromTile, TileUI toTile, MergeItem movingItem)
     {
-        if (energyManager != null && !energyManager.TrySpend(1))
+        if (gameManager != null && !gameManager.TrySpendEnergy(1))
             return;
         MergeChainData chain = chainLookup[movingItem.family];
 
@@ -176,7 +176,7 @@ public class MergeBoardController : MonoBehaviour
     /// </summary>
     public void SpawnIntoRandomEmpty(ChestFamily family, int startLevel)
     {
-        if (energyManager != null && !energyManager.CanPlay())
+        if (gameManager != null && !gameManager.CanPlay())
             return;
         if(!gridManager.TryGetRandomEmptyTile(out Vector2Int pos))
 {

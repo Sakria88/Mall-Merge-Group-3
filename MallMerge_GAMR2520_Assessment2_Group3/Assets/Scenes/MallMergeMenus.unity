@@ -1867,6 +1867,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1116332020818264983, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
+      propertyPath: stars
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094561482718049669, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
+      propertyPath: sceneLoadDelay
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5093322783672110435, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 709.7009
@@ -3803,7 +3811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550819433467083995, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00014327231
+      value: 0.00021086719
       objectReference: {fileID: 0}
     - target: {fileID: 5206040833208493295, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchorMax.x

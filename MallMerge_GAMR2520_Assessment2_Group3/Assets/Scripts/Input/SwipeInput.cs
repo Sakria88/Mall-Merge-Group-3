@@ -6,7 +6,7 @@ using UnityEngine;
 public class SwipeInput : MonoBehaviour
 
 {
-    public EnergyManager energyManager;
+    public GameManagerScript gameManager;
    
     public MergeBoardController board;
     public float minSwipeDistance = 60f;
@@ -50,7 +50,7 @@ public class SwipeInput : MonoBehaviour
 
     private void HandleSwipe(Vector2 start, Vector2 end)
     {
-        if (energyManager != null && !energyManager.CanPlay())
+        if (GameManagerScript.Instance.currentEnergy != 0 && !GameManagerScript.Instance.CanPlay())
             return;
         Vector2 delta = end - start;
 
