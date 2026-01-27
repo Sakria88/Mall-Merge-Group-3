@@ -3759,7 +3759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550819433467083995, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.027848251
+      value: -0.000020518444
       objectReference: {fileID: 0}
     - target: {fileID: 5206040833208493295, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7223,7 +7223,7 @@ MonoBehaviour:
           m_StringArgument: MallMergeMenus
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1544763223}
+      - m_Target: {fileID: 6570971698138597940, guid: 0a918b5a202c4094f8363edbf5b06e0d, type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlayClickSound
         m_Mode: 1
@@ -7740,6 +7740,18 @@ PrefabInstance:
     - target: {fileID: 8644102319361150701, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752819901408632838, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 512935616}
+    - target: {fileID: 8752819901408632838, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752819901408632838, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Component, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

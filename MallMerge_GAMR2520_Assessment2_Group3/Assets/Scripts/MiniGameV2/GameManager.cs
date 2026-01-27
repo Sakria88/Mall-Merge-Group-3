@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public enum GameState
 {
@@ -21,9 +23,13 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+        }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
     void Start()
@@ -45,8 +51,37 @@ public class GameManager : MonoBehaviour
 
     public void Pause(bool pause)
     {
-        State = pause ? GameState.Paused : GameState.Playing;
-        Time.timeScale = pause ? 0f : 1f;
-        UI.ShowPause(pause);
+        if (pause)
+        {
+            if (State != GameState.Playing) return;
+            State = GameState.Paused;
+            Time.timeScale = 0f;
+            UI.ShowPause(true);
+        }
+        else
+        {
+            if (State != GameState.Paused) return;
+            State = GameState.Playing;
+            Time.timeScale = 1f;
+            UI.ShowPause(false);
+        }
     }
+
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        UI = FindObjectOfType<UIManager>();
+        Score = FindObjectOfType<ScoreManager>();
+    }
+
 }

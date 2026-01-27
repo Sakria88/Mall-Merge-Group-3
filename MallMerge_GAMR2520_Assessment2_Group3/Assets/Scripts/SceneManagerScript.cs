@@ -23,7 +23,7 @@ public class SceneManagerScript : MonoBehaviour
     {
         while (t > 0)
         {
-            t -= Time.deltaTime * fadeSpeed;
+            t -= Time.unscaledDeltaTime * fadeSpeed;
             sceneFade.alpha = t;
             yield return null;
         }
@@ -34,7 +34,7 @@ public class SceneManagerScript : MonoBehaviour
     {
         while (t < 1)
         {
-            t += Time.deltaTime * fadeSpeed;
+            t += Time.unscaledDeltaTime * fadeSpeed;
             sceneFade.alpha = t;
             yield return null;
         }
@@ -48,9 +48,9 @@ public class SceneManagerScript : MonoBehaviour
 
     IEnumerator LoadScene(string sceneName)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSecondsRealtime(0.5f);
         StartCoroutine(BlackFadeIn());
-        yield return new WaitForSeconds(sceneLoadDelay);
+        yield return new WaitForSecondsRealtime(sceneLoadDelay);
         SceneManager.LoadScene(sceneName);
     }
 
@@ -61,9 +61,9 @@ public class SceneManagerScript : MonoBehaviour
 
     IEnumerator ExitingGame()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSecondsRealtime(0.5f);
         StartCoroutine(BlackFadeIn());
-        yield return new WaitForSeconds(sceneLoadDelay);
+        yield return new WaitForSecondsRealtime(sceneLoadDelay);
         Application.Quit();
     }
 }

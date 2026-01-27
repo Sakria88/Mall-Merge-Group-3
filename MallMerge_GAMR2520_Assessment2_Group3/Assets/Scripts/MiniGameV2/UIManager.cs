@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowPause(bool show)
     {
-        pausePanel.SetActive(show);
+        //
     }
 
     public void ShowGameOver(bool victory)
