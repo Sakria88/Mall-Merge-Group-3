@@ -5,11 +5,14 @@ using UnityEngine;
 /// </summary>
 public class SwipeInput : MonoBehaviour
 {
+    public AudioSource swipeSound;
     public MergeBoardController board;
     public float minSwipeDistance = 60f;
 
     private Vector2 startPos;
     private bool swiping;
+   
+
 
     void Update()
     {
@@ -48,6 +51,9 @@ public class SwipeInput : MonoBehaviour
         Vector2 delta = end - start;
 
         if (delta.magnitude < minSwipeDistance) return;
+
+        if (swipeSound != null)
+            swipeSound.Play();
 
         if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
             board.Move(delta.x > 0 ? SwipeDir.Right : SwipeDir.Left);
