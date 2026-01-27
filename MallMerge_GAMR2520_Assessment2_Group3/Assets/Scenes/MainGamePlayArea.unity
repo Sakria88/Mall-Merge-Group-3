@@ -2631,6 +2631,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4024319360409677786, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
   m_PrefabInstance: {fileID: 364795253}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &364795255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5461246853523924511, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+  m_PrefabInstance: {fileID: 364795253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2243176ce666f44cb11a24ce6dfebcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &368193772
 GameObject:
   m_ObjectHideFlags: 0
@@ -5017,7 +5028,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 648294194}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1924076926}
+        m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
+        m_MethodName: EnableMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &648294194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5773,6 +5796,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
+--- !u!114 &742068681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2094561482718049669, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
+  m_PrefabInstance: {fileID: 742068680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a497ab2bbe90e419a0f9ee3c4cb6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &743049328
 GameObject:
   m_ObjectHideFlags: 0
@@ -6470,7 +6504,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 950087967}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 742068681}
+        m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MallMergeMenus
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &950087967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8724,6 +8770,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4926593349493666961, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926593349493666961, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926593349493666961, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926593349493666961, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5091766361695811849, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8809,6 +8871,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6609660175025487085, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998200785528185611, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998200785528185611, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998200785528185611, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998200785528185611, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -8848,6 +8926,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9026180456748127668, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026180456748127668, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026180456748127668, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026180456748127668, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8858,6 +8952,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4233414912141835041, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
   m_PrefabInstance: {fileID: 1217930332}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1217930334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8623540958835830107, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+  m_PrefabInstance: {fileID: 1217930332}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2243176ce666f44cb11a24ce6dfebcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1226147222
 GameObject:
   m_ObjectHideFlags: 0
@@ -13033,7 +13138,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1835512521}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1217930334}
+        m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
+        m_MethodName: EnableMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1835512521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13567,7 +13684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550819433467083995, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 412.5188
+      value: 192.06311
       objectReference: {fileID: 0}
     - target: {fileID: 5206040833208493295, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchorMax.x
@@ -13651,6 +13768,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4350936583054799370, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
   m_PrefabInstance: {fileID: 1924076924}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1924076926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4337313192771308694, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
+  m_PrefabInstance: {fileID: 1924076924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2243176ce666f44cb11a24ce6dfebcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1951176407
 GameObject:
   m_ObjectHideFlags: 0
@@ -14951,13 +15079,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 364795255}
+        m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
+        m_MethodName: EnableMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
