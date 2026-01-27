@@ -4329,7 +4329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551a3e81a1073e2428abadbb02771849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customersToWin: 2
+  customersToWin: 999
   winPanel: {fileID: 1756080007}
   gridManager: {fileID: 1326576381}
   itemPool: {fileID: 8263957}
@@ -6957,7 +6957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 667451915, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  m_Sprite: {fileID: 821365448, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11094,7 +11094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 999
-  currentEnergy: 20
+  currentEnergy: 999
   energyCounterText: {fileID: 97827810}
   outOfEnergyPanel: {fileID: 691024874}
 --- !u!4 &1605031654
