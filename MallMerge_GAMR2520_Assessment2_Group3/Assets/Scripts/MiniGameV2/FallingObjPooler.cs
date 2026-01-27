@@ -45,11 +45,30 @@ public class FallingObjPooler : MonoBehaviour
             if (kv.Value)
             {
                 pool[kv.Key] = false;
-                kv.Key.transform.position = spawnPos.position;
+                kv.Key.transform.position = GetRandomSpawnPosition();
                 kv.Key.SetActive(true);
                 return;
             }
         }
+    }
+
+    Vector2 GetRandomSpawnPosition()
+    {
+        Camera cam = Camera.main;
+
+        float camHeight = cam.orthographicSize * 2f;
+        float camWidth = camHeight * cam.aspect;
+
+        float margin = 0.5f;
+
+
+        float minX = -camWidth / 2f + margin;
+        float maxX = camWidth / 2f - margin;
+
+        return new Vector2(
+            Random.Range(minX, maxX),
+            spawnPos.position.y
+        );
     }
 
     void ReturnToPool(GameObject obj)
