@@ -48,10 +48,23 @@ public class GridManager : MonoBehaviour
         gridLayout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gridLayout.constraintCount = columns; //setting to 5 
         //Creating the tiles
+            
+        StartCoroutine(InitGridDelayed());
+    }
+
+    private IEnumerator InitGridDelayed()
+    {
+        // Espera a que Unity calcule todos los layouts
+        yield return null;
+        yield return new WaitForEndOfFrame();
+
+        // Fuerza el cálculo del layout
+        LayoutRebuilder.ForceRebuildLayoutImmediate(gridParent);
 
         CalculateCellSize();
         GenerateGrid();
     }
+
 
     /// <summary>
     /// Calculating the width and height of each tile so the will all fit evenly in the board panel
