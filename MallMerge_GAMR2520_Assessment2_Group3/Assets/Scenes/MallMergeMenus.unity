@@ -2476,6 +2476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicMenu_Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 1364091043779592646, guid: 8f15bdad0a8c630449f0df78f8f97986, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2231941251946361519, guid: 8f15bdad0a8c630449f0df78f8f97986, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3799,7 +3803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550819433467083995, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00002271434
+      value: 0.00014327231
       objectReference: {fileID: 0}
     - target: {fileID: 5206040833208493295, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchorMax.x

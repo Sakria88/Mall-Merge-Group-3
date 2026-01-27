@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MiniGameScene.unity
-    guid: 14fe1a2d889558848bfd8284bbdcc70f
+    path: Assets/Scenes/MallMergeMenus.unity
+    guid: bfdb3a64954f6bd4e8ffe00516797693
   - enabled: 1
     path: Assets/Scenes/MainGamePlayArea.unity
     guid: 62c159e42ac1d1b469584746cde45e35
   - enabled: 1
-    path: Assets/Scenes/MallMergeMenus.unity
-    guid: bfdb3a64954f6bd4e8ffe00516797693
+    path: Assets/Scenes/MiniGameScene.unity
+    guid: 14fe1a2d889558848bfd8284bbdcc70f
   m_configObjects: {}
