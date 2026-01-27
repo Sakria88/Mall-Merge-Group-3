@@ -4,7 +4,9 @@ using UnityEngine;
 /// Detects swipe direction and tells board to move
 /// </summary>
 public class SwipeInput : MonoBehaviour
+
 {
+    public EnergyManager energyManager;
     public AudioSource swipeSound;
     public MergeBoardController board;
     public float minSwipeDistance = 60f;
@@ -48,6 +50,8 @@ public class SwipeInput : MonoBehaviour
 
     private void HandleSwipe(Vector2 start, Vector2 end)
     {
+        if (energyManager != null && !energyManager.CanPlay())
+            return;
         Vector2 delta = end - start;
 
         if (delta.magnitude < minSwipeDistance) return;

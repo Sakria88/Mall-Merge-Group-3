@@ -622,6 +622,7 @@ MonoBehaviour:
   orderManager: {fileID: 617707863}
   gridManager: {fileID: 1326576381}
   itemPool: {fileID: 8263957}
+  energyManager: {fileID: 1605031653}
   chains:
   - {fileID: 11400000, guid: 6d83d024eec8a9a439214e9d21abb529, type: 2}
   - {fileID: 11400000, guid: b6fd05b11c4e10544b7340625d5406ce, type: 2}
@@ -655,6 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ceaafc81608b984a9c9bda476cc5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energyManager: {fileID: 1605031653}
   swipeSound: {fileID: 92085477}
   board: {fileID: 92085474}
   minSwipeDistance: 60
@@ -4837,7 +4839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &691024875
 RectTransform:
   m_ObjectHideFlags: 0
