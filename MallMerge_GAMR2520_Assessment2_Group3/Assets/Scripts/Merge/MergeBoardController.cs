@@ -21,6 +21,7 @@ public class MergeBoardController : MonoBehaviour
     public GridManager gridManager; // your existing grid
     public ItemPool itemPool;       // object pool
     public EnergyManager energyManager;
+    public GameObject losePanel;
 
     // Assign 5 chain assets (FruitChain, DessertChain, etc.)
     public List<MergeChainData> chains;
@@ -177,7 +178,16 @@ public class MergeBoardController : MonoBehaviour
     {
         if (energyManager != null && !energyManager.CanPlay())
             return;
-        if (!gridManager.TryGetRandomEmptyTile(out Vector2Int pos)) return;
+        if(!gridManager.TryGetRandomEmptyTile(out Vector2Int pos))
+{
+            
+
+            if (losePanel != null)
+                losePanel.SetActive(true);
+
+            Time.timeScale = 0f; // freeze game
+            return;
+        }
 
         TileUI tile = gridManager.GetTileUI(pos.x, pos.y);
 

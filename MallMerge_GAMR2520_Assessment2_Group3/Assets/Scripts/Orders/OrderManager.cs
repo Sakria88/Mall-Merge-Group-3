@@ -40,6 +40,7 @@ public bool GameEnded { get; private set; }
 
     [Tooltip("AudioSource that plays when an order item is successfully delivered.")]
     public AudioSource successAudio;
+    public AudioSource winAudio;
 
     [Header("Data (Chains + Characters)")]
     [Tooltip("Assign ALL 5 MergeChainData assets here (Fruit, Dessert, Wardrobe, Makeup, Tech).")]
@@ -361,6 +362,9 @@ public bool GameEnded { get; private set; }
 
         if (winPanel != null)
             winPanel.SetActive(true);
+
+        if (winAudio != null)
+            winAudio.Play();
 
         Time.timeScale = 0;
     }
