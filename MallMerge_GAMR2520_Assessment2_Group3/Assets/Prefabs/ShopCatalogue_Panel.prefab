@@ -1424,6 +1424,7 @@ GameObject:
   - component: {fileID: 2343957569634031649}
   - component: {fileID: 459505513476617146}
   - component: {fileID: 7800301782390976093}
+  - component: {fileID: 308837464179994949}
   m_Layer: 5
   m_Name: Price_Button
   m_TagString: Untagged
@@ -1447,9 +1448,9 @@ RectTransform:
   - {fileID: 2384269072202156429}
   m_Father: {fileID: 2745742676248856888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 182.5, y: -415}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2343957569634031649
@@ -1546,6 +1547,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 308837464179994949}
+        m_TargetAssemblyTypeName: ShopButtonScript, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &308837464179994949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830503827350826610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9483cb2a019a1454c8c0464b56f6cdbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starCost: 10
+  gainEnergy: 10
 --- !u!1 &5093664161722412342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,9 +1606,9 @@ RectTransform:
   - {fileID: 3180569029193089882}
   m_Father: {fileID: 2745742676248856888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 182.5, y: -175}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6254914295096385307
@@ -1981,6 +2008,7 @@ GameObject:
   - component: {fileID: 6229627072672978585}
   - component: {fileID: 3411175372585326483}
   - component: {fileID: 7720870079892154637}
+  - component: {fileID: 6729845118976902225}
   m_Layer: 5
   m_Name: Price_Button
   m_TagString: Untagged
@@ -2004,9 +2032,9 @@ RectTransform:
   - {fileID: 6210134800364487042}
   m_Father: {fileID: 8799324239206690692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 182.5, y: -415}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6229627072672978585
@@ -2103,6 +2131,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6729845118976902225}
+        m_TargetAssemblyTypeName: ShopButtonScript, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6729845118976902225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443276986120276901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9483cb2a019a1454c8c0464b56f6cdbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starCost: 15
+  gainEnergy: 15
 --- !u!1 &6649668170954684205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2432,7 +2486,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5461246853523924511, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+      - m_Target: {fileID: 8623540958835830107}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
         m_MethodName: DisableMenu
         m_Mode: 1
@@ -2542,8 +2596,8 @@ GameObject:
   - component: {fileID: 4233414912141835041}
   - component: {fileID: 945815025507299217}
   - component: {fileID: 1157325878551663570}
-  - component: {fileID: 8623540958835830107}
   - component: {fileID: 2194615832006779108}
+  - component: {fileID: 8623540958835830107}
   m_Layer: 5
   m_Name: ShopCatalogue_Panel
   m_TagString: Untagged
@@ -2612,18 +2666,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8623540958835830107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7820254112859073070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2243176ce666f44cb11a24ce6dfebcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2194615832006779108
 Animator:
   serializedVersion: 5
@@ -2645,6 +2687,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8623540958835830107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820254112859073070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2243176ce666f44cb11a24ce6dfebcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7899151675982705825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,9 +2732,9 @@ RectTransform:
   - {fileID: 3279417576970579241}
   m_Father: {fileID: 8799324239206690692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 182.5, y: -175}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5850748754322536965
@@ -2733,6 +2787,7 @@ GameObject:
   - component: {fileID: 3620967491128679206}
   - component: {fileID: 1229869496431353553}
   - component: {fileID: 5045437896396546949}
+  - component: {fileID: 7498459462948956977}
   m_Layer: 5
   m_Name: Price_Button
   m_TagString: Untagged
@@ -2855,6 +2910,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7498459462948956977}
+        m_TargetAssemblyTypeName: ShopButtonScript, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7498459462948956977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8355429234920757313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9483cb2a019a1454c8c0464b56f6cdbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starCost: 20
+  gainEnergy: 25
 --- !u!1 &8391998997109133673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,10 +3178,10 @@ RectTransform:
   - {fileID: 5516076992718119990}
   m_Father: {fileID: 5086555522255666366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 332.5, y: 0}
-  m_SizeDelta: {x: 365, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4899660501340487088
 MonoBehaviour:
@@ -3161,10 +3242,10 @@ RectTransform:
   - {fileID: 1690744133442646349}
   m_Father: {fileID: 5086555522255666366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 747.5, y: 0}
-  m_SizeDelta: {x: 365, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2987728148969681549
 MonoBehaviour:
