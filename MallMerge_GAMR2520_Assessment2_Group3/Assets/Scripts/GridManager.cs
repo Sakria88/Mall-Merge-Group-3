@@ -59,7 +59,9 @@ public class GridManager : MonoBehaviour
     private void CalculateCellSize()
     {
         float totalWidth = gridParent.rect.width;
+        Debug.Log("Total Width: " + totalWidth);
         float totalHeight = gridParent.rect.height;
+        Debug.Log("Total Height: " + totalHeight);
 
         //Take the width of the board subtract the spacing inbetween and split the remaining width even between the tiles
         float cellWidth = (totalWidth - spacing.x * (columns - 1)) / columns;
