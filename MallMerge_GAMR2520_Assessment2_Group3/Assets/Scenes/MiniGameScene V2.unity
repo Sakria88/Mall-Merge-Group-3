@@ -179,6 +179,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a918b5a202c4094f8363edbf5b06e0d, type: 3}
+--- !u!114 &22176541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6570971698138597940, guid: 0a918b5a202c4094f8363edbf5b06e0d, type: 3}
+  m_PrefabInstance: {fileID: 22176540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d7fd418f9f0a34f93acbf8e5dbdbc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &45221210
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +588,8 @@ GameObject:
   - component: {fileID: 270672333}
   - component: {fileID: 270672332}
   - component: {fileID: 270672331}
+  - component: {fileID: 270672336}
+  - component: {fileID: 270672335}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -657,6 +670,35 @@ MonoBehaviour:
   Score: {fileID: 270672333}
   UI: {fileID: 270672332}
   Timer: {fileID: 270672331}
+--- !u!114 &270672335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270672329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a497ab2bbe90e419a0f9ee3c4cb6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 0
+  sceneLoadDelay: 3
+--- !u!114 &270672336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270672329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3859038b4a0b141a85c81f111b218a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stars: 10
+  maxEnergy: 999
+  currentEnergy: 20
 --- !u!1001 &316475224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -948,10 +990,9 @@ GameObject:
   - component: {fileID: 437304674}
   - component: {fileID: 437304677}
   - component: {fileID: 437304676}
-  - component: {fileID: 437304675}
   - component: {fileID: 437304678}
   m_Layer: 0
-  m_Name: Star_Button
+  m_Name: Timer_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -978,50 +1019,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &437304675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437304673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 437304676}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &437304676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,7 +1106,7 @@ RectTransform:
   m_Father: {fileID: 953968858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7, y: 0.25}
-  m_AnchorMax: {x: 0.9, y: 0.75}
+  m_AnchorMax: {x: 0.95, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1134,8 +1131,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 777733809, guid: 2baa2b0b1625bfb4389ae57f70c9bdf4, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1237,7 +1234,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 134.5
+  m_fontSize: 110.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1669,9 +1666,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1015954991}
+      - m_Target: {fileID: 1594441440}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: EnableMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1681,13 +1678,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 22176541}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1819,7 +1816,7 @@ GameObject:
   - component: {fileID: 1236007459}
   - component: {fileID: 1236007458}
   m_Layer: 0
-  m_Name: EnergyButton_Text
+  m_Name: EnergyCounter_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2187,6 +2184,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3001826693761863200, guid: 58b9322f46e003e42a6d0f7198f8d013, type: 3}
   m_PrefabInstance: {fileID: 1594441438}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1594441440 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 946084216305673397, guid: 58b9322f46e003e42a6d0f7198f8d013, type: 3}
+  m_PrefabInstance: {fileID: 1594441438}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2243176ce666f44cb11a24ce6dfebcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1605162875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +2207,7 @@ GameObject:
   - component: {fileID: 1605162878}
   - component: {fileID: 1605162877}
   m_Layer: 0
-  m_Name: Star Icon
+  m_Name: Timer_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2244,7 +2252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1366991039, guid: 2baa2b0b1625bfb4389ae57f70c9bdf4, type: 3}
+  m_Sprite: {fileID: -821427214, guid: 2baa2b0b1625bfb4389ae57f70c9bdf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2435,7 +2443,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1973373851}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 270672335}
+        m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MallMergeMenus
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22176541}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1973373851
 MonoBehaviour:
   m_ObjectHideFlags: 0
