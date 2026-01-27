@@ -544,6 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6674aee7bfe5405409cfbc4918566bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orderManager: {fileID: 617707863}
   gridManager: {fileID: 1326576381}
   itemPool: {fileID: 8263957}
   chains:
@@ -3883,6 +3884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 617707862}
+  - component: {fileID: 617707863}
   m_Layer: 0
   m_Name: OrderManager
   m_TagString: Untagged
@@ -3905,6 +3907,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617707863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617707861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551a3e81a1073e2428abadbb02771849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 1326576381}
+  itemPool: {fileID: 8263957}
+  orderSlots:
+  - {fileID: 1063437306}
+  - {fileID: 380238769}
+  - {fileID: 1914460263}
+  starCounterText: {fileID: 1890572559}
+  displayCharacter: {fileID: 1053473098}
+  successAudio: {fileID: 1483288957}
+  chains:
+  - {fileID: 11400000, guid: 6d83d024eec8a9a439214e9d21abb529, type: 2}
+  - {fileID: 11400000, guid: b6fd05b11c4e10544b7340625d5406ce, type: 2}
+  - {fileID: 11400000, guid: 6de20f156cde8b046bfa210b538a02e1, type: 2}
+  - {fileID: 11400000, guid: eb0e4b3b081c58a46b467f237e51ec4f, type: 2}
+  - {fileID: 11400000, guid: 8d4f1ad3d30564c4d95490dfae46fd3f, type: 2}
+  characterSprites:
+  - {fileID: 821365448, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: -1742900915, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: 1894436683, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: 1879140022, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: 1358166150, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: -1106202943, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: 709788296, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: 1327752978, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: 506014166, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  - {fileID: 667451915, guid: a15a924f5222ba44bb8cd3fe08aeb7b0, type: 3}
+  minOrderSize: 1
+  maxOrderSize: 3
+  minRequestedLevel: 0
+  maxRequestedLevelOverride: -1
 --- !u!1 &642340903
 GameObject:
   m_ObjectHideFlags: 0
@@ -9046,8 +9090,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1063437305}
-  - {fileID: 380238768}
   - {fileID: 1914460262}
+  - {fileID: 380238768}
   m_Father: {fileID: 1955457807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.22137037, y: 0.625}
@@ -9168,6 +9212,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449233171}
   m_CullTransparentMesh: 1
+--- !u!1 &1483288956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483288958}
+  - component: {fileID: 1483288957}
+  m_Layer: 0
+  m_Name: SuccessSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1483288957
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483288956}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a53349b7591726d4cac075c07c2e0cf4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1483288958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483288956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 486.17563, y: 1017.1056, z: 3.023187}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495145973
 GameObject:
   m_ObjectHideFlags: 0
@@ -11472,7 +11644,7 @@ GameObject:
   - component: {fileID: 1914460264}
   - component: {fileID: 1914460263}
   m_Layer: 5
-  m_Name: 'OrderSlot_image '
+  m_Name: 'OrderSlot3_image '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12930,3 +13102,4 @@ SceneRoots:
   - {fileID: 92085475}
   - {fileID: 8263958}
   - {fileID: 617707862}
+  - {fileID: 1483288958}

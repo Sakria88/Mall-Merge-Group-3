@@ -15,6 +15,9 @@ public enum SwipeDir { Up, Down, Left, Right }
 /// </summary>
 public class MergeBoardController : MonoBehaviour
 {
+    // Reference to OrderManager so we can tell it when merges happen
+    public OrderManager orderManager;
+
     public GridManager gridManager; // your existing grid
     public ItemPool itemPool;       // object pool
 
@@ -145,6 +148,10 @@ public class MergeBoardController : MonoBehaviour
         MergeItem target = toTile.currentItem.GetComponent<MergeItem>();
         int newLevel = target.level + 1;
         target.ApplyVisual(chain, target.family, newLevel);
+
+        OrderManager orderManager = FindObjectOfType<OrderManager>();
+        if (orderManager != null)
+            orderManager.CheckForDeliveries();
     }
 
     /// <summary>
@@ -178,5 +185,8 @@ public class MergeBoardController : MonoBehaviour
 
         tile.currentItem = obj;
         gridManager.OccupyTile(pos.x, pos.y);
+
+        if (orderManager != null)
+            orderManager.CheckForDeliveries();
     }
 }
