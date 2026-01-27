@@ -11094,7 +11094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 999
-  currentEnergy: 999
+  currentEnergy: 20
   energyCounterText: {fileID: 97827810}
   outOfEnergyPanel: {fileID: 691024874}
 --- !u!4 &1605031654
