@@ -27,21 +27,6 @@ public class OrderManager : MonoBehaviour
     [Tooltip("Drag your Currency Counter Text here (the number next to the star).")]
     public TMP_Text starCounterText;
 
-    [Header("Energy")]
-    [Tooltip("Text showing current energy.")]
-    public TMP_Text energyText;
-
-    [Tooltip("Starting energy at game start.")]
-    public int startingEnergy = 20;
-
-    [Tooltip("Energy lost per successful DELIVERY (when an order item is completed).")]
-    public int energyCostPerDelivery = 5;
-
-    [Tooltip("Optional: if true, you can't deliver if energy is 0.")]
-    public bool blockDeliveriesWhenNoEnergy = false;
-
-    private int energy;
-
 
     [Tooltip("Your DisplayCharacter component (script) that controls the Character_Image.")]
     public DisplayCharacter displayCharacter;
@@ -85,8 +70,6 @@ public class OrderManager : MonoBehaviour
 
     private void Awake()
     {
-        energy = startingEnergy;
-        RefreshEnergyUI();
         // Build a lookup so we can quickly get the chain for any family.
         chainLookup = new Dictionary<ChestFamily, MergeChainData>();
 
@@ -105,11 +88,7 @@ public class OrderManager : MonoBehaviour
         // Initialize star counter display.
         RefreshStarUI();
     }
-    private void RefreshEnergyUI()
-    {
-        if (energyText != null)
-            energyText.text = energy.ToString();
-    }
+
     private void Start()
     {
         // Make the first order as soon as game starts.
@@ -251,14 +230,6 @@ public class OrderManager : MonoBehaviour
 
     private void DeliverRequestAtIndex(int requestIndex, TileUI tile, GameObject itemGO)
     {
-        // Optionally block deliveries if out of energy
-        if (blockDeliveriesWhenNoEnergy && energy <= 0)
-            return;
-
-        // Spend energy on successful delivery
-        energy = Mathf.Max(0, energy - energyCostPerDelivery);
-        RefreshEnergyUI();
-
         // Mark request completed
         activeRequests[requestIndex].completed = true;
 

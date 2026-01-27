@@ -20,10 +20,9 @@ public class MergeBoardController : MonoBehaviour
 
     public GridManager gridManager; // your existing grid
     public ItemPool itemPool;       // object pool
-    public EnergyManager energyManager; // drag your EnergyManager here
+
     // Assign 5 chain assets (FruitChain, DessertChain, etc.)
     public List<MergeChainData> chains;
-
 
     private Dictionary<ChestFamily, MergeChainData> chainLookup;
 
@@ -120,27 +119,19 @@ public class MergeBoardController : MonoBehaviour
                 mergedThisMove[nx, ny] == false &&
                 movingItem.level < chainLookup[movingItem.family].MaxLevel)
             {
-                if (energyManager != null && !energyManager.TrySpendEnergy(1))
-                {
-                    // Not enough energy -> panel will show (your EnergyManager does that)
-                    return;
-                }
                 DoMerge(fromTile, nextTile, movingItem);
                 mergedThisMove[nx, ny] = true;
-
-
-                return;
             }
 
-            if (lastEmpty != null)
-            {
-                MoveItem(fromTile, lastEmpty, movingObj);
-
-            }
+            return;
         }
 
-
+        if (lastEmpty != null)
+        {
+            MoveItem(fromTile, lastEmpty, movingObj);
+        }
     }
+
     /// <summary>
     /// Performs a merge between two items
     /// </summary>
