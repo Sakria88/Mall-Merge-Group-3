@@ -4,9 +4,13 @@ using System.Collections.Generic;
 
 public class FallingObjPooler : MonoBehaviour
 {
-    public GameObject[] prefabs;
+    public GameObject[] objectPrefabs;
+    public int[] prefabAmounts;
     public Transform spawnPos;
-    public Transform hidePos;
+    public Transform tempPos;
+
+    public int poolSize = 10;
+    public int startPrefabs = 3;
 
     public float minDelay = 0.2f;
     public float maxDelay = 1f;
@@ -15,18 +19,31 @@ public class FallingObjPooler : MonoBehaviour
 
     void Start()
     {
-        foreach (var p in prefabs)
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                GameObject obj = Instantiate(p, hidePos.position, Quaternion.identity);
-                obj.SetActive(false);
-                obj.GetComponent<FallingObjectScriptV2>().OnReturnToPool += ReturnToPool;
-                pool.Add(obj, true);
-            }
-        }
-
+        CreatePool();
         StartCoroutine(SpawnLoop());
+    }
+
+    void CreatePool()
+    {
+        if (prefabAmounts.Length != objectPrefabs.Length)
+        {
+            Debug.LogError("Prefab amounts length does not match object prefabs length.");
+            return;
+        } else
+        {
+            for (int i = 0; i < objectPrefabs.Length; i++)
+            {
+                for (int j = 0; j < prefabAmounts[i]; j++)
+                {
+                    GameObject obj = Instantiate(objectPrefabs[i], tempPos.position, Quaternion.identity);
+                    obj.SetActive(false);
+                    var falling = obj.GetComponent<FallingObjectScript>();
+                    if (falling != null) falling.OnReturnToPool += ReturnToPool;
+                    pool.Add(obj, true);
+                }
+            }
+            return;
+        }
     }
 
     IEnumerator SpawnLoop()
@@ -40,16 +57,19 @@ public class FallingObjPooler : MonoBehaviour
 
     void Spawn()
     {
-        foreach (var kv in pool)
+        List<GameObject> availableObjs = new List<GameObject>();
+        foreach (var value in pool)
         {
-            if (kv.Value)
-            {
-                pool[kv.Key] = false;
-                kv.Key.transform.position = GetRandomSpawnPosition();
-                kv.Key.SetActive(true);
-                return;
-            }
+            if (value.Value) availableObjs.Add(value.Key);
         }
+
+        if (availableObjs.Count == 0) return;
+
+        GameObject obj = availableObjs[Random.Range(0, availableObjs.Count)];
+        pool[obj] = false;
+        obj.transform.position = GetRandomSpawnPosition();
+        obj.SetActive(true);
+        StartCoroutine(ReturnPrefab(obj));
     }
 
     Vector2 GetRandomSpawnPosition()
@@ -71,10 +91,23 @@ public class FallingObjPooler : MonoBehaviour
         );
     }
 
+    IEnumerator ReturnPrefab(GameObject selPrefab)
+    {
+        while (!selPrefab.GetComponent<Renderer>().isVisible)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        while (selPrefab.GetComponent<Renderer>().isVisible)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        ReturnToPool(selPrefab);
+    }
+
     void ReturnToPool(GameObject obj)
     {
         obj.SetActive(false);
-        obj.transform.position = hidePos.position;
+        obj.transform.position = tempPos.position;
         pool[obj] = true;
     }
 }
