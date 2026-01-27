@@ -38,9 +38,7 @@ public bool GameEnded { get; private set; }
     [Tooltip("Your DisplayCharacter component (script) that controls the Character_Image.")]
     public DisplayCharacter displayCharacter;
 
-    [Tooltip("AudioSource that plays when an order item is successfully delivered.")]
-    public AudioSource successAudio;
-    public AudioSource winAudio;
+    
 
     [Header("Data (Chains + Characters)")]
     [Tooltip("Assign ALL 5 MergeChainData assets here (Fruit, Dessert, Wardrobe, Makeup, Tech).")]
@@ -249,14 +247,11 @@ public bool GameEnded { get; private set; }
         if (orderSlots != null && requestIndex < orderSlots.Length)
         {
             orderSlots[requestIndex].gameObject.SetActive(false);
+        
         }
 
-        // Play success sound
-        if (successAudio != null)
-        {
-            successAudio.Play();
-        }
 
+    
         // Remove item from tile (VERY important so it doesn’t overlap)
         tile.currentItem = null;
 
@@ -363,8 +358,7 @@ public bool GameEnded { get; private set; }
         if (winPanel != null)
             winPanel.SetActive(true);
 
-        if (winAudio != null)
-            winAudio.Play();
+        
 
         Time.timeScale = 0;
     }
