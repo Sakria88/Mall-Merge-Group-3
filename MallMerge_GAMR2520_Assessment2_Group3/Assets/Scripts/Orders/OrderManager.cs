@@ -14,6 +14,13 @@ using TMPro;
 /// </summary>
 public class OrderManager : MonoBehaviour
 {
+    [Header("Win Condition")]
+public int customersToWin = 20;
+public GameObject winPanel;   // drag your WinPanel here
+
+private int customersServed = 0;
+public bool GameEnded { get; private set; }
+
     [Header("Scene References")]
     [Tooltip("Your existing GridManager that created the 5x5 tiles.")]
     public GridManager gridManager;
@@ -86,19 +93,23 @@ public class OrderManager : MonoBehaviour
         HideAllSlots();
 
         // Initialize star counter display.
-        RefreshStarUI();
+        RefreshStartUI();
     }
 
     private void Start()
     {
+
         // Make the first order as soon as game starts.
         GenerateNewOrder();
+
     }
 
     /// <summary>
     /// Creates a new order of 1-3 items, each from a different chest family.
     /// Displays them in the order slots.
     /// </summary>
+    /// 
+
     public void GenerateNewOrder()
     {
         activeRequests.Clear();
@@ -272,24 +283,28 @@ public class OrderManager : MonoBehaviour
     private void PayoutAndNextCustomer()
     {
         int completedCount = activeRequests.Count;
-
-        // You asked:
-        // 1 item = 3 stars
-        // 2 items = 6 stars
-        // 3 items = 10 stars
+        
         int reward = 0;
         if (completedCount == 1) reward = 3;
         else if (completedCount == 2) reward = 6;
         else if (completedCount >= 3) reward = 10;
 
         stars += reward;
-        RefreshStarUI();
+        RefreshStartUI();
 
-        // New order + new character
-        GenerateNewOrder();
-    }
+        customersServed++;
 
-    private void RefreshStarUI()
+        if (customersServed >= customersToWin)
+        {
+            WinGame();
+            return;
+        }
+        GenerateNewOrder(); 
+
+        
+    } 
+            
+    private void RefreshStartUI()
     {
         if (starCounterText != null)
         {
@@ -340,5 +355,17 @@ public class OrderManager : MonoBehaviour
         Sprite s = characterSprites[UnityEngine.Random.Range(0, characterSprites.Count)];
         displayCharacter.DisplayImage(s);
     }
-   
+    private void WinGame()
+    {
+        GameEnded = true;
+
+        if (winPanel != null)
+            winPanel.SetActive(true);
+
+        Time.timeScale = 0;
+    }
+
+
+
+
 }

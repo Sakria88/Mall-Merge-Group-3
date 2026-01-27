@@ -4328,6 +4328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551a3e81a1073e2428abadbb02771849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customersToWin: 2
+  winPanel: {fileID: 1756080007}
   gridManager: {fileID: 1326576381}
   itemPool: {fileID: 8263957}
   orderSlots:
