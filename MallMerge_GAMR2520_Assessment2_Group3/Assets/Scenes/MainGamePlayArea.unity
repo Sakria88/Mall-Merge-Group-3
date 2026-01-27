@@ -4837,9 +4837,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642340908}
-        m_TargetAssemblyTypeName: ChestButton, Assembly-CSharp
-        m_MethodName: OnChestClicked
+      - m_Target: {fileID: 1064078766}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayItemChest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9937,9 +9937,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1298604775}
-        m_TargetAssemblyTypeName: ChestButton, Assembly-CSharp
-        m_MethodName: OnChestClicked
+      - m_Target: {fileID: 1064078766}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayItemChest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11465,9 +11465,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1593530885}
-        m_TargetAssemblyTypeName: ChestButton, Assembly-CSharp
-        m_MethodName: OnChestClicked
+      - m_Target: {fileID: 1064078766}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayItemChest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
