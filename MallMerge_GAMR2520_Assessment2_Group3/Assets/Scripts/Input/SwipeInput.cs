@@ -7,7 +7,7 @@ public class SwipeInput : MonoBehaviour
 
 {
     public EnergyManager energyManager;
-    public AudioSource swipeSound;
+   
     public MergeBoardController board;
     public float minSwipeDistance = 60f;
 
@@ -56,8 +56,7 @@ public class SwipeInput : MonoBehaviour
 
         if (delta.magnitude < minSwipeDistance) return;
 
-        if (swipeSound != null)
-            swipeSound.Play();
+      
 
         if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
             board.Move(delta.x > 0 ? SwipeDir.Right : SwipeDir.Left);
