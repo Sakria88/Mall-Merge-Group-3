@@ -60,12 +60,15 @@ public class AudioManager : MonoBehaviour
         if (muteButtonImage != null) muteButtonImage.sprite = isMuted ? muteSprite : volumeSprite;
 
         // 3. Initial Music setup
-        if (musicSource != null && !musicSource.isPlaying)
+        if (musicSource != null)
         {
-            int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0); 
-            PlaySong(savedMusic == 0 ? chillyMusic : dreamMusic);
-        }
+            int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0);
+            var clip = (savedMusic == 0) ? chillyMusic : dreamMusic;
 
+            // Only start if we don't already have the right track playing
+            if (musicSource.clip != clip || !musicSource.isPlaying)
+                PlaySong(clip);
+        }
         SetupUI(); 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }

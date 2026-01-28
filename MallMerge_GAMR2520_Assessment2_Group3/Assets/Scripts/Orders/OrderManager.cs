@@ -38,7 +38,9 @@ public bool GameEnded { get; private set; }
     [Tooltip("Your DisplayCharacter component (script) that controls the Character_Image.")]
     public DisplayCharacter displayCharacter;
 
-    
+    [Header("Audio")]
+    public AudioManager audioManager;
+
 
     [Header("Data (Chains + Characters)")]
     [Tooltip("Assign ALL 5 MergeChainData assets here (Fruit, Dessert, Wardrobe, Makeup, Tech).")]
@@ -378,7 +380,12 @@ public bool GameEnded { get; private set; }
     private void WinGame()
     {
         GameEnded = true;
-
+         //Play win / success sound
+        if (audioManager != null)
+        {
+            audioManager.PlaySFX(audioManager.successSFX);
+            
+        }
         if (winPanel != null)
             winPanel.SetActive(true);
 

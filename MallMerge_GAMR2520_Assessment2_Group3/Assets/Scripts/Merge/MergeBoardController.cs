@@ -16,7 +16,10 @@ public enum SwipeDir { Up, Down, Left, Right }
 public class MergeBoardController : MonoBehaviour
 {
     // Reference to OrderManager so we can tell it when merges happen
+    [Header("Audio")]
+    public AudioManager audioManager;
     public OrderManager orderManager;
+    
 
     public GridManager gridManager; // your existing grid
     public ItemPool itemPool;       // object pool
@@ -181,9 +184,11 @@ public class MergeBoardController : MonoBehaviour
         if(!gridManager.TryGetRandomEmptyTile(out Vector2Int pos))
 {
             
-
-            if (losePanel != null)
-                losePanel.SetActive(true);
+    // Play lose / explosion sound
+        if (audioManager != null)
+            audioManager.PlayExplosion();
+        if (losePanel != null)
+            losePanel.SetActive(true);
 
             Time.timeScale = 0f; // freeze game
             return;

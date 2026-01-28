@@ -619,6 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6674aee7bfe5405409cfbc4918566bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 1544763223}
   orderManager: {fileID: 617707863}
   gridManager: {fileID: 1326576381}
   itemPool: {fileID: 8263957}
@@ -5416,6 +5417,7 @@ MonoBehaviour:
   - {fileID: 1914460263}
   starCounterText: {fileID: 1890572559}
   displayCharacter: {fileID: 1053473098}
+  audioManager: {fileID: 1544763223}
   chains:
   - {fileID: 11400000, guid: 6d83d024eec8a9a439214e9d21abb529, type: 2}
   - {fileID: 11400000, guid: b6fd05b11c4e10544b7340625d5406ce, type: 2}
