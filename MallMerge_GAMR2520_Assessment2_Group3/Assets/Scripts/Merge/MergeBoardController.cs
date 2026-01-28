@@ -59,6 +59,10 @@ public class MergeBoardController : MonoBehaviour
     /// </summary>
     public void Move(SwipeDir dir)
     {
+        //play swipe sound
+        if (audioManager != null)
+        audioManager.PlaySwipe();
+        
         bool[,] mergedThisMove = new bool[gridManager.columns, gridManager.rows];
 
         // Set traversal order like 2048
