@@ -103,7 +103,7 @@ public bool GameEnded { get; private set; }
         // This ensures the UI displays the stars earned in previous scenes or minigames
         if (GameManagerScript.Instance != null)
         {
-            stars = GameManagerScript.Instance.stars;
+            stars = GameManagerScript.Instance.Stars;
         }
 
         // 2. Update the Text on screen to show the synced star count
@@ -301,7 +301,7 @@ public bool GameEnded { get; private set; }
             GameManagerScript.Instance.AddStars(reward);
 
             // Sync local stars with global stars 
-            stars = GameManagerScript.Instance.stars;
+            stars = GameManagerScript.Instance.Stars;
         }
         else
         {

@@ -1806,6 +1806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starCost: 20
   gainEnergy: 25
+  starUI: {fileID: 0}
+  energyManager: {fileID: 0}
 --- !u!1 &272729435
 GameObject:
   m_ObjectHideFlags: 0
@@ -7601,6 +7603,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959732686}
   m_CullTransparentMesh: 1
+--- !u!1 &960786989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6786077703087833559, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+  m_PrefabInstance: {fileID: 965948691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &965948691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7888,7 +7895,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6786077703087833559, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1317279299}
   m_SourcePrefab: {fileID: 100100000, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
 --- !u!224 &965948692 stripped
 RectTransform:
@@ -11083,10 +11093,22 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5461246853523924511, guid: 196fd5e6efe049d4e9e8205bfc3266ad, type: 3}
   m_PrefabInstance: {fileID: 965948691}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 960786989}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2243176ce666f44cb11a24ce6dfebcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1317279299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960786989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f5bf282bc99864ab452a934ddcebfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1326576379
@@ -11544,6 +11566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starCost: 15
   gainEnergy: 15
+  starUI: {fileID: 0}
+  energyManager: {fileID: 0}
 --- !u!1 &1393082087
 GameObject:
   m_ObjectHideFlags: 0
@@ -11755,7 +11779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1116332020818264983, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
       propertyPath: maxEnergy
-      value: 999
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1116332020818264983, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
       propertyPath: currentEnergy
@@ -14750,6 +14774,7 @@ GameObject:
   - component: {fileID: 1890572558}
   - component: {fileID: 1890572560}
   - component: {fileID: 1890572559}
+  - component: {fileID: 1890572561}
   m_Layer: 5
   m_Name: StarCounter_Text
   m_TagString: Untagged
@@ -14873,6 +14898,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890572557}
   m_CullTransparentMesh: 1
+--- !u!114 &1890572561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890572557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f56388c44686844b8b80b11f642f5b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starText: {fileID: 1890572559}
 --- !u!114 &1898257321 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1116332020818264983, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}

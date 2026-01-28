@@ -10,17 +10,29 @@ public class ShopButtonScript : MonoBehaviour
     //How much energy the gplayer will get
     public int gainEnergy = 10;
 
+    //References to item UI
+    public StarUI starUI;
+    public EnergyManager energyManager;
     //When the button is clicked this function will run
     public void Buy()
     {
         Debug.Log("GameManager Instance is: " + GameManagerScript.Instance);
         //Ask the game manager if the player can buy the energy
-        GameManagerScript.Instance.BuyEnergy(starCost, gainEnergy);
-      
+        bool bought = GameManagerScript.Instance.BuyEnergy(starCost, gainEnergy);
+
         //If the player does not have enough
-        //if (!bought)
-        //{
-        //    Debug.Log("Not enough stars");
-        //}
+        if (bought)
+        {
+            if (starUI != null)
+                starUI.RefreshUI();
+
+            if (energyManager != null)
+                energyManager.RefreshUI();
+            Debug.Log("Not enough stars");
+        }
+        else
+        {
+            Debug.Log("Not enough stars");
+        }
     }
 }

@@ -7,12 +7,13 @@ public class GameManagerScript : MonoBehaviour
 {
     public static GameManagerScript Instance;
 
-  //Star currency
-    public int stars = 0;
+    //Star currency
+    private const string Stars_Key = "Player_Stars";
+
 
     //Energy
-    public int maxEnergy = 20;
-    public int currentEnergy = 20;
+    private const string Energy_Key = "Player_Energy";
+    public int maxEnergy = 60;
 
     private void Awake()
     {
@@ -40,50 +41,72 @@ public class GameManagerScript : MonoBehaviour
             volumeSlider.value = savedVolume;
         }
 
-        // Initialize Energy
-        currentEnergy = Mathf.Clamp(currentEnergy, 0, maxEnergy);
     }
 
+    //Loading and saving the star and energy information
+
+    private void ItemData()
+    {
+        int defaultEnergy = maxEnergy;
+        int stars = PlayerPrefs.GetInt(Stars_Key, 0);
+        int currentEnergy = PlayerPrefs.GetInt(Energy_Key, 0);
+
+        PlayerPrefs.SetInt(Stars_Key, stars);
+        PlayerPrefs.SetInt(Energy_Key, currentEnergy);
+        PlayerPrefs.Save();
+    }
+
+    private void SaveStarData(int value)
+    {
+        PlayerPrefs.SetInt(Stars_Key, value);
+        PlayerPrefs.Save();
+    }
+
+    private void SaveEnergyData(int value)
+    {
+        PlayerPrefs.SetInt(Energy_Key, value);
+        PlayerPrefs.Save();
+    }
     // --- STAR LOGIC ---
 
+    public int Stars => PlayerPrefs.GetInt(Stars_Key, 0);
     public void AddStars(int amount)
     {
-        stars += amount;
-        Debug.Log("Stars added! Current balance: " + stars);
+        int updatesStars = Stars + amount;
+        SaveStarData(updatesStars);
+        Debug.Log("Stars added! Current balance: " + updatesStars);
     }
 
     public bool SpendStars(int amount)
     {
-        if (stars < amount)
+        if (Stars < amount)
             return false;
 
-        stars -= amount;
+        SaveStarData(Stars - amount);
         return true;
     }
 
     // --- ENERGY LOGIC ---
-
+    public int currentEnergy => PlayerPrefs.GetInt(Energy_Key, maxEnergy);
     public bool TrySpendEnergy(int amount = 1)
     {
         if (currentEnergy < amount)
             return false;
 
-        currentEnergy -= amount;
-        currentEnergy = Mathf.Clamp(currentEnergy, 0, maxEnergy);
+        SaveEnergyData(currentEnergy - amount);
+        
         return true;
     }
 
     public void AddEnergy(int amount)
     {
-        currentEnergy += amount;
-        currentEnergy = Mathf.Clamp(currentEnergy, 0, maxEnergy);
+       int updatedEnergy = Mathf.Clamp(currentEnergy + amount, 0, maxEnergy);
+        SaveEnergyData(updatedEnergy);
     }
 
     public bool BuyEnergy(int starCost, int gainEnergy)
     {
-        //Debug.Log("Trying to buy energy...");
-        //Debug.Log("Stars before purchase: " + stars);
-        //Debug.Log("Cost: " + starCost);
+        
 
         if (!SpendStars(starCost))
             return false;

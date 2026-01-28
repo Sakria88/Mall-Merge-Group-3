@@ -34,7 +34,7 @@ public class EnergyManager : MonoBehaviour
 
     //Updating the text on the screen
 
-    private void RefreshUI()
+    public void RefreshUI()
     {
         energyCounterText.text= GameManagerScript.Instance.currentEnergy.ToString();
 
