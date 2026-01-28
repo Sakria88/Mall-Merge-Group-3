@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MallMergeMenus.unity
     guid: bfdb3a64954f6bd4e8ffe00516797693
   - enabled: 1
+    path: Assets/Scenes/MiniGameScene.unity
+    guid: 14fe1a2d889558848bfd8284bbdcc70f
+  - enabled: 1
     path: Assets/Scenes/MiniGameScene V2.unity
     guid: d47c2c73568edce499647f0efaadb7ab
   m_configObjects: {}

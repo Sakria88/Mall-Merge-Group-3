@@ -321,11 +321,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236808873}
   m_CullTransparentMesh: 1
---- !u!1 &632317609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 712529532778851345, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
-  m_PrefabInstance: {fileID: 652550377678789603}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &673935009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1197,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2094561482718049669, guid: c644c63bedf08864cb8b7487b65706c5, type: 3}
   m_PrefabInstance: {fileID: 652550377678789603}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632317609}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a497ab2bbe90e419a0f9ee3c4cb6d7, type: 3}
@@ -3456,16 +3451,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1801824646}
     - target: {fileID: 3676177261574605500, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 632317609}
-    - target: {fileID: 3676177261574605500, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayClickSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 3676177261574605500, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3676177261574605500, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4054,7 +4041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550819433467083995, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00014518485
+      value: 0.00010333115
       objectReference: {fileID: 0}
     - target: {fileID: 5206040833208493295, guid: a8a1f3435188f5c4585e25127d384c29, type: 3}
       propertyPath: m_AnchorMax.x
