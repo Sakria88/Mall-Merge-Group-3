@@ -20,7 +20,6 @@ public class GameManagerScript : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
