@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class BombHit : MonoBehaviour
 {
-    private GameObject explosionPrefab;
-    private Vector3 explosionOffset = Vector3.zero;
+    [Header("Explosion")]
+    [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private Vector3 explosionOffset = Vector3.zero;
 
-    private string basketTag = "Basket";
+    [Header("Collision")]
+    [SerializeField] private string basketTag = "Basket";
 
-    private bool endGameOnHit = true;
+    [Header("Gameplay (optional)")]
+    [SerializeField] private bool endGameOnHit = true;
 
     private bool hasTriggered = false;
 

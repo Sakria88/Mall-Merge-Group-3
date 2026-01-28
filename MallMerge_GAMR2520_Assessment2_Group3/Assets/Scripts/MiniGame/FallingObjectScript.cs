@@ -23,7 +23,7 @@ public class FallingObjectScript : MonoBehaviour
 
     protected virtual void OnCollected()
     {
-        
+        // We warn the pooler that this object should be returned to the pool
         OnReturnToPool?.Invoke(gameObject);
     }
 }
