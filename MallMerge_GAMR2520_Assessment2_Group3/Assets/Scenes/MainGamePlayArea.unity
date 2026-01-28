@@ -5834,6 +5834,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1544763226}
     - target: {fileID: 6570971698138597940, guid: 0a918b5a202c4094f8363edbf5b06e0d, type: 3}
+      propertyPath: successSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: a53349b7591726d4cac075c07c2e0cf4, type: 3}
+    - target: {fileID: 6570971698138597940, guid: 0a918b5a202c4094f8363edbf5b06e0d, type: 3}
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 1544763227}
