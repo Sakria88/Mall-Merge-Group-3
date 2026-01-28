@@ -45,6 +45,14 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        if (musicSource == null || sfxSource == null)
+        {
+        var sources = GetComponents<AudioSource>();
+        if (sources.Length > 0 && sfxSource == null) sfxSource = sources[0];
+        if (sources.Length > 1 && musicSource == null) musicSource = sources[1];
+        if (sources.Length == 1 && musicSource == null) musicSource = sources[0];
+        }
     }
 
     void Start()
@@ -75,7 +83,15 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SetupUI();
+    SetupUI();
+
+    // Resume music if not playing
+    if (musicSource != null && !musicSource.isPlaying)
+    {
+        int savedMusic = PlayerPrefs.GetInt("SelectedMusic", 0);
+        PlaySong(savedMusic == 0 ? chillyMusic : dreamMusic);
+    }
+    
     }
 
     public void SetupUI()
