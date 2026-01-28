@@ -87,11 +87,9 @@ public class GameManagerScript : MonoBehaviour
         //Debug.Log("Cost: " + starCost);
 
         if (!SpendStars(starCost))
-        {
-            Debug.Log("NOT ENOUGH STARS");
             return false;
-        }
-        
+        Debug.Log("NOT ENOUGHS");
+
         AddEnergy(gainEnergy);
         Debug.Log("Purchase Success");
         return true;

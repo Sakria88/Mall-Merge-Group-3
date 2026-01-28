@@ -1,31 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BombObjectScript : FallingObjectScript
 {
-    private int energyValue = -5;
-    private GameObject explosionPrefab;   
-    private Vector3 explosionOffset = Vector3.zero;
-
-    private bool hasExploded = false;
+    public int energyValue = -5;
 
     protected override void OnCollected()
     {
-        if (hasExploded) return;
-        hasExploded = true;
-
-        Debug.Log("Boooooom! Value: " + energyValue);
-
-    
-        if (explosionPrefab != null)
-        {
-            Instantiate(explosionPrefab, transform.position + explosionOffset, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogWarning("BombObjectScript: explosionPrefab is NOT assigned on " + gameObject.name);
-        }
-
-        // Return bomb to pool / existing collected logic
+        Debug.Log("Boooooom!" + " Value: " + energyValue);
         base.OnCollected();
     }
 }
