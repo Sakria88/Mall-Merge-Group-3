@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("UI Elements")]
     public Text timerText;
-    public Text scoreText;
+    public TMP_Text scoreText;
     [SerializeField] private AudioManager audioManager;
 
     public GameObject pausePanel;

@@ -37,31 +37,33 @@ public class BasketController : MonoBehaviour
 
     void Update()
     {
-        if (inpMode == InputMode.Touch)
-        {
-            TouchMove();
-        }
-        else if (inpMode == InputMode.Accel)
-        {
-            AccelMove();
-        }
-
-        Move();
-
-
         if (GameManager.Instance.State != GameState.Playing)
+        {
+            moveInput = 0;
             return;
+        }
+
+        if (inpMode == InputMode.Touch)
+            TouchMove();
+        else if (inpMode == InputMode.Accel)
+            AccelMove();
     }
+
+    void FixedUpdate()
+    {
+        Move();
+    }
+
 
     void TouchMove()
     {
         if (Input.touchCount > 0)
         {
-            if ((Input.mousePosition.x > (Screen.width * 0.75f)) && rb.position.x < maxX)
+            if ((Input.mousePosition.x > (Screen.width * 0.6f)) && rb.position.x < maxX)
             {
                 moveInput = 1f;
             }
-            else if (Input.mousePosition.x <= (Screen.width * 0.25f) && rb.position.x > minX)
+            else if (Input.mousePosition.x <= (Screen.width * 0.4f) && rb.position.x > minX)
             {
                 moveInput = -1;
             }
@@ -80,11 +82,11 @@ public class BasketController : MonoBehaviour
     {
         if (Input.acceleration.x > 0.1f && rb.position.x < maxX)
         {
-            facingRight = true;
+            moveInput = 1f;
         }
         else if (Input.acceleration.x < -0.1f && rb.position.x > minX)
         {
-            facingRight = false;
+            moveInput = -1;
         }
         else
         {
@@ -106,42 +108,50 @@ public class BasketController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Energy"))
+        {
             GameManager.Instance.Score.Add(1);
-
+            GameManagerScript.Instance.AddEnergy(1);
+        }
         else if (col.CompareTag("Energy_5"))
+        {
             GameManager.Instance.Score.Add(5);
-
+            GameManagerScript.Instance.AddEnergy(5);
+        }
         else if (col.CompareTag("Energy_15"))
+        {             
             GameManager.Instance.Score.Add(15);
-
+            GameManagerScript.Instance.AddEnergy(15);
+        }
         else if (col.CompareTag("Bomb"))
+        {
             GameManager.Instance.EndGame(false);
+        }
     }
 
-    //void OnGUI()
-    //{
-    //    if (inpMode == InputMode.Touch)
-    //    {
-    //        GUI.skin.label.fontSize = Screen.width / 20;
-    //        GUILayout.Label("Touch");
+    void OnGUI()
+    {
+        if (inpMode == InputMode.Touch)
+        {
+            GUI.skin.label.fontSize = Screen.width / 20;
+            GUILayout.Label("Touch");
 
-    //        for (int i = 0; i < Input.touchCount; i++)
-    //        {
-    //            Touch touch = Input.GetTouch(i);
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Touch touch = Input.GetTouch(i);
 
-    //            if (touch.position.x >= (Screen.width * 0.75f))
-    //            {
-    //                GUI.DrawTexture(new Rect(touch.position.x, (touch.position.y * -1f) + (Screen.height), 200, 200), aTextureRight, ScaleMode.StretchToFill, true, 10.0F);
-    //                GUILayout.Label("Right");
-    //            }
+                if (touch.position.x >= (Screen.width * 0.75f))
+                {
+                    GUI.DrawTexture(new Rect(touch.position.x, (touch.position.y * -1f) + (Screen.height), 200, 200), aTextureRight, ScaleMode.StretchToFill, true, 10.0F);
+                    GUILayout.Label("Right");
+                }
 
-    //            if (touch.position.x <= (Screen.width * 0.25f))
-    //            {
-    //                GUI.DrawTexture(new Rect(touch.position.x, (touch.position.y * -1f) + (Screen.height), 200, 200), aTextureLeft, ScaleMode.StretchToFill, true, 10.0F);
-    //                GUILayout.Label("Left");
-    //            }
-    //        }
-    //    }
+                if (touch.position.x <= (Screen.width * 0.25f))
+                {
+                    GUI.DrawTexture(new Rect(touch.position.x, (touch.position.y * -1f) + (Screen.height), 200, 200), aTextureLeft, ScaleMode.StretchToFill, true, 10.0F);
+                    GUILayout.Label("Left");
+                }
+            }
+        }
 
-    //}
+    }
 }
