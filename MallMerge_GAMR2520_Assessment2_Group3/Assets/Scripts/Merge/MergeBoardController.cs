@@ -187,12 +187,16 @@ public class MergeBoardController : MonoBehaviour
     // Play lose / explosion sound
         if (audioManager != null)
             audioManager.PlayExplosion();
+ 
         if (losePanel != null)
             losePanel.SetActive(true);
 
             Time.timeScale = 0f; // freeze game
             return;
         }
+        //chest spawn sound
+        if (audioManager != null)
+            audioManager.PlayItemChest();
 
         TileUI tile = gridManager.GetTileUI(pos.x, pos.y);
 

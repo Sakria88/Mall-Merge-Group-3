@@ -6100,6 +6100,7 @@ GameObject:
   - component: {fileID: 691024875}
   - component: {fileID: 691024877}
   - component: {fileID: 691024876}
+  - component: {fileID: 691024878}
   m_Layer: 5
   m_Name: OutOfEnergyPanel
   m_TagString: Untagged
@@ -6171,6 +6172,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691024874}
   m_CullTransparentMesh: 1
+--- !u!114 &691024878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691024874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7a991b5ccb27a4982a74aef54019ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 1544763223}
+  sfxToPlay: 0
 --- !u!1 &694334421
 GameObject:
   m_ObjectHideFlags: 0
@@ -13721,6 +13736,7 @@ GameObject:
   - component: {fileID: 1756080008}
   - component: {fileID: 1756080010}
   - component: {fileID: 1756080009}
+  - component: {fileID: 1756080011}
   m_Layer: 5
   m_Name: Congratulations_Panel
   m_TagString: Untagged
@@ -13797,6 +13813,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756080007}
   m_CullTransparentMesh: 1
+--- !u!114 &1756080011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756080007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7a991b5ccb27a4982a74aef54019ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 1544763223}
+  sfxToPlay: 1
 --- !u!1 &1797379073
 GameObject:
   m_ObjectHideFlags: 0
