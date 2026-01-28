@@ -4557,6 +4557,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5045437896396546949, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045437896396546949, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045437896396546949, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1544763223}
+    - target: {fileID: 5045437896396546949, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045437896396546949, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlayMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045437896396546949, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045437896396546949, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5091766361695811849, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4672,6 +4700,34 @@ PrefabInstance:
     - target: {fileID: 6998200785528185611, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720870079892154637, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720870079892154637, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720870079892154637, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1544763223}
+    - target: {fileID: 7720870079892154637, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720870079892154637, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlayMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720870079892154637, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720870079892154637, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7800301782390976093, guid: 9b0e255f77e9fde43a2887072c4e5599, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
