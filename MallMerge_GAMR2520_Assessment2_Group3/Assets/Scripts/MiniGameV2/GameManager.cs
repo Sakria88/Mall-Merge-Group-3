@@ -13,10 +13,6 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [Header("Scene Names (must match Build Settings)")]
-    [SerializeField] private string menuSceneName = "MallMergeMenus";
-    [SerializeField] private string playAreaSceneName = "MainGamePlayArea";
-    [SerializeField] private string miniGameSceneName = "MiniGameScene V2";
 
     public GameState State { get; private set; }
 
@@ -40,7 +36,6 @@ public class GameManager : MonoBehaviour
     {
         State = GameState.Playing;
         Time.timeScale = 1f;
-
     }
 
     public void EndGame(bool victory)
