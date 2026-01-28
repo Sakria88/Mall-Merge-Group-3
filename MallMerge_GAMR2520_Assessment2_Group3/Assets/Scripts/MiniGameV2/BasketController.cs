@@ -107,23 +107,29 @@ public class BasketController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        AudioManagerV2 audioManager = AudioManagerV2.Instance;
+        
         if (col.CompareTag("Energy"))
         {
             GameManager.Instance.Score.Add(1);
             GameManagerScript.Instance.AddEnergy(1);
+            if (audioManager != null) audioManager.PlayEnergy();
         }
         else if (col.CompareTag("Energy_5"))
         {
             GameManager.Instance.Score.Add(5);
             GameManagerScript.Instance.AddEnergy(5);
+            if (audioManager != null) audioManager.PlayEnergy();
         }
         else if (col.CompareTag("Energy_15"))
         {             
             GameManager.Instance.Score.Add(15);
             GameManagerScript.Instance.AddEnergy(15);
+            if (audioManager != null) audioManager.PlayEnergy();
         }
         else if (col.CompareTag("Bomb"))
         {
+            if (audioManager != null) audioManager.PlayExplosion();
             GameManager.Instance.EndGame(false);
         }
     }

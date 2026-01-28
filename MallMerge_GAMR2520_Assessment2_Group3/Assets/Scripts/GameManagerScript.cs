@@ -107,13 +107,18 @@ public class GameManagerScript : MonoBehaviour
 
     public bool BuyEnergy(int starCost, int gainEnergy)
     {
-        
-
         if (!SpendStars(starCost))
             return false;
         Debug.Log("NOT ENOUGHS");
 
         AddEnergy(gainEnergy);
+        
+        AudioManagerV2 audioManager = AudioManagerV2.Instance;
+        if (audioManager != null)
+        {
+            audioManager.PlayMoney();
+        }
+        
         Debug.Log("Purchase Success");
         return true;
     }

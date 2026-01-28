@@ -7,7 +7,6 @@ public class UIManager : MonoBehaviour
     [Header("UI Elements")]
     public Text timerText;
     public TMP_Text scoreText;
-    [SerializeField] private AudioManager audioManager;
 
     public GameObject pausePanel;
     public GameObject gameOverPanel;
@@ -34,12 +33,11 @@ public class UIManager : MonoBehaviour
     public void ShowGameOver(bool victory)
     {
         gameOverPanel.SetActive(true);
-        // Play appropriate sound
-        if (audioManager != null)
-    {
-        if (victory) audioManager.PlayWinner();
-        else audioManager.PlayExplosion();
-    }
+        
+        if (AudioManagerV2.Instance != null)
+        {
+            AudioManagerV2.Instance.PlayResultsPopup();
+        }
 
         titleText.text = victory ? "CONGRATULATIONS" : "GAME OVER";
         titleText.color = victory ? Color.green : Color.red;

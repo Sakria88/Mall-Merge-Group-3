@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - Energy_15
   - Energy_5
+  - SFXSliderTag
+  - VolumeSliderTag
   layers:
   - Default
   - TransparentFX

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,9 +37,6 @@ public bool GameEnded { get; private set; }
 
     [Tooltip("Your DisplayCharacter component (script) that controls the Character_Image.")]
     public DisplayCharacter displayCharacter;
-
-    [Header("Audio")]
-    public AudioManager audioManager;
 
 
     [Header("Data (Chains + Characters)")]
@@ -253,6 +250,12 @@ public bool GameEnded { get; private set; }
         // Mark request completed
         activeRequests[requestIndex].completed = true;
 
+        // Play success sound when item is delivered
+        if (AudioManagerV2.Instance != null)
+        {
+            AudioManagerV2.Instance.PlaySuccess();
+        }
+
         // Hide/remove the matching UI slot
         if (orderSlots != null && requestIndex < orderSlots.Length)
         {
@@ -380,16 +383,14 @@ public bool GameEnded { get; private set; }
     private void WinGame()
     {
         GameEnded = true;
-         //Play win / success sound
-        if (audioManager != null)
+        
+        if (AudioManagerV2.Instance != null)
         {
-            audioManager.PlaySFX(audioManager.successSFX);
-            
+            AudioManagerV2.Instance.PlayWinner();
         }
+        
         if (winPanel != null)
             winPanel.SetActive(true);
-
-        
 
         Time.timeScale = 0;
     }

@@ -16,8 +16,6 @@ public enum SwipeDir { Up, Down, Left, Right }
 public class MergeBoardController : MonoBehaviour
 {
     // Reference to OrderManager so we can tell it when merges happen
-    [Header("Audio")]
-    public AudioManager audioManager;
     public OrderManager orderManager;
     
 
@@ -60,8 +58,8 @@ public class MergeBoardController : MonoBehaviour
     public void Move(SwipeDir dir)
     {
         //play swipe sound
-        if (audioManager != null)
-        audioManager.PlaySwipe();
+        if (AudioManagerV2.Instance != null)
+            AudioManagerV2.Instance.PlaySwipe();
         
         bool[,] mergedThisMove = new bool[gridManager.columns, gridManager.rows];
 
@@ -189,8 +187,8 @@ public class MergeBoardController : MonoBehaviour
 {
             
     // Play lose / explosion sound
-        if (audioManager != null)
-            audioManager.PlayExplosion();
+        if (AudioManagerV2.Instance != null)
+            AudioManagerV2.Instance.PlayExplosion();
  
         if (losePanel != null)
             losePanel.SetActive(true);
@@ -199,8 +197,8 @@ public class MergeBoardController : MonoBehaviour
             return;
         }
         //chest spawn sound
-        if (audioManager != null)
-            audioManager.PlayItemChest();
+        if (AudioManagerV2.Instance != null)
+            AudioManagerV2.Instance.PlayItemChest();
 
         TileUI tile = gridManager.GetTileUI(pos.x, pos.y);
 

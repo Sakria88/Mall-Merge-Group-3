@@ -18,6 +18,7 @@ public class MenuButtonScript : MonoBehaviour
 
     public void EnableMenu()
     {
+        gameObject.SetActive(true);
         GetComponent<Animator>().ResetTrigger("Disable");
         GetComponent<Animator>().SetTrigger("Enable");
     }
