@@ -5,7 +5,8 @@ public class PlaySFXOnEnable : MonoBehaviour
     public enum SFXType
     {
         Explosion,
-        Success
+        Success,
+        Winner  
     }
 
     [Header("Audio")]
@@ -30,6 +31,10 @@ public class PlaySFXOnEnable : MonoBehaviour
             case SFXType.Success:
                 audioManager.PlaySFX(audioManager.successSFX);
                 // or audioManager.PlaySuccessSFX();
+                break;
+                
+             case SFXType.Winner:
+                audioManager.PlayWinner();
                 break;
         }
     }
