@@ -30,6 +30,7 @@ public class GameManagerScript : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         // Audio Setup
         float savedVolume = PlayerPrefs.GetFloat("AudioLevel", 1);
         AudioListener.volume = savedVolume;
